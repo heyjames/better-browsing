@@ -1,0 +1,42 @@
+.ember-chat .chat-messages .chat-line {
+    font-size: 18px !important;
+    color: lightgray;
+}
+
+.ember-chat .chat-messages .chat-line .from, .ember-chat .chat-messages .chat-line .to {
+    /*font-size: 18px;*/
+    font-weight: normal;
+    color: red !important;
+}
+
+.badges .badge {
+    display: none;
+    height: 8px;
+	min-width: 8px;
+}
+
+.player-button {
+	height:4em;
+    width:3em;
+    position:relative;
+    background:none;
+    padding:0 0 1em;
+    border:1px solid red;
+    outline:none;
+    cursor:pointer;
+    font-size:1em;
+    float:left;
+    overflow:visible;
+	margin-left:18px;
+    margin-right:18px;
+}
+
+body, code, samp, kbd, .real_title, #right_col .content #chat_line_list, .ember-chat, .ember-chat .message, .ember-chat .from, .ember-chat, .ember-chat .colon, #right_col #chat_line_list, #main_col .content #broadcast_meta .info .channel, #channel .player-column #broadcast-meta .info .title, #channel_panels_contain #channel_panels .panel h3, #channel_panels_contain #channel_panels .panel h1, #channel_panels_contain #channel_panels .panel h2, h3, h2, .tse-content a, .js-live-widget a {
+    color: white;
+}
+
+.ember-chat .chat-line .mentioning, .ember-chat .chat-line .mentioned, .chat-container.dark .chat-line .mentioned, .ember-chat-container.dark .chat-line .mentioned {
+    color: lightgreen;
+    font-weight: normal;
+    font-size: 14px;
+}
