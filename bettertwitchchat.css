@@ -36,7 +36,7 @@
 
 /* Moves the whisper button slightly to the left so you can still access the right-most player controls */
 .conversations-content .conversations-list-container {
-    margin-right: 84px;
+    margin-right: 146px;
     z-index: 10;
     float: right;
 }
