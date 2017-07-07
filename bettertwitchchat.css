@@ -31,7 +31,17 @@
 
 /* Removes the bottom black bar used for whispers when logged in while using theater mode */
 .app-main.theatre .player--authenticated {
-    margin-bottom: 0;
+    margin-bottom: 0px !important;
+}
+.app-main.theatre .player-whispers-padding {
+    margin-bottom: 0px !important;
+}
+.app-main.theatre .conversations-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 6;
+    background-color: black;
 }
 
 /* Moves the whisper button slightly to the left so you can still access the right-most player controls */
