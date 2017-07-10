@@ -46,7 +46,7 @@
 }
 
 
-/* Shrinks the chat for corner pixel perfect theater mode Windows corner snap */
+/* (1440p only) Shrinks the chat for corner pixel perfect theater mode Windows corner snap */
 .app-main.theatre #player {
     width: auto!important;
     position: fixed!important;
