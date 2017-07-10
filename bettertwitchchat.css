@@ -36,9 +36,6 @@
 .app-main.theatre .player-whispers-padding {
     margin-bottom: 0;
 }
-/* .app-main.theatre #player {
-    
-} */
 .app-main.theatre .conversations-wrapper {
     height: 0;
     position: absolute;
@@ -46,6 +43,32 @@
 	width: 100%;
     z-index: 6;
     background-color: black;
+}
+
+
+/* Shrinks the chat for corner pixel perfect theater mode Windows corner snap */
+.app-main.theatre #player {
+    width: auto!important;
+    position: fixed!important;
+	top: 0;
+    left: 0;
+    right: 230px;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 6;
+}
+#right_col {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 230px;
+/*     z-index: 3; */
+    background: #efeef1;
+}
+.ember-chat .chat-messages .chat-lines {
+    padding: 10px 14px 10px 0px;
+    list-style-type: none;
 }
 
 /* Moves the whisper button slightly to the left so you can still access the right-most player controls */
