@@ -1,5 +1,5 @@
 # clean-twitch-chat
-CSS for a clean, simple, uncluttered Twitch Chat using the Stylish Chrome Extension
+CSS for a clean, simple, uncluttered Twitch Chat using the Stylish Chrome Extension. Use with BetterTwitchTV Chrome extension.
 
 ### Features
 * Large font messages
