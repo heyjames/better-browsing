@@ -1,6 +1,6 @@
 /* Chat text */
 .ember-chat .chat-messages .chat-line {
-    font-size: 18px !important;
+    font-size: 16px !important;
     color: lightgray;
 }
 
@@ -73,6 +73,27 @@
 #main_col div.tse-scrollbar {
     visibility: hidden;
 }
+/* Moves the purple chat send button to the left */
+.chat-buttons-container .button.float-right {
+    margin-right: 20px;
+}
+/* Moves the right side of the chat input box left */
+.ember-chat .chat-interface .textarea-contain textarea {
+    width: 92%!important;
+    height: 50px!important;
+    margin: 0;
+    resize: none;
+}
+/* Moves the emote smiley to the left */
+.ember-chat .chat-interface .textarea-contain .emoticon-selector-toggle {
+    display: block;
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    right: 25px;
+    position: absolute;
+}
+
 
 /* Moves the whisper button slightly to the left so you can still access the right-most player controls */
 .conversations-content .conversations-list-container {
