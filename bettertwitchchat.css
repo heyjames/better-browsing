@@ -70,6 +70,9 @@
     padding: 10px 14px 10px 0px;
     list-style-type: none;
 }
+#main_col div.tse-scrollbar {
+    visibility: hidden;
+}
 
 /* Moves the whisper button slightly to the left so you can still access the right-most player controls */
 .conversations-content .conversations-list-container {
