@@ -1,0 +1,4 @@
+/* Hide Chromecast button */
+button[title="Play on TV"] {
+    display: none !important;
+}
