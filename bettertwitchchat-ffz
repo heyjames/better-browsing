@@ -1,3 +1,5 @@
+/* A slim version for use with FrankerFaceZ Chrome extension */
+
 /* Chat text */
 .ember-chat .chat-messages .chat-line {
     color: lightgray;
