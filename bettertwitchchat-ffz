@@ -1,0 +1,23 @@
+/* Chat text */
+.ember-chat .chat-messages .chat-line {
+    color: lightgray;
+}
+
+/* @user_name mentions are light green */
+.ffz-clickable-mentions .chat-display .chat-line .user-token, .ffz-clickable-mentions .ffz-recent-messages .chat-line .user-token, .ffz-clickable-mentions .pinned-cheers .chat-line .user-token {
+    color: lightgreen !important;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Unbold names and make them red colored */
+.ember-chat .chat-messages .chat-line .from, .ember-chat .chat-messages .chat-line .to {
+/*     font-size: 18px; */
+    font-weight: normal;
+    color: red !important;
+}
+
+/* Disable chat rules pop-up */
+.ember-chat .chat-interface .chat-rules {
+    display: none;
+}
