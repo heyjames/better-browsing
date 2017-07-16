@@ -23,3 +23,8 @@
 .ember-chat .chat-interface .chat-rules {
     display: none;
 }
+
+/* More pop-ups! Stop with all these pop-ups that cover the video! */
+.extension-container {
+    display:none;
+}
