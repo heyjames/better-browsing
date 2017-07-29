@@ -1,6 +1,15 @@
 # clean-twitch-chat
 CSS for a clean, simple, uncluttered Twitch Chat using the Stylish Chrome Extension. Use with BetterTwitchTV Chrome extension.
 
+### Number of distractions Twitch implements
+* MasterOverwatch pop-up/overlay
+* Rules pop-up
+* Follow this streamer pop-up
+* Log-in pop-up
+* Mature audiences overlay
+* Buffering stream pop-up
+* Bits
+
 ### Features
 * Large font messages
 * Fewer amount of badges in front of usernames
