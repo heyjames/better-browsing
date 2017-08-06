@@ -1,4 +1,16 @@
-/* Hide Chromecast button */
+/* Remove the Chromecast button */
 button[title="Play on TV"] {
     display: none !important;
+}
+
+/* Enable dark mode on search bar suggestions */
+.sbsb_a {
+    background-color: rgb(17, 17, 17) !important;
+    color: rgb(71, 71, 71) !important;
+}
+.sbsb_a ul li {
+    color: white !important;
+}
+.sbsb_a ul li:hover {
+    background-color: rgb(71, 71, 71) !important;
 }
