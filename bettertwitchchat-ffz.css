@@ -28,3 +28,56 @@
 .extension-container {
     display:none;
 }
+
+
+/* Non-theater mode global look */
+#right_close {
+    top: 75px; /* Default: 15px */
+    right: 5px;
+    height: 80px;
+    background-color: red;
+    opacity: 1;
+    border: 2px solid white;
+}
+/* Non-theater mode (chat hidden) triangle color */
+#right_close.closed:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: transparent solid 6px;
+    border-right-width: 6px;
+    border-left-width: 0;
+    border-right-color: rgb(255, 255, 255);
+}
+/* Non-theater mode (chat showing) triangle color */
+#right_close:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: transparent solid 6px;
+    border-left-width: 6px;
+    border-right-width: 0;
+    border-left-color: rgb(255, 255, 255);
+}
+/* Theater mode chat toggle button - global look */
+.app-main.theatre #main_col:hover #right_close {
+    display: block;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    opacity: 0.2;
+    border: 2px solid white;
+}
+/* Theater mode chat toggle button - increase opacity on mouse hover */
+.app-main.theatre #main_col #right_close:hover {
+    display: block;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    opacity: 0.7;
+    border: 2px solid white;
+}
