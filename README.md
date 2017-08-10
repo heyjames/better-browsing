@@ -9,6 +9,8 @@ CSS for a clean, simple, uncluttered Twitch Chat using the Stylish Chrome Extens
 * Mature audiences overlay
 * Buffering stream pop-up
 * Bits
+* Turn on browser notifications pop-up
+* TwitchCon tickets pop-up
 
 ### Features
 * Large font messages
