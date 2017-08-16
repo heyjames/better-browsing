@@ -4,7 +4,7 @@ www.youtube.com##.ytp-button.ytp-remote-button
 
 ! Removes the awful "More Videos" overlay that appears over a paused, embedded YouTube video
 ! 7/15/2017, 7:33:00 PM
-! ##.ytp-pause-overlay
+##.ytp-pause-overlay
 
 
 
