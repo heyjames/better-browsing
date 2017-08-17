@@ -92,3 +92,12 @@ div[class^="player-buttons-right"], div[class*=" player-buttons-right"] {
     transform: scale(1.5);
     margin-right: 12%;
 }
+
+
+/* Hide Upcoming Events panel (Overwatch game directory page) */
+.col-xs-9 {
+    width: 100%;
+}
+.tower .col-xs-3 {
+    display: none;
+}
