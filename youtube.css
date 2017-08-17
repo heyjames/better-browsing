@@ -14,3 +14,10 @@ button[title="Play on TV"] {
 .sbsb_a ul li:hover {
     background-color: rgb(71, 71, 71) !important;
 }
+
+
+/* Restore color to YouTube's new layout's dark mode's autoplay button */
+paper-toggle-button[checked]:not([disabled]) .toggle-bar.paper-toggle-button {
+    opacity: 1;
+    background-color: red;
+}
