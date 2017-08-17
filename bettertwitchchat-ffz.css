@@ -101,3 +101,12 @@ div[class^="player-buttons-right"], div[class*=" player-buttons-right"] {
 .tower .col-xs-3 {
     display: none;
 }
+
+
+/* Stroke stream info title in theater mode  */
+div[class^="player-streaminfo__title qa-stream-title"], div[class^="player-streaminfo__viewers"] {
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
