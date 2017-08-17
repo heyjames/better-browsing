@@ -25,24 +25,54 @@ paper-toggle-button[checked]:not([disabled]) .toggle-bar.paper-toggle-button {
 
 /* Highlight Show More button */
 .more-button {
+    opacity: 0.90;
     color: red !important;
 }
 /* Highlight Show Less button */
 .less-button {
+    opacity: 0.90;
     color: red !important;
 }
 /* Highlight view count */
 .view-count {
     color: #00ff00 !important;
+    font-size: 22px;
 }
 /* Green Thumbs up */
-path[d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"] {
+/* path[d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"] {
     color: green !important;
-    opacity: 0.5;
-}
+    opacity: 0.7;
+} */
 
 /* Red Thumbs down */
-path[d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"] {
+/* path[d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"] {
     color: red !important;
-    opacity: 0.55;
+    opacity: 0.35;
+} */
+/* Number of subscribers */
+span[class="deemphasize style-scope yt-formatted-string"] {
+    color: red !important;
+    font-size: 18px;
+}
+/* Recolor Subscribed button */
+paper-button[subscribed].ytd-subscribe-button-renderer, paper-button[subscribed].ytd-subscribe-button-renderer:hover {
+    background-color: rgb(17,17,17);
+    color: rgba(136,136,136,0.4) !important;
+    border: 1px solid rgba(136,136,136,0.4);
+}
+/* Recolor Subscribe button */
+paper-button.ytd-subscribe-button-renderer {
+    background-color: rgb(17,17,17);
+    color: white !important;
+    border: 3px solid white;
+}
+/* Recolor Subscribe button Hover */
+paper-button.ytd-subscribe-button-renderer:hover {
+    color: white !important;
+    background-color: rgb(30,30,30);
+    border: 3px solid white;
+}
+/* Hide notifications icon */
+ytd-toggle-button-renderer.style-grey-text[is-icon-button] {
+    display: none;
 }
