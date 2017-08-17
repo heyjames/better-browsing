@@ -110,6 +110,11 @@ div[class^="player-streaminfo__title qa-stream-title"], div[class^="player-strea
     font-size: 16px;
     font-weight: bold;
 }
+/* Remove stroke on game name */
+a[class="player-text-link player-text-link--no-color qa-game-name"] {
+    text-shadow: none;
+    color: #a68ed2;
+}
 
 
 /* Move VOD seek bar up to compensate for enlarged player controls */
