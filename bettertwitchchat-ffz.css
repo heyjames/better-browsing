@@ -86,11 +86,11 @@
 /* Increase size of player buttons */
 div[class^="player-buttons-left"], div[class*=" player-buttons-left"] {
     transform: scale(1.5);
-    margin-left: 8%;
+    margin-left: 9%;
 }
 div[class^="player-buttons-right"], div[class*=" player-buttons-right"] {
     transform: scale(1.5);
-    margin-right: 12%;
+    margin-right: 11%;
 }
 
 
