@@ -122,3 +122,11 @@ a[class="player-text-link player-text-link--no-color qa-game-name"] {
     display: block;
     margin-bottom: 50px;
 }
+
+/* Transparent top overlay until mouseover */
+#top-bar {
+    opacity: 0.2;
+}
+#top-bar:hover {
+    opacity: 1;
+}
