@@ -20,26 +20,26 @@
 }
 
 /* Disable chat rules pop-up */
-.ember-chat .chat-interface .chat-rules {
+/* .ember-chat .chat-interface .chat-rules {
     display: none;
-}
+} */
 
-/* More pop-ups! Stop with all these pop-ups that cover the video! */
-.extension-container {
+/* Disable MasterOverwatch overlay */
+/* .extension-container {
     display:none;
-}
+} */
 
 
-/* Non-theater mode global look */
+/* Non-theater - Chat toggle button overall redesign */
 #right_close {
-    top: 75px; /* Default: 15px */
+    top: 75px;
     right: 5px;
     height: 80px;
     background-color: red;
     opacity: 1;
     border: 2px solid white;
 }
-/* Non-theater mode (chat hidden) triangle color */
+/* Non-theater - Open chat toggle button - Triangle color */
 #right_close.closed:before {
     content: '';
     display: inline-block;
@@ -50,7 +50,7 @@
     border-left-width: 0;
     border-right-color: rgb(255, 255, 255);
 }
-/* Non-theater mode (chat showing) triangle color */
+/* Non-theater - Close chat toggle button - Triangle color */
 #right_close:before {
     content: '';
     display: inline-block;
@@ -61,7 +61,7 @@
     border-right-width: 0;
     border-left-color: rgb(255, 255, 255);
 }
-/* Theater mode chat toggle button - global look */
+/* Theater - Chat toggle button overall redesign */
 .app-main.theatre #main_col:hover #right_close {
     display: block;
     background-color: red;
@@ -71,7 +71,7 @@
     opacity: 0.2;
     border: 2px solid white;
 }
-/* Theater mode chat toggle button - increase opacity on mouse hover */
+/* Theater - Chat toggle button - Increase opacity on mouse hover */
 .app-main.theatre #main_col #right_close:hover {
     display: block;
     background-color: red;
@@ -83,7 +83,7 @@
 }
 
 
-/* Increase size of player buttons */
+/* Increase size of video player's buttons */
 div[class^="player-buttons-left"], div[class*=" player-buttons-left"] {
     transform: scale(1.5);
     margin-left: 9%;
@@ -91,6 +91,13 @@ div[class^="player-buttons-left"], div[class*=" player-buttons-left"] {
 div[class^="player-buttons-right"], div[class*=" player-buttons-right"] {
     transform: scale(1.5);
     margin-right: 11%;
+}
+
+
+/* Move VOD seek bar up to compensate for enlarged player controls */
+.player-seek {
+    display: block;
+    margin-bottom: 50px;
 }
 
 
@@ -111,16 +118,13 @@ div[class^="player-streaminfo__title qa-stream-title"], div[class^="player-strea
     font-weight: bold;
 }
 /* Remove stroke on game name */
-a[class="player-text-link player-text-link--no-color qa-game-name"] {
+/* a[class="player-text-link player-text-link--no-color qa-game-name"] {
     text-shadow: none;
     color: #a68ed2;
-}
-
-
-/* Move VOD seek bar up to compensate for enlarged player controls */
-.player-seek {
-    display: block;
-    margin-bottom: 50px;
+} */
+/* Stroke streamer's username */
+a[class="player-text-link player-text-link--no-color qa-display-name"] {
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 
 /* Transparent top overlay until mouseover */
@@ -129,4 +133,28 @@ a[class="player-text-link player-text-link--no-color qa-game-name"] {
 }
 #top-bar:hover {
     opacity: 1;
+}
+
+
+/* Remove black gradient overlay (bottom) */
+.player-controls-bottom {
+    background: none !important;
+    bottom: 0;
+    padding: 0;
+    padding-top: 4em;
+    z-index: 3;
+}
+
+/* Remove black gradient overlay (top) */
+.player-controls-top {
+    background: none !important;
+    top: 0;
+    padding: 1.5em;
+    margin-bottom: 5.5em;
+}
+
+
+/* Increase height of chat when taking a video clip */
+.view-clip-temp-wrap {
+    height: 750px !important;
 }
