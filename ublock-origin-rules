@@ -55,3 +55,7 @@ www.twitch.tv##.extension-container
 ! Remove "Enjoying the show? Log in to follow this channel..."
 ! 8/18/2017, 8:45:35 PM
 www.twitch.tv##.brick--pd-lg.brick--marked.brick
+
+! Remove "Learning a new hero? Searching for Zarya mains? Find streams with the new Hero filter" notification at the Overwatch game directory page.
+! 8/19/2017, 3:27:41 PM
+www.twitch.tv##.mg-b-2.typeset.brick--theme-white.brick--marked.brick
