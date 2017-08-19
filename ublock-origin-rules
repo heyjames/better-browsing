@@ -1,37 +1,57 @@
-! Removes the Chromecast button on the YouTube video player
+! Remove the Chromecast button on the video player
 ! 6/28/2017, 10:28:42 AM
 www.youtube.com##.ytp-button.ytp-remote-button
 
-! Removes the awful "More Videos" overlay that appears over a paused, embedded YouTube video
+! Remove the "More Videos" overlay that appears over a paused, embedded YouTube video
 ! 7/15/2017, 7:33:00 PM
 ##.ytp-pause-overlay
 
 
 
-! Removes the right sidebar for better zoom viewing
+! Remove the right sidebar for better zoomed viewing in snapped windows
 ! 6/28/2017, 10:33:14 AM
 www.reddit.com##.side
 
 
 
-! Removes the top banner
+! Remove the top ad banner
 ! 7/6/2017, 8:55:23 PM
 coinmarketcap.com###icobanner-wrapper
 
 
 
-! Removes the Chromecast button on the Twitch video player
+! Remove the Chromecast button on the video player
 ! 6/28/2017, 10:31:28 AM
 www.twitch.tv##.js-chromecast-button.player-button--chromecast.player-button
 
-! Removes the Events panel that takes up so much space on Twitch's Overwatch directory
+! Remove the Events panel in the Overwatch directory
 ! 6/28/2017, 11:01:38 AM
 www.twitch.tv##.pd-l-2.flex-grow-0
 
-! Shut up about TwitchCon tickets
+! Remove TwitchCon tickets pop-up
 ! 7/10/2017, 10:46:39 AM
 www.twitch.tv###noty_bottomCenter_layout_container > li
 
-! Removes Twitch dimmed overlay when video is paused
+! Remove dim overlay when video is paused
 ! 7/18/2017, 6:15:57 PM
 www.twitch.tv##.js-paused-overlay.player-play-overlay.player-overlay
+
+! Remove copyrighted audio pop-up
+! 8/18/2017, 8:11:56 PM
+www.twitch.tv##.player-alert
+
+! Remove chat rules pop-up
+! 8/18/2017, 8:16:27 PM
+www.twitch.tv##.ember-view.js-chat-rules.chat-rules
+
+! Remove "Follow and get notified when ____ is live"
+! 8/18/2017, 8:34:27 PM
+www.twitch.tv##.pl-pinned-panel--animate.pl-pinned-panel
+
+! Remove MasterOverwatch overlay
+! 8/18/2017, 8:43:58 PM
+www.twitch.tv##.extension-container
+
+! Remove "Enjoying the show? Log in to follow this channel..."
+! 8/18/2017, 8:45:35 PM
+www.twitch.tv##.brick--pd-lg.brick--marked.brick
