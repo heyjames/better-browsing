@@ -39,7 +39,8 @@ Note: bettertwitchchat.css has a 1440p-only feature enabled by default.
 * Twitch - Remove chat rules pop-up
 * Twitch - Remove "Follow and get notified when ____ is live"
 * Twitch - Remove MasterOverwatch overlay
-* Twitch - Removes "Enjoying the show? Log in to follow this channel..."
+* Twitch - Remove "Enjoying the show? Log in to follow this channel..."
+* Twitch - Remove "Learning a new hero? Searching for Zarya mains? Find streams with the new Hero filter" notification at the Overwatch game directory page.
 
 ### To do
 Now if only I can figure out how to replace the badges that I allow (moderator, staff) with color-coded backgrounds instead of showing a badge.
