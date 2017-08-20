@@ -59,3 +59,11 @@ www.twitch.tv##.brick--pd-lg.brick--marked.brick
 ! Remove "Learning a new hero? Searching for Zarya mains? Find streams with the new Hero filter" notification at the Overwatch game directory page.
 ! 8/19/2017, 3:27:41 PM
 www.twitch.tv##.mg-b-2.typeset.brick--theme-white.brick--marked.brick
+
+! Remove "Playing past broadcast from ____" when a streamer broadcasts a VOD
+! 8/19/2017, 5:49:04 PM
+www.twitch.tv##.cn-watchparty__video-title.align-items-center.flex-nowrap.flex.pd-1
+
+! Remove "Playing past broadcast from ____" when a streamer broadcasts a VOD in theater mode
+! 8/19/2017, 5:50:18 PM
+www.twitch.tv##.player-streaminfo__watchparty
