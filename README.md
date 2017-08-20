@@ -1,6 +1,6 @@
 The CSS files clean up, simplify, or hide elements within websites using the Stylish Chrome Extension. The "ffz" in the bettertwitchchat-ffz.css file indicates it should be used when the FrankerFaceZ Chrome extension is also installed. Additionally, some ublock origin rules aim to remove many of Twitch's distracting/obtrusive elements.
 
-### List of Twitch's notifications/pop-ups avaiable to hide
+### List of Twitch's notifications/pop-ups I noticed
 * MasterOverwatch pop-up/overlay
 * Chat Rules pop-up
 * Follow this streamer pop-up
