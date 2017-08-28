@@ -67,3 +67,50 @@ www.twitch.tv##.cn-watchparty__video-title.align-items-center.flex-nowrap.flex.p
 ! Remove "Playing past broadcast from ____" when a streamer broadcasts a VOD in theater mode
 ! 8/19/2017, 5:50:18 PM
 www.twitch.tv##.player-streaminfo__watchparty
+
+
+
+! Remove "Sign Up to get updates" bottom static bar
+! 8/21/2017, 1:39:14 AM
+medium.com##.js-stickyFooter.u-xs-paddingRight10.u-xs-paddingLeft10.u-zIndexMetabar.u-paddingBottom10.u-paddingTop10.u-borderBox.u-boxShadowTop.u-backgroundWhite.u-sizeFullWidth.u-bottom0.u-fixed
+
+! Remove Sign-Up prompt
+! 8/22/2017, 5:26:21 PM
+stackoverflow.com##.hero-container.s-hero
+
+! Remove top fixed bar
+! 8/17/2017, 1:25:02 PM
+www.theverge.com##.tab-bar-fixed.c-tab-bar
+
+! Remove fixed bars
+! 8/21/2017, 6:20:30 PM
+medium.com##.overlay--lighter.overlay
+
+! Remove fixed bars
+! 8/21/2017, 6:20:37 PM
+medium.com##.js-stickyFooter.u-xs-paddingRight10.u-xs-paddingLeft10.u-zIndexMetabar.u-paddingBottom10.u-paddingTop10.u-borderBox.u-boxShadowTop.u-backgroundWhite.u-sizeFullWidth.u-bottom0.u-fixed
+
+! Remove fixed bars
+! 8/21/2017, 6:20:46 PM
+medium.com##.u-xs-sizeFullViewportWidth.u-backgroundTransparentWhiteDarkest.u-fixed.u-boxShadowBottomThinLighter.js-metabar.u-clearfix.metabar
+
+! Remove fixed bars
+! 8/21/2017, 6:20:56 PM
+medium.com##.u-xs-height56.u-height65.js-metabarSpacer.metabar--spacer.metabar
+
+! Remove fixed bars
+! 8/21/2017, 6:21:16 PM
+medium.com##.u-fixed.u-transition--fadeIn300.u-sm-hide.u-foreground.js-postShareWidget > ul
+
+! Remove "Need to post something that doesn't quite fit in a specific community?" in your saved links
+! 8/22/2017, 3:32:40 PM
+www.reddit.com##.profilebetabar.infobar
+
+! Remove Overwatch Events panel
+! 8/24/2017, 10:51:11 PM
+www.twitch.tv##.featured-events-layout__column
+
+! Remove Overwatch Events panel (2)
+! 8/24/2017, 10:51:18 PM
+www.twitch.tv##.mg-l-3.flex-shrink-0.flex-grow-0
+
