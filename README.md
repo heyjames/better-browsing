@@ -14,6 +14,9 @@ The CSS files clean up, simplify, or hide elements within websites using the Sty
 * Follow and get notified when ____ is live
 * "Learning a new hero? Searching for Zarya mains? Find streams with the new Hero filter" notification
 * "Playing past broadcast from ____" when a streamer live streams a VOD
+* "Manage all your clips from here" pop-up
+* "New on Clips: Playback Speeds!" pop-up
+* Remove Interactions button from player buttons
 
 ### bettertwitchchat-ffz.css Changes
 * (legibilty) Brightened chat text color
@@ -44,6 +47,9 @@ Note: bettertwitchchat.css has a 1440p-only feature enabled by default.
 * Twitch - Remove "Enjoying the show? Log in to follow this channel..."
 * Twitch - Remove "Learning a new hero? Searching for Zarya mains? Find streams with the new Hero filter" notification at the Overwatch game directory page.
 * Twitch - Remove "Playing past broadcast from ____" when a streamer broadcasts a VOD
+* Twitch - "Manage all your clips from here" pop-up
+* Twitch - "New on Clips: Playback Speeds!" pop-up
+* Twitch - Remove Interactions button from player buttons
 
 ### To do
 Replace the badges that I currently allow (moderator, staff) with color-coded backgrounds instead of showing a badge, so all Twitch usernames are consistent and aligned to the left side of the chat box properly.
