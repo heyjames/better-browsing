@@ -121,3 +121,15 @@ clips.twitch.tv##.cur-pointer.show.icon--white.balloon--purple.balloon--right.ba
 ! Remove "New on Clips: Playback Speeds!" pop-up
 ! 8/27/2017, 8:14:29 PM
 clips.twitch.tv##.pl-upsell-tip.balloon--sm.balloon--purple.balloon--right.balloon--up.balloon
+
+! Remove Get Desktop App
+! 8/30/2017, 5:05:01 AM
+www.twitch.tv##.flex__item:nth-of-type(3) > .block.top-nav__nav-link
+
+! Remove Stickied Comment (1)
+! 8/30/2017, 4:32:03 PM
+www.reddit.com##.score-hidden.comment.controversial.noncollapsed.stickied[class*="id-t1_"].thing
+
+! Remove Stickied Comment (2)
+! 8/30/2017, 4:32:03 PM
+www.reddit.com##.score-hidden.comment.noncollapsed.stickied[class*="id-t1_"].thing
