@@ -35,6 +35,7 @@ Note: bettertwitchchat.css has a 1440p-only feature enabled by default.
 * YouTube - Remove Chromecast button
 * Youtube - Remove "More Videos" overlay on embedded videos when paused
 * Reddit - Remove the sidebar
+* Reddit - Remove Stickied comments from moderators
 * CoinMarketCap - Remove the top banner
 * Twitch - Remove Chromecast button
 * Twitch - Remove Events panel in Overwatch's game directory
