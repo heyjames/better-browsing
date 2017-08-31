@@ -133,3 +133,15 @@ www.reddit.com##.score-hidden.comment.controversial.noncollapsed.stickied[class*
 ! Remove Stickied Comment (2)
 ! 8/30/2017, 4:32:03 PM
 www.reddit.com##.score-hidden.comment.noncollapsed.stickied[class*="id-t1_"].thing
+
+! Remove "MAL Supporter is now accepting PayPal" button
+! 8/30/2017, 5:16:05 PM
+||myanimelist.cdn-dena.com/images/membership/banner2.gif?v=1$image
+
+! Remove "Hide Ads" button
+! 8/30/2017, 5:16:13 PM
+myanimelist.net##.btn-mal-service
+
+! Remove "Notice us, senpai..." ad complaints
+! 8/30/2017, 5:18:03 PM
+myanimelist.net##._unit
