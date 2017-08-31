@@ -51,6 +51,8 @@ Note: bettertwitchchat.css has a 1440p-only feature enabled by default.
 * Twitch - "Manage all your clips from here" pop-up
 * Twitch - "New on Clips: Playback Speeds!" pop-up
 * Twitch - Remove Interactions button from player buttons
+* Medium - Left Social bar
+* Medium - Top and bottom static bars
 
 ### To do
 Replace the badges that I currently allow (moderator, staff) with color-coded backgrounds instead of showing a badge, so all Twitch usernames are consistent and aligned to the left side of the chat box properly.
