@@ -134,10 +134,6 @@ www.reddit.com##.score-hidden.comment.controversial.noncollapsed.stickied[class*
 ! 8/30/2017, 4:32:03 PM
 www.reddit.com##.score-hidden.comment.noncollapsed.stickied[class*="id-t1_"].thing
 
-! Remove "MAL Supporter is now accepting PayPal" button
-! 8/30/2017, 5:16:05 PM
-||myanimelist.cdn-dena.com/images/membership/banner2.gif?v=1$image
-
 ! Remove "Hide Ads" button
 ! 8/30/2017, 5:16:13 PM
 myanimelist.net##.btn-mal-service
@@ -145,3 +141,20 @@ myanimelist.net##.btn-mal-service
 ! Remove "Notice us, senpai..." ad complaints
 ! 8/30/2017, 5:18:03 PM
 myanimelist.net##._unit
+
+! Remove "MAL Supporter is now accepting PayPal" button
+! 9/3/2017, 9:17:16 PM https://myanimelist.net/
+myanimelist.net##.banner-header-anime-straming
+
+! Remove interactive player button
+! 9/4/2017, 4:20:47 PM
+www.twitch.tv###js-extension-settings > .pl-flex > .player-button
+
+! Remove corner ad
+! 9/5/2017, 9:01:35 PM
+coinmarketcap.com###ct_70unrF
+
+! Remove Subscribe button in comments page
+! 9/8/2017, 5:00:52 PM
+www.reddit.com##.RESSubscriptionButton
+
