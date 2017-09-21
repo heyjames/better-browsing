@@ -8,15 +8,32 @@
 /* @user_name mentions are light green */
 .ffz-clickable-mentions .chat-display .chat-line .user-token, .ffz-clickable-mentions .ffz-recent-messages .chat-line .user-token, .ffz-clickable-mentions .pinned-cheers .chat-line .user-token {
     color: lightgreen !important;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
 }
 
 /* Unbold names and make them red colored */
 .ember-chat .chat-messages .chat-line .from, .ember-chat .chat-messages .chat-line .to {
-/*     font-size: 18px; */
+    width: 1px !important;
+    font-size: 12px;
     font-weight: normal;
     color: red !important;
+}
+
+/* Remove colon */
+.colon {
+    display: none;
+}
+
+/* Thicker subscription message */
+.theme--dark .special-message {
+    background: #201c2b;
+    border-left:  10px solid lightgreen;
+}
+
+/* Purify chat message for users typing with "/me" */
+span[class="message has-color"] {
+    color: lightgray !important;
 }
 
 /* Disable chat rules pop-up */
@@ -68,7 +85,7 @@
     width: 50px;
     height: 50px;
     margin-right: 10px;
-    opacity: 0.2;
+    opacity: 0.5;
     border: 2px solid white;
 }
 /* Theater - Chat toggle button - Increase opacity on mouse hover */
@@ -78,7 +95,7 @@
     width: 50px;
     height: 50px;
     margin-right: 10px;
-    opacity: 0.7;
+    opacity: 1;
     border: 2px solid white;
 }
 
