@@ -7,18 +7,6 @@ www.youtube.com##.ytp-button.ytp-remote-button
 ! 7/15/2017, 7:33:00 PM
 ##.ytp-pause-overlay
 
-! Remove Try YouTube TV
-! 9/16/2017, 4:02:27 AM
-www.youtube.com##.theater-mode-mealbar.float-mealbar.visible.ytd-watch.style-scope
-
-! Remove Try YouTube TV (2)
-! 9/19/2017, 5:56:33 AM
-www.youtube.com##.float-mealbar.visible.ytd-watch.style-scope
-
-! Remove Try Youtube Red
-! 11/1/2017, 6:57:11 PM https://www.youtube.com/watch?v=ULqY6yXn2S4
-www.youtube.com##.ytd-popup-container.style-scope
-
 
 
 ! Reddit
