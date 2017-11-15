@@ -1,3 +1,12 @@
+/* Enlarge "hide all child comments" and change color to red */
 a[class^="noCtrlF res-toggleAllChildren"] {
     color: red !important;
+    font-size: 18px;
+}
+
+/* With RES, there is a duplicate pop-up on hover over usernames.
+   This removes the official Reddit pop-up. */
+Remove non-RES username pop-up
+.author-tooltip {
+    visibility: hidden !important;
 }
