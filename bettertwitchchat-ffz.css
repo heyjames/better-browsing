@@ -108,3 +108,20 @@ button[class^="right-column__toggle-visibility block flex-grow-0 flex-shrink-0 a
     opacity: 1;
     border: 2px solid white;
 }
+
+/* Remove Subscriber, Prime, Bits, Turbo, glhf badges from chat */
+span[data-badge^="subscriber"] {
+    display: none !important;
+}
+span[data-badge^="premium"] {
+    display: none !important;
+}
+span[data-badge^="bits"] {
+    display: none !important;
+}
+span[data-badge^="turbo"] {
+    display: none !important;
+}
+span[data-badge^="glhf-pledge"] {
+    display: none !important;
+}
