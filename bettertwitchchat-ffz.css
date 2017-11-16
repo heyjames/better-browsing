@@ -1,104 +1,29 @@
 /* A slim version for use with FrankerFaceZ Chrome extension */
 
 /* Chat text */
-.ember-chat .chat-messages .chat-line {
+span[class^="message"] {
     color: lightgray;
 }
 
-/* @user_name mentions are light green */
-.ffz-clickable-mentions .chat-display .chat-line .user-token, .ffz-clickable-mentions .ffz-recent-messages .chat-line .user-token, .ffz-clickable-mentions .pinned-cheers .chat-line .user-token {
-    color: lightgreen !important;
-    font-size: 12px;
-    font-weight: normal;
-}
-
 /* Unbold names and make them red colored */
-.ember-chat .chat-messages .chat-line .from, .ember-chat .chat-messages .chat-line .to {
+a[class^="chat-author__display-name"] {
     width: 1px !important;
     font-size: 12px;
     font-weight: normal;
     color: red !important;
 }
 
-/* Remove colon */
-.colon {
-    display: none;
-}
-
-/* Thicker subscription message */
-.theme--dark .special-message {
-    background: #201c2b;
-    border-left:  10px solid lightgreen;
+/* @user_name mentions are light green */
+strong[class^="chat-line__message-mention"] {
+    color: lightgreen !important;
+    font-size: 12px;
+    font-weight: normal;
 }
 
 /* Purify chat message for users typing with "/me" */
 span[class="message has-color"] {
     color: lightgray !important;
 }
-
-/* Disable chat rules pop-up */
-/* .ember-chat .chat-interface .chat-rules {
-    display: none;
-} */
-
-/* Disable MasterOverwatch overlay */
-/* .extension-container {
-    display:none;
-} */
-
-
-/* Non-theater - Chat toggle button overall redesign */
-#right_close {
-    top: 75px;
-    right: 5px;
-    height: 80px;
-    background-color: red;
-    opacity: 1;
-    border: 2px solid white;
-}
-/* Non-theater - Open chat toggle button - Triangle color */
-#right_close.closed:before {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border: transparent solid 6px;
-    border-right-width: 6px;
-    border-left-width: 0;
-    border-right-color: rgb(255, 255, 255);
-}
-/* Non-theater - Close chat toggle button - Triangle color */
-#right_close:before {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border: transparent solid 6px;
-    border-left-width: 6px;
-    border-right-width: 0;
-    border-left-color: rgb(255, 255, 255);
-}
-/* Theater - Chat toggle button overall redesign */
-.app-main.theatre #main_col:hover #right_close {
-    display: block;
-    background-color: red;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    opacity: 0.5;
-    border: 2px solid white;
-}
-/* Theater - Chat toggle button - Increase opacity on mouse hover */
-.app-main.theatre #main_col #right_close:hover {
-    display: block;
-    background-color: red;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    opacity: 1;
-    border: 2px solid white;
-}
-
 
 /* Increase size of video player's buttons */
 div[class^="player-buttons-left"], div[class*=" player-buttons-left"] {
@@ -110,38 +35,17 @@ div[class^="player-buttons-right"], div[class*=" player-buttons-right"] {
     margin-right: 11%;
 }
 
-
-/* Move VOD seek bar up to compensate for enlarged player controls */
-.player-seek {
-    display: block;
-    margin-bottom: 50px;
-}
-
-
-/* Hide Upcoming Events panel (Overwatch game directory page) */
-.col-xs-9 {
-    width: 100%;
-}
-.tower .col-xs-3 {
-    display: none;
-}
-
-
-/* Stroke stream info title in theater mode  */
+/*  Stream info title in theater mode  */
 div[class^="player-streaminfo__title qa-stream-title"], div[class^="player-streaminfo__viewers"] {
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-    color: white;
+    color: purple;
     font-size: 16px;
     font-weight: bold;
 }
-/* Remove stroke on game name */
-/* a[class="player-text-link player-text-link--no-color qa-game-name"] {
-    text-shadow: none;
-    color: #a68ed2;
-} */
-/* Stroke streamer's username */
-a[class="player-text-link player-text-link--no-color qa-display-name"] {
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+
+/* Streamer's username and game text */
+.player a.player-text-link--no-color {
+    color: purple;
 }
 
 /* Transparent top overlay until mouseover */
@@ -152,6 +56,11 @@ a[class="player-text-link player-text-link--no-color qa-display-name"] {
     opacity: 1;
 }
 
+/* Move VOD seek bar up to compensate for enlarged player controls */
+.player-seek {
+    display: block;
+    margin-bottom: 50px;
+}
 
 /* Remove black gradient overlay (bottom) */
 .player-controls-bottom {
@@ -170,8 +79,32 @@ a[class="player-text-link player-text-link--no-color qa-display-name"] {
     margin-bottom: 5.5em;
 }
 
+/* Hide Upcoming Events panel (Overwatch game directory page) */
+.col-xs-9 {
+    width: 100%;
+}
+.tower .col-xs-3 {
+    display: none;
+}
 
-/* Increase height of chat when taking a video clip */
-.view-clip-temp-wrap {
-    height: 750px !important;
+/* Theater - Chat toggle button overall redesign + hover */
+button[class^="right-column__toggle-visibility block flex-grow-0 flex-shrink-0 absolute"] {
+    display: block;
+    background-color: red;
+    width: 74px;
+    height: 22px;
+    margin-left: -26px;
+    margin-top: 82px;
+    opacity: 0.1;
+    border: 2px solid white;
+}
+button[class^="right-column__toggle-visibility block flex-grow-0 flex-shrink-0 absolute"]:hover {
+    display: block;
+    background-color: red;
+    width: 74px;
+    height: 22px;
+    margin-left: -26px;
+    margin-top: 82px;
+    opacity: 1;
+    border: 2px solid white;
 }
