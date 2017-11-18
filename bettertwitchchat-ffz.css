@@ -38,7 +38,6 @@ div[class^="player-buttons-right"], div[class*=" player-buttons-right"] {
 /*  Stream info title in theater mode  */
 div[class^="player-streaminfo__title qa-stream-title"], div[class^="player-streaminfo__viewers"] {
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-    color: purple;
     font-size: 16px;
     font-weight: bold;
 }
@@ -62,7 +61,7 @@ div[class^="player-streaminfo__title qa-stream-title"], div[class^="player-strea
     margin-bottom: 50px;
 }
 
-/* Remove black gradient overlay (bottom) */
+/* Remove black gradient overlay when video is paused (bottom) */
 .player-controls-bottom {
     background: none !important;
     bottom: 0;
@@ -71,7 +70,7 @@ div[class^="player-streaminfo__title qa-stream-title"], div[class^="player-strea
     z-index: 3;
 }
 
-/* Remove black gradient overlay (top) */
+/* Remove black gradient overlay when video is paused (top) */
 .player-controls-top {
     background: none !important;
     top: 0;
