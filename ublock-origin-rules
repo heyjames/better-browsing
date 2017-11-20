@@ -34,6 +34,7 @@ www.reddit.com##.RESSubscriptionButton
 www.reddit.com##.author-tooltip
 
 
+
 ! CoinMarketCap
 ! Remove the top ad banner
 ! 7/6/2017, 8:55:23 PM
@@ -42,89 +43,6 @@ coinmarketcap.com###icobanner-wrapper
 ! Remove corner ad
 ! 9/5/2017, 9:01:35 PM
 coinmarketcap.com###ct_70unrF
-
-
-
-! Twitch
-! Remove the Chromecast button on the video player
-! 6/28/2017, 10:31:28 AM
-! www.twitch.tv##.js-chromecast-button.player-button--chromecast.player-button
-
-! Remove the Events panel in the Overwatch directory
-! 6/28/2017, 11:01:38 AM
-! www.twitch.tv##.pd-l-2.flex-grow-0
-
-! Remove TwitchCon tickets pop-up
-! 7/10/2017, 10:46:39 AM
-! www.twitch.tv###noty_bottomCenter_layout_container > li
-
-! Remove dim overlay when video is paused
-! 7/18/2017, 6:15:57 PM
-! www.twitch.tv##.js-paused-overlay.player-play-overlay.player-overlay
-
-! Remove copyrighted audio pop-up
-! 8/18/2017, 8:11:56 PM
-! www.twitch.tv##.player-alert
-
-! Remove chat rules pop-up
-! 8/18/2017, 8:16:27 PM
-! www.twitch.tv##.ember-view.js-chat-rules.chat-rules
-
-! Remove "Follow and get notified when ____ is live"
-! 8/18/2017, 8:34:27 PM
-! www.twitch.tv##.pl-pinned-panel--animate.pl-pinned-panel
-
-! Remove MasterOverwatch overlay
-! 8/18/2017, 8:43:58 PM
-! www.twitch.tv##.extension-container
-
-! Remove "Enjoying the show? Log in to follow this channel..."
-! 8/18/2017, 8:45:35 PM
-! www.twitch.tv##.brick--pd-lg.brick--marked.brick
-
-! Remove "Learning a new hero? Searching for Zarya mains? Find streams with the new Hero filter" notification at the Overwatch game directory page.
-! 8/19/2017, 3:27:41 PM
-! www.twitch.tv##.mg-b-2.typeset.brick--theme-white.brick--marked.brick
-
-! Remove "Playing past broadcast from ____" when a streamer broadcasts a VOD
-! 8/19/2017, 5:49:04 PM
-! www.twitch.tv##.cn-watchparty__video-title.align-items-center.flex-nowrap.flex.pd-1
-
-! Remove "Playing past broadcast from ____" when a streamer broadcasts a VOD in theater mode
-! 8/19/2017, 5:50:18 PM
-! www.twitch.tv##.player-streaminfo__watchparty
-
-! Remove Overwatch Events panel
-! 8/24/2017, 10:51:11 PM
-! www.twitch.tv##.featured-events-layout__column
-
-! Remove Overwatch Events panel (2)
-! 8/24/2017, 10:51:18 PM
-! www.twitch.tv##.mg-l-3.flex-shrink-0.flex-grow-0
-
-! Remove "Manage all your clips from here" pop-up
-! 8/27/2017, 8:14:22 PM
-! clips.twitch.tv##.cur-pointer.show.icon--white.balloon--purple.balloon--right.balloon--down.balloon
-
-! Remove "New on Clips: Playback Speeds!" pop-up
-! 8/27/2017, 8:14:29 PM
-! clips.twitch.tv##.pl-upsell-tip.balloon--sm.balloon--purple.balloon--right.balloon--up.balloon
-
-! Remove Get Desktop App
-! 8/30/2017, 5:05:01 AM
-! www.twitch.tv##.flex__item:nth-of-type(3) > .block.top-nav__nav-link
-
-! Remove Extensions player button
-! 10/3/2017, 6:57:16 PM
-! www.twitch.tv##.pl-flex:nth-of-type(2) > .player-button > span > .pl-settings-icon
-
-! Remove Extensions player button
-! 10/3/2017, 6:57:21 PM
-! www.twitch.tv##.pl-flex:nth-of-type(2) > .player-button
-
-! Remove interactive player button
-! 9/4/2017, 4:20:47 PM
-! www.twitch.tv###js-extension-settings > .pl-flex > .player-button
 
 
 
@@ -199,10 +117,6 @@ www.twitch.tv##.featured-events-layout__column
 ! 11/17/2017, 2:00:13 AM
 www.twitch.tv##.pl-flex:nth-of-type(2) > .player-button
 
-! Remove "Get Desktop" link on menu bar
-! 11/17/2017, 6:38:44 PM
-www.twitch.tv##.top-nav__nav-link:nth-of-type(2)
-
 ! Remove "Try Prime" link on menu bar
 ! 11/17/2017, 6:39:24 PM
 www.twitch.tv##.top-nav__nav-link:nth-of-type(3)
@@ -211,10 +125,6 @@ www.twitch.tv##.top-nav__nav-link:nth-of-type(3)
 ! 11/17/2017, 6:40:42 PM
 www.twitch.tv##.top-nav__nav-link:nth-of-type(4)
 
-! Remove "Live Hosts" section from "Following" page
-! 11/17/2017, 6:41:42 PM
-www.twitch.tv##.pd-3 > div:nth-of-type(3)
-
 ! Remove "You can now follow your favorite games! Find Out More!" section from "Following" page
 ! 11/17/2017, 6:42:10 PM
 www.twitch.tv##.pd-y-3.mg-y-2.flex-column.flex.align-items-center.full-width.c-background-alt-2
@@ -222,4 +132,3 @@ www.twitch.tv##.pd-y-3.mg-y-2.flex-column.flex.align-items-center.full-width.c-b
 ! Remove "Based on your viewing history" section from "Following" page
 ! 11/17/2017, 6:42:21 PM
 www.twitch.tv##.pd-3 > div:nth-of-type(5)
-
