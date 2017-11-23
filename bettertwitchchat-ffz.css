@@ -124,3 +124,32 @@ span[data-badge^="turbo"] {
 span[data-badge^="glhf-pledge"] {
     display: none !important;
 }
+
+/* VOD */
+img[alt^="Subscriber"] {
+    display: none !important;
+}
+
+img[alt^="Twitch Prime"] {
+    display: none !important;
+}
+
+img[alt^="Turbo"] {
+    display: none !important;
+}
+
+img[alt^="cheer"] {
+    display: none !important;
+}
+
+img[alt^="GLHF Pledge"] {
+    display: none !important;
+}
+
+/* VOD: Unbold names and make them red colored */
+span[class^="chat-author__display-name"] {
+    width: 1px !important;
+    font-size: 12px;
+    font-weight: normal;
+    color: red !important;
+}
