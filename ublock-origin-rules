@@ -132,3 +132,19 @@ www.twitch.tv##.pd-y-3.mg-y-2.flex-column.flex.align-items-center.full-width.c-b
 ! Remove "Based on your viewing history" section from "Following" page
 ! 11/17/2017, 6:42:21 PM
 www.twitch.tv##.pd-3 > div:nth-of-type(5)
+
+! Remove "YouTube is now available" pop-up
+! 11/19/2017, 11:45:58 PM
+www.youtube.com##.ytd-popup-container.style-scope.mealbar-poup
+
+! Remove chat header
+! 11/21/2017, 11:45:23 PM
+www.twitch.tv##.pd-y-1.justify-content-center.flex-shrink-0.flex.align-items-center.chat__header
+
+! Remove "Audio for portions of this video has been muted..." pop-up
+! 11/23/2017, 3:49:41 AM
+www.twitch.tv##.player-alert
+
+! Remove "Title this clip to publish" on the preview clipped page
+! 11/25/2017, 2:33:48 AM
+!clips.twitch.tv##.flex--verticalCenter.flex--horizontalCenter.flex.editing-var-nav
