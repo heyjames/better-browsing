@@ -1,3 +1,4 @@
+Twitch
 /* A slim version for use with FrankerFaceZ Chrome extension */
 
 /* Chat text */
@@ -108,40 +109,23 @@ button[class^="right-column__toggle-visibility block flex-grow-0 flex-shrink-0 a
     border: 2px solid white;
 }
 
-/* Remove Subscriber, Prime, Bits, Turbo, glhf badges from chat */
-span[data-badge^="subscriber"] {
-    display: none !important;
-}
-span[data-badge^="premium"] {
-    display: none !important;
-}
-span[data-badge^="bits"] {
-    display: none !important;
-}
-span[data-badge^="turbo"] {
-    display: none !important;
-}
-span[data-badge^="glhf-pledge"] {
+/* Remove badges from chat */
+span[data-badge^="subscriber"],
+span[data-badge^="premium"], 
+span[data-badge^="bits"], 
+span[data-badge^="turbo"], 
+span[data-badge^="glhf-pledge"], 
+span[data-badge^="twitchcon2017"] {
     display: none !important;
 }
 
-/* VOD */
-img[alt^="Subscriber"] {
-    display: none !important;
-}
-
-img[alt^="Twitch Prime"] {
-    display: none !important;
-}
-
-img[alt^="Turbo"] {
-    display: none !important;
-}
-
-img[alt^="cheer"] {
-    display: none !important;
-}
-
+/* VOD: Remove badges from chat */
+img[alt^="Subscriber"], 
+img[alt^="3-Month Subscriber"], 
+img[alt^="6-Month Subscriber"], 
+img[alt^="Twitch Prime"], 
+img[alt^="Turbo"], 
+img[alt^="cheer"], 
 img[alt^="GLHF Pledge"] {
     display: none !important;
 }
@@ -152,4 +136,9 @@ span[class^="chat-author__display-name"] {
     font-size: 12px;
     font-weight: normal;
     color: red !important;
+}
+
+/* Fix streamer's name in chat */
+.video-chat__message-author--creator {
+    background-color: white !important;
 }
