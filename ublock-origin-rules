@@ -1,4 +1,4 @@
-! Youtube
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Youtube
 ! Remove the Chromecast button on the video player
 ! 11/14/2017, 11:44:56 PM
 www.youtube.com##.ytp-button:nth-of-type(5)
@@ -7,9 +7,16 @@ www.youtube.com##.ytp-button:nth-of-type(5)
 ! 7/15/2017, 7:33:00 PM
 ##.ytp-pause-overlay
 
+! Remove "YouTube is now available" pop-up
+! 11/19/2017, 11:45:58 PM
+www.youtube.com##.ytd-popup-container.style-scope.mealbar-poup
+
+! Remove YouTube "Endcard" overlay links near end of videos
+! 11/30/2017, 3:56:00 PM
+www.youtube.com##.ytp-ce-element
 
 
-! Reddit
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Reddit
 ! Remove the right sidebar for better zoomed viewing in snapped windows
 ! 6/28/2017, 10:33:14 AM
 www.reddit.com##.side
@@ -34,8 +41,7 @@ www.reddit.com##.RESSubscriptionButton
 www.reddit.com##.author-tooltip
 
 
-
-! CoinMarketCap
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! CoinMarketCap
 ! Remove the top ad banner
 ! 7/6/2017, 8:55:23 PM
 coinmarketcap.com###icobanner-wrapper
@@ -45,8 +51,7 @@ coinmarketcap.com###icobanner-wrapper
 coinmarketcap.com###ct_70unrF
 
 
-
-! Medium
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Medium
 ! Remove "Sign Up to get updates" bottom static bar
 ! 8/21/2017, 1:39:14 AM
 medium.com##.js-stickyFooter.u-xs-paddingRight10.u-xs-paddingLeft10.u-zIndexMetabar.u-paddingBottom10.u-paddingTop10.u-borderBox.u-boxShadowTop.u-backgroundWhite.u-sizeFullWidth.u-bottom0.u-fixed
@@ -75,9 +80,24 @@ medium.com##.u-xs-height56.u-height65.js-metabarSpacer.metabar--spacer.metabar
 ! 8/21/2017, 6:21:16 PM
 medium.com##.u-fixed.u-transition--fadeIn300.u-sm-hide.u-foreground.js-postShareWidget > ul
 
+! Remove top static bar
+! 12/12/2017, 5:23:27 PM
+medium.com##.u-xs-sizeFullViewportWidth.u-backgroundTransparentWhiteDarkest.u-fixed.js-metabar.u-clearfix.metabar
+
+! Remove top static bar space
+! 12/12/2017, 5:23:42 PM
+medium.com##.u-xs-height56.u-height65.js-metabarSpacer.metabar--spacer.metabar
+
+! Remove bottom static bar
+! 12/12/2017, 5:24:49 PM
+medium.com##.js-stickyFooter.u-xs-paddingRight10.u-xs-paddingLeft10.u-zIndexMetabar.u-paddingBottom10.u-paddingTop10.u-borderBox.u-boxShadowTop.u-backgroundWhite.u-sizeFullWidth.u-bottom0.u-fixed
+
+! Remove left social media bar
+! 12/12/2017, 5:25:34 PM
+medium.com##.u-transition--fadeIn300.u-fixed.u-sm-hide.u-foreground.js-postShareWidget
 
 
-! MyAnimeList
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! MyAnimeList
 ! Remove "Hide Ads" button
 ! 8/30/2017, 5:16:13 PM
 myanimelist.net##.btn-mal-service
@@ -91,12 +111,13 @@ myanimelist.net##._unit
 myanimelist.net##.banner-header-anime-straming
 
 
-
-! The Verge
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! The Verge
 ! Remove top fixed bar
 ! 8/17/2017, 1:25:02 PM
 www.theverge.com##.tab-bar-fixed.c-tab-bar
 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Twitch
 ! Remove Chromcast player button
 ! 11/15/2017, 10:41:06 PM
 www.twitch.tv##.pl-chromecast--available.pl-control--chromecast.player-button
@@ -133,18 +154,47 @@ www.twitch.tv##.pd-y-3.mg-y-2.flex-column.flex.align-items-center.full-width.c-b
 ! 11/17/2017, 6:42:21 PM
 www.twitch.tv##.pd-3 > div:nth-of-type(5)
 
-! Remove "YouTube is now available" pop-up
-! 11/19/2017, 11:45:58 PM
-www.youtube.com##.ytd-popup-container.style-scope.mealbar-poup
-
-! Remove chat header
-! 11/21/2017, 11:45:23 PM
-www.twitch.tv##.pd-y-1.justify-content-center.flex-shrink-0.flex.align-items-center.chat__header
-
-! Remove "Audio for portions of this video has been muted..." pop-up
+! Remove "Audio for portions of this video has been muted..." pop-up on VODs
 ! 11/23/2017, 3:49:41 AM
 www.twitch.tv##.player-alert
 
 ! Remove "Title this clip to publish" on the preview clipped page
 ! 11/25/2017, 2:33:48 AM
-!clips.twitch.tv##.flex--verticalCenter.flex--horizontalCenter.flex.editing-var-nav
+clips.twitch.tv##.flex--verticalCenter.flex--horizontalCenter.flex.editing-var-nav
+
+! Remove Notifications pop-up overlay after stream ends
+! 12/5/2017, 5:22:33 PM
+www.twitch.tv##.pl-pinned-panel--animate.pl-pinned-panel
+
+! Remove Cheers at the top of chat
+! 12/11/2017, 12:53:51 AM
+www.twitch.tv##.flex-shrink-0.flex-grow-0.z-default.pinned-cheer
+
+! Remove game sort bar at the top of the directory page
+! 12/15/2017, 2:32:25 PM
+www.twitch.tv##.tw-pd-2.tw-mg-b-2.tw-flex-row.tw-flex.tw-c-background.tw-border-l.tw-border-b.tw-border-r.tw-border-t
+
+! Remove chat header
+! 11/21/2017, 11:45:23 PM
+www.twitch.tv##.pd-y-1.justify-content-center.flex-shrink-0.flex.align-items-center.chat__header
+
+! Remove chat header
+! 12/10/2017, 10:30:11
+www.twitch.tv##.pd-y-1.justify-content-center.flex-shrink-0.flex.align-items-center.chat-room__header
+
+! Remove chat header
+! 12/16/2017, 10:01:01 PM
+www.twitch.tv##.tw-pd-y-1.tw-justify-content-center.tw-flex-shrink-0.tw-flex.tw-align-items-center.chat-room__header
+
+! Remove "Add a special effect to your clip!" pop-up on preview clipped page
+! 12/9/2017, 11:26:54 PM
+clips.twitch.tv##.align-center.ce-effect-onboard.show.balloon--center.balloon--up.balloon
+
+! Remove Holiday gifted emote pop-up above chat input area
+! 12/21/2017, 2:20:14 PM
+www.twitch.tv##.gift-notification__holiday-background > .tw-pd-1
+
+! Remove Holiday gifted emote pop-up above chat input area (small line)
+! 12/21/2017, 2:20:30 PM
+www.twitch.tv##.tw-absolute.tw-c-background.tw-border-l.tw-border-b.tw-border-r.tw-border-t.crate-notification
+
