@@ -3,3 +3,13 @@ a[class^="noCtrlF res-toggleAllChildren"] {
     color: red !important;
     font-size: 18px;
 }
+
+/* Hide Reddit user shittymorph's Reddit comments and replies to his comment */
+div[data-author-fullname^="t2_tfpcq"] div[class^="entry unvoted"] form[class^="usertext warn-on-unload"] div[class^="usertext-body may-blank-within md-container"] div[class^="md"] p {
+    display: none !important;
+}
+/* Highlights a red bar on the username line to further distinguish Shittymorph comments */
+div[data-author-fullname^="t2_tfpcq"] div[class^="entry unvoted"] p[class^="tagline"] {
+    background-color: red;
+    color: white;
+}
