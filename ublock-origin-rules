@@ -198,3 +198,18 @@ www.twitch.tv##.gift-notification__holiday-background > .tw-pd-1
 ! 12/21/2017, 2:20:30 PM
 www.twitch.tv##.tw-absolute.tw-c-background.tw-border-l.tw-border-b.tw-border-r.tw-border-t.crate-notification
 
+! Remove static top bar, bottom bar, social elements
+! 12/24/2017, 12:21:40 AM
+hackernoon.com##.u-tintSpectrum.u-tintBgColor.u-xs-sizeFullViewportWidth.u-backgroundTransparentWhiteDarkest.u-fixed.u-textColorDarker.js-metabar.u-clearfix.metabar
+
+! Remove static top bar, bottom bar, social elements
+! 12/24/2017, 12:21:46 AM
+hackernoon.com##.js-stickyFooter.u-xs-paddingRight10.u-xs-paddingLeft10.u-zIndexMetabar.u-paddingBottom10.u-paddingTop10.u-borderBox.u-boxShadowTop.u-backgroundWhite.u-sizeFullWidth.u-bottom0.u-fixed
+
+! Remove static top bar, bottom bar, social elements
+! 12/24/2017, 12:21:53 AM
+hackernoon.com##.u-fixed.u-transition--fadeIn300.u-sm-hide.u-foreground.js-postShareWidget
+
+! Remove static top bar, bottom bar, social elements
+! 12/24/2017, 12:22:05 AM
+hackernoon.com##.u-xs-height95.u-height105.u-tintBgColor.js-metabarSpacer.metabar--spacer.metabar
