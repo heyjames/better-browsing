@@ -198,6 +198,22 @@ www.twitch.tv##.gift-notification__holiday-background > .tw-pd-1
 ! 12/21/2017, 2:20:30 PM
 www.twitch.tv##.tw-absolute.tw-c-background.tw-border-l.tw-border-b.tw-border-r.tw-border-t.crate-notification
 
+! Remove "Want to watch it in your local language?"
+! 1/7/2018, 2:57:00 PM
+www.twitch.tv##.tw-pd-1.tw-absolute.tw-left-0.tw-right-0.tw-top-0.tw-c-text-overlay.tw-c-background-accent-alt-2
+
+! Remove pop-up when a word is highlighted
+! 1/20/2018, 10:45:09 PM
+medium.com##.highlightMenu-inner
+
+! Remove pop-up when a word is highlighted (small arrow)
+! 1/20/2018, 10:45:20 PM
+medium.com##.highlightMenu-arrowClip
+
+! Remove Amazon sub navigation bar that pops up a large obstructing element on mouseover
+! 1/21/2018, 1:23:27 AM https://www.amazon.com/s/ref=sr_pg_5?rh=n%3A1055398%2Cn%3A284507%2Ck%3Aspoon&page=5&keywords=spoon&ie=UTF8&qid=1516526570
+www.amazon.com###nav-subnav
+
 ! Remove static top bar, bottom bar, social elements
 ! 12/24/2017, 12:21:40 AM
 hackernoon.com##.u-tintSpectrum.u-tintBgColor.u-xs-sizeFullViewportWidth.u-backgroundTransparentWhiteDarkest.u-fixed.u-textColorDarker.js-metabar.u-clearfix.metabar
