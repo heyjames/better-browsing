@@ -10,7 +10,7 @@ span[class^="message"] {
 a[class^="chat-author__display-name"] {
     width: 1px !important;
     font-size: 12px;
-    font-weight: normal;
+/*     font-weight: normal; */
     color: red !important;
 }
 
@@ -126,9 +126,30 @@ img[alt^="6-Month Subscriber"],
 img[alt^="Twitch Prime"], 
 img[alt^="Turbo"], 
 img[alt^="cheer"], 
+img[alt^="dizzyDolphin"], 
+img[alt^="dizzyHype"], 
+img[alt^="dizzyH"], 
+img[alt^="dizzyREEE"], 
+img[alt^="dizzyGasm"], 
+img[alt^="dizzySenpai"], 
+img[alt^="dizzyCool"], 
+img[alt^="dizzyLul"], 
+img[alt^="dizzyShy"], 
+img[alt^="dizzyWtf"], 
+img[alt^="dizzyUp"], 
+img[alt^="dizzyTen"], 
+img[alt^="dizzyCry"], 
+img[alt^="dizzyW"], 
+img[alt^="dizzyTeehee"], 
+img[alt^="H1Z1"], 
 img[alt^="GLHF Pledge"] {
     display: none !important;
 }
+
+/* Remove all emotes */
+/* img[data-provider^="twitch"] {
+    display: none !important;
+} */
 
 /* VOD: Unbold names and make them red colored */
 span[class^="chat-author__display-name"] {
@@ -141,4 +162,12 @@ span[class^="chat-author__display-name"] {
 /* Fix streamer's name in chat */
 .video-chat__message-author--creator {
     background-color: white !important;
+}
+
+/* Clip page dark mode (before title name is added */
+body[class^="ce-body"] {
+    background-color: #272822 !important;
+}
+textarea[class^="full-width form__input ct-text-input"] {
+    background-color: #272822 !important;
 }
