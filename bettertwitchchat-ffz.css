@@ -9,7 +9,7 @@ span[class^="message"] {
 /* Unbold names and make them red colored */
 a[class^="chat-author__display-name"] {
     width: 1px !important;
-    font-size: 12px;
+/*     font-size: 12px; */
 /*     font-weight: normal; */
     color: red !important;
 }
@@ -17,7 +17,7 @@ a[class^="chat-author__display-name"] {
 /* @user_name mentions are light green */
 strong[class^="chat-line__message-mention"] {
     color: lightgreen !important;
-    font-size: 12px;
+/*     font-size: 12px; */
     font-weight: normal;
 }
 
@@ -109,13 +109,14 @@ button[class^="right-column__toggle-visibility block flex-grow-0 flex-shrink-0 a
     border: 2px solid white;
 }
 
-/* Remove badges from chat */
+/* Remove badges from chat, ffz supporter badge */
 span[data-badge^="subscriber"],
 span[data-badge^="premium"], 
 span[data-badge^="bits"], 
 span[data-badge^="turbo"], 
 span[data-badge^="glhf-pledge"], 
-span[data-badge^="twitchcon2017"] {
+span[data-badge^="twitchcon2017"], 
+span[data-provider^="ffz"] {
     display: none !important;
 }
 
@@ -149,6 +150,11 @@ img[alt^="GLHF Pledge"] {
 /* Remove all emotes */
 /* img[data-provider^="twitch"] {
     display: none !important;
+} */
+
+/* Highlight a user in chat */
+/* div[data-user*="INSERT tWITCH NAME"] span[class*="message"] {
+    color: #b22eff !important;
 } */
 
 /* VOD: Unbold names and make them red colored */
