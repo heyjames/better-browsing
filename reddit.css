@@ -1,7 +1,61 @@
-/* Enlarge "hide all child comments" and change color to red */
-a[class^="noCtrlF res-toggleAllChildren"] {
-    color: red !important;
-    font-size: 18px;
+/* Remove sticked comments */
+div[class*="sitetable nestedlisting"] div[class*="stickied"] {
+    display: none !important;
+}
+
+/* Hide sidebar if width <768px */
+@media (max-width: 768px) {
+    .side {
+        display: none !important;
+    }
+}
+
+/* Remove sign up banner */
+section[class*="infobar listingsignupbar"],
+section[class*="infobar commentsignupbar"]
+{
+    display: none !important;
+}
+
+/* Easily select the "hide all child comments" link */
+a[class*="noCtrlF res-toggleAllChildren"] {
+	opacity: 0.10 !important;
+    background-color: #f00 !important;
+    border: none !important;
+    color: white !important;
+    padding: 4px 24px !important;
+    margin-bottom: -3px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    font-size: 10px !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 9999 !important;
+    position: fixed !important;
+}
+a[class*="noCtrlF res-toggleAllChildren"]:hover {
+	opacity: 1.0 !important;
+    background-color: #c10000 !important;
+    border: none !important;
+    color: white !important;
+    padding: 4px 24px !important;
+    margin-bottom: -3px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    font-size: 10px !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 9999 !important;
+    position: fixed !important;
+}
+
+/* Hide "More from r/..." that appears if not logged in */
+div[class*="spacer seo-comments-recommendations"],
+div[class*="seo-comments spacer"],
+#bottom-comments {
+    display: none !important;
 }
 
 /* Hide Reddit user shittymorph's Reddit comments and replies to his comment */
