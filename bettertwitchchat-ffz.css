@@ -1,6 +1,22 @@
 /* Twitch */
 /* A slim version for use with FrankerFaceZ Chrome extension */
 
+/* Remove Twitch emotes */
+img[data-provider^="twitch"],
+/* Disable FFZ emotes */
+img[data-tooltip-type*="emote"] {
+    /*display: none !important;*/
+}
+/* VOD emotes*/
+/*img[class*="chat-image chat-line__message--emote tw-inline-block"] {
+    display: none !important;
+}*/
+
+/* Highlight a user in chat */
+/* div[data-user*="INSERT tWITCH NAME"] span[class*="message"] {
+    color: #b22eff !important;
+} */
+
 /* Chat usernames */
 span[class^="chat-author__display-name"] {
     width: 1px !important;
@@ -33,7 +49,7 @@ span[class="message has-color"] {
 
 
 /*  Mouseover overlay stream info  */
-/* TItle */
+/* Title */
 div[class^="player-streaminfo__title qa-stream-title"] {
     background-color: black;
     margin-right: 80%;
@@ -71,18 +87,6 @@ div[class*="player-overlay player-play-overlay js-paused-overlay"] {
     display: none;
 }
 
-/* Remove Twitch emotes */
-img[data-provider^="twitch"],
-/* Disable FFZ emotes */
-img[data-tooltip-type*="emote"] {
-    /*display: none !important;*/
-}
-
-/* Highlight a user in chat */
-/* div[data-user*="INSERT tWITCH NAME"] span[class*="message"] {
-    color: #b22eff !important;
-} */
-
 /* Remove badges from live chat, ffz supporter badge */
 span[data-badge*="subscriber"],
 span[data-badge*="premium"], 
@@ -109,6 +113,7 @@ img[alt*="cheer"],
 img[alt^="H1Z1"],
 img[alt^="GLHF"],
 img[alt*="TwitchCon"],
+img[alt*="Clip"],
 /* Channel specific emotes */
 img[alt^="dizzy"], 
 img[alt^="kaotyk"], 
@@ -122,6 +127,11 @@ body[class^="ce-body"] {
 }
 textarea[class^="full-width form__input ct-text-input"] {
     background-color: #272822 !important;
+}
+
+/* Hide "Chat on Videos" fixed chat header */
+div[class*="tw-align-items-center tw-flex tw-flex-shrink-0 tw-justify-content-center video-chat__header"] {
+    display: none !important;
 }
 
 /* Rerun indicator above video */
