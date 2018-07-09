@@ -1,24 +1,29 @@
-Twitch
+/* Twitch */
 /* A slim version for use with FrankerFaceZ Chrome extension */
 
-/* Chat text */
-span[class^="message"] {
-    color: lightgray;
-}
-
-/* Unbold names and make them red colored */
-a[class^="chat-author__display-name"] {
+/* Chat usernames */
+span[class^="chat-author__display-name"] {
     width: 1px !important;
-/*     font-size: 12px; */
-/*     font-weight: normal; */
+    font-size: 12px;
+    font-weight: bold;
     color: red !important;
 }
 
+/* Chat text */
+div[class^="chat-line__message"] span[class^="message"] {
+    /* font-weight: bold !important; */
+}
+
 /* @user_name mentions are light green */
-strong[class^="chat-line__message-mention"] {
+strong[class^="chat-line__message-mention"],
+span[class*="mention-fragment"] {
     color: lightgreen !important;
-/*     font-size: 12px; */
     font-weight: normal;
+}
+
+/* Hide "Offers in-game Drops" corner overlay in game Directory */
+div[class^="drops-badge tw-absolute tw-right-0 tw-top-0"] {
+	display: none !important;
 }
 
 /* Purify chat message for users typing with "/me" */
@@ -26,57 +31,36 @@ span[class="message has-color"] {
     color: lightgray !important;
 }
 
-/* Increase size of video player's buttons */
-div[class^="player-buttons-left"], div[class*=" player-buttons-left"] {
-    transform: scale(1.5);
-    margin-left: 9%;
-}
-div[class^="player-buttons-right"], div[class*=" player-buttons-right"] {
-    transform: scale(1.5);
-    margin-right: 11%;
-}
 
-/*  Stream info title in theater mode  */
-div[class^="player-streaminfo__title qa-stream-title"], div[class^="player-streaminfo__viewers"] {
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+/*  Mouseover overlay stream info  */
+/* TItle */
+div[class^="player-streaminfo__title qa-stream-title"] {
+    background-color: black;
+    margin-right: 80%;
     font-size: 16px;
     font-weight: bold;
 }
-
-/* Streamer's username and game text */
+/* "playing <game> for <#> viewers" */
+div[class^="player-streaminfo__viewers"] {
+    background-color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* Twitch username and game links */
 .player a.player-text-link--no-color {
-    color: purple;
+    color: #9b66ff;
+    background-color: black !important;
 }
 
-/* Transparent top overlay until mouseover */
-#top-bar {
-    opacity: 0.2;
-}
-#top-bar:hover {
-    opacity: 1;
-}
 
-/* Move VOD seek bar up to compensate for enlarged player controls */
-.player-seek {
-    display: block;
-    margin-bottom: 50px;
-}
-
-/* Remove black gradient overlay when video is paused (bottom) */
-.player-controls-bottom {
+/* Remove black gradient overlay on mouseover */
+div[class*="pl-controls-top js-controls-top"],
+div[class*="pl-controls-bottom pl-flex qa-controls-bottom"] {
     background: none !important;
-    bottom: 0;
-    padding: 0;
-    padding-top: 4em;
-    z-index: 3;
 }
-
-/* Remove black gradient overlay when video is paused (top) */
-.player-controls-top {
-    background: none !important;
-    top: 0;
-    padding: 1.5em;
-    margin-bottom: 5.5em;
+/* Remove black gradient overlay on pause (VOD confirmed) */
+div[class*="player-overlay player-play-overlay js-paused-overlay"] {
+    display: none !important;
 }
 
 /* Hide Upcoming Events panel (Overwatch game directory page) */
@@ -87,87 +71,49 @@ div[class^="player-streaminfo__title qa-stream-title"], div[class^="player-strea
     display: none;
 }
 
-/* Theater - Chat toggle button overall redesign + hover */
-button[class^="right-column__toggle-visibility block flex-grow-0 flex-shrink-0 absolute"] {
-    display: block;
-    background-color: red;
-    width: 74px;
-    height: 22px;
-    margin-left: -26px;
-    margin-top: 82px;
-    opacity: 0.1;
-    border: 2px solid white;
+/* Remove Twitch emotes */
+img[data-provider^="twitch"],
+/* Disable FFZ emotes */
+img[data-tooltip-type*="emote"] {
+    /*display: none !important;*/
 }
-button[class^="right-column__toggle-visibility block flex-grow-0 flex-shrink-0 absolute"]:hover {
-    display: block;
-    background-color: red;
-    width: 74px;
-    height: 22px;
-    margin-left: -26px;
-    margin-top: 82px;
-    opacity: 1;
-    border: 2px solid white;
-}
-
-/* Remove badges from chat, ffz supporter badge */
-span[data-badge^="subscriber"],
-span[data-badge^="premium"], 
-span[data-badge^="bits"], 
-span[data-badge^="turbo"], 
-span[data-badge^="glhf-pledge"], 
-span[data-badge^="twitchcon2017"], 
-span[data-provider^="ffz"] {
-    display: none !important;
-}
-
-/* VOD: Remove badges from chat */
-img[alt^="Subscriber"], 
-img[alt^="3-Month Subscriber"], 
-img[alt^="6-Month Subscriber"], 
-img[alt^="Twitch Prime"], 
-img[alt^="Turbo"], 
-img[alt^="cheer"], 
-img[alt^="dizzyDolphin"], 
-img[alt^="dizzyHype"], 
-img[alt^="dizzyH"], 
-img[alt^="dizzyREEE"], 
-img[alt^="dizzyGasm"], 
-img[alt^="dizzySenpai"], 
-img[alt^="dizzyCool"], 
-img[alt^="dizzyLul"], 
-img[alt^="dizzyShy"], 
-img[alt^="dizzyWtf"], 
-img[alt^="dizzyUp"], 
-img[alt^="dizzyTen"], 
-img[alt^="dizzyCry"], 
-img[alt^="dizzyW"], 
-img[alt^="dizzyTeehee"], 
-img[alt^="H1Z1"], 
-img[alt^="GLHF Pledge"] {
-    display: none !important;
-}
-
-/* Remove all emotes */
-/* img[data-provider^="twitch"] {
-    display: none !important;
-} */
 
 /* Highlight a user in chat */
 /* div[data-user*="INSERT tWITCH NAME"] span[class*="message"] {
     color: #b22eff !important;
 } */
 
-/* VOD: Unbold names and make them red colored */
-span[class^="chat-author__display-name"] {
-    width: 1px !important;
-    font-size: 12px;
-    font-weight: normal;
-    color: red !important;
+/* Remove badges from live chat, ffz supporter badge */
+span[data-badge*="subscriber"],
+span[data-badge*="premium"], 
+span[data-badge*="bits"], 
+span[data-badge*="turbo"], 
+span[data-badge*="glhf-pledge"], 
+span[data-badge*="twitchcon"], 
+span[data-badge*="firewatch"], 
+span[data-badge*="H1Z1"], 
+span[data-provider^="ffz"], 
+span[data-badge*="sub-gifter"], 
+span[data-badge*="kingdom-new-lands"], 
+span[data-badge*="clip-champ"] {
+    display: none !important;
 }
 
-/* Fix streamer's name in chat */
-.video-chat__message-author--creator {
-    background-color: white !important;
+/* Remove badges from chat and emotes in VODs */
+/* Badges */
+img[alt*="Subscriber"],
+img[alt*="Gifter"],
+img[alt*="Prime"],
+img[alt^="Turbo"],
+img[alt*="cheer"],
+img[alt^="H1Z1"],
+img[alt^="GLHF"],
+img[alt*="TwitchCon"],
+/* Channel specific emotes */
+img[alt^="dizzy"], 
+img[alt^="kaotyk"], 
+img[alt^="mjl"] {
+    display: none !important;
 }
 
 /* Clip page dark mode (before title name is added */
@@ -176,4 +122,9 @@ body[class^="ce-body"] {
 }
 textarea[class^="full-width form__input ct-text-input"] {
     background-color: #272822 !important;
+}
+
+/* Rerun indicator above video */
+.tw-theme--dark .tw-c-background-accent-alt-2 {
+    background-color: red !important;
 }
