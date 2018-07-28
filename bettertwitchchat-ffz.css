@@ -1,16 +1,8 @@
-/* Twitch */
-/* A slim version for use with FrankerFaceZ Chrome extension */
-
-/* Remove Twitch emotes */
+/* Remove Twitch, FFZ emotes */
 img[data-provider^="twitch"],
-/* Disable FFZ emotes */
 img[data-tooltip-type*="emote"] {
-    /*display: none !important;*/
-}
-/* VOD emotes*/
-/*img[class*="chat-image chat-line__message--emote tw-inline-block"] {
     display: none !important;
-}*/
+}
 
 /* Highlight a user in chat */
 /* div[data-user*="INSERT tWITCH NAME"] span[class*="message"] {
@@ -25,10 +17,19 @@ span[class^="chat-author__display-name"] {
     color: red !important;
 }
 
-/* Chat text */
-div[class^="chat-line__message"] span[class^="message"] {
-    /* font-weight: bold !important; */
+/* Remove non-theater mode padding around video */
+.tw-pd-x-3 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
+.tw-pd-t-2 {
+    padding-top: 0px !important;
+}
+
+/* Chat text */
+/*div[class^="chat-line__message"] span[class^="message"] {
+    font-weight: bold !important;
+}*/
 
 /* @user_name mentions are light green */
 strong[class^="chat-line__message-mention"],
@@ -51,21 +52,38 @@ span[class="message has-color"] {
 /*  Mouseover overlay stream info  */
 /* Title */
 div[class^="player-streaminfo__title qa-stream-title"] {
-    background-color: black;
-    margin-right: 80%;
+    /*background-color: black;*/
     font-size: 16px;
     font-weight: bold;
+    text-shadow:
+     2px 2px 0 #000,
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 /* "playing <game> for <#> viewers" */
 div[class^="player-streaminfo__viewers"] {
-    background-color: black;
+    /*background-color: black;*/
     font-size: 16px;
     font-weight: bold;
+    text-shadow:
+     2px 2px 0 #000,
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 /* Twitch username and game links */
 .player a.player-text-link--no-color {
     color: #9b66ff;
-    background-color: black !important;
+    /*background-color: black !important;*/
+    text-shadow:
+     2px 2px 0 #000,
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 
 
@@ -113,9 +131,9 @@ img[alt*="cheer"],
 img[alt^="H1Z1"],
 img[alt^="GLHF"],
 img[alt*="TwitchCon"],
-img[alt*="Clip"],
 /* Channel specific emotes */
 img[alt^="dizzy"], 
+img[alt^="jnb"], 
 img[alt^="kaotyk"], 
 img[alt^="mjl"] {
     display: none !important;
@@ -129,12 +147,28 @@ textarea[class^="full-width form__input ct-text-input"] {
     background-color: #272822 !important;
 }
 
-/* Hide "Chat on Videos" fixed chat header */
-div[class*="tw-align-items-center tw-flex tw-flex-shrink-0 tw-justify-content-center video-chat__header"] {
+/* (VOD+Live) Hide "Chat on Videos" fixed chat header */
+div[class*="tw-align-items-center tw-flex tw-flex-shrink-0 tw-justify-content-center video-chat__header"],
+div[class*="room-selector__header tw-align-items-center tw-border-b tw-border-l tw-border-r tw-c-background-alt-2 tw-flex tw-flex-shrink-0 tw-full-width tw-justify-content-between tw-pd-l-2 tw-pd-r-1"] {
+    display: none !important;
+}
+
+/* Remove "Show me Games sorted by Popularity" filter bar */
+div[class*="tw-border-b tw-border-l tw-border-r tw-border-t tw-c-background tw-flex tw-flex-row tw-mg-b-2 tw-pd-2"] {
     display: none !important;
 }
 
 /* Rerun indicator above video */
 .tw-theme--dark .tw-c-background-accent-alt-2 {
     background-color: red !important;
+    color: black !important;
+    height: 1px !important;
 }
+.tw-c-text-overlay-alt, .tw-theme--dark .tw-c-text-overlay-alt, .tw-theme--light .tw-c-text-overlay-alt {
+    color: #ebebeb !important;
+}
+
+/* Hide "Get Bits" in the site title bar */
+/*div[class*="tw-align-self-center tw-flex-grow-0 tw-flex-nowrap tw-flex-shrink-0 tw-mg-x-1"] {
+    display: none !important;
+}*/
