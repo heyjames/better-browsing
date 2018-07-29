@@ -19,22 +19,24 @@ section[class*="infobar commentsignupbar"]
 
 /* Easily select the "hide all child comments" link */
 a[class*="noCtrlF res-toggleAllChildren"] {
-	opacity: 0.10 !important;
+	/*opacity: 0.10 !important;*/
     background-color: #f00 !important;
     border: none !important;
+    font-size: 12px !important;
     color: white !important;
-    padding: 4px 24px !important;
-    margin-bottom: -3px !important;
-    text-align: center !important;
+    padding: 2px 6px !important;
     text-decoration: none !important;
+    /*margin-bottom: -3px !important;
+    text-align: center !important;
     display: inline-block !important;
     font-size: 10px !important;
     top: 0 !important;
     left: 0 !important;
     z-index: 9999 !important;
-    position: fixed !important;
+    position: fixed !important;*/
 }
-a[class*="noCtrlF res-toggleAllChildren"]:hover {
+/* Fixed to top-left corner with opacity */
+/*a[class*="noCtrlF res-toggleAllChildren"]:hover {
 	opacity: 1.0 !important;
     background-color: #c10000 !important;
     border: none !important;
@@ -49,7 +51,7 @@ a[class*="noCtrlF res-toggleAllChildren"]:hover {
     left: 0 !important;
     z-index: 9999 !important;
     position: fixed !important;
-}
+}*/
 
 /* Hide "More from r/..." that appears if not logged in */
 div[class*="spacer seo-comments-recommendations"],
@@ -66,4 +68,9 @@ div[data-author-fullname^="t2_tfpcq"] div[class^="entry unvoted"] form[class^="u
 div[data-author-fullname^="t2_tfpcq"] div[class^="entry unvoted"] p[class^="tagline"] {
     background-color: red;
     color: white;
+}
+
+/* Remove subscribe button's "notify me of new comments" */
+span[class="RESSubscriptionButton"] {
+    display: none !important;
 }
