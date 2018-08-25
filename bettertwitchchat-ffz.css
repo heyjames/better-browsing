@@ -1,42 +1,146 @@
 /* Remove Twitch, FFZ emotes */
-img[data-provider^="twitch"],
+/* img[data-provider^="twitch"],
 img[data-tooltip-type*="emote"] {
     display: none !important;
-}
-
-/* Highlight a user in chat */
-/* div[data-user*="INSERT tWITCH NAME"] span[class*="message"] {
-    color: #b22eff !important;
 } */
 
-/* Chat usernames */
+/* Remove strikethrough on FFZ's deleted messages */
+/* .ffz--deleted-message .message {
+    text-decoration: none !important;
+} */
+
+/* Live+VOD Chat usernames */
 span[class^="chat-author__display-name"] {
-    width: 1px !important;
-    font-size: 12px;
-    font-weight: bold;
-    color: red !important;
-}
-
-/* Remove non-theater mode padding around video */
-.tw-pd-x-3 {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-}
-.tw-pd-t-2 {
-    padding-top: 0px !important;
-}
-
-/* Chat text */
-/*div[class^="chat-line__message"] span[class^="message"] {
+/*     font-size: 16px !important; */
     font-weight: bold !important;
-}*/
+    color: red !important;
+    font-family: "Verdana" !important;
+}
+
+/* Live message */
+div[class*="chat-line__message"] span[class*="message"] {
+/*     font-size: 16px !important; */
+    font-weight: bold !important;
+    font-family: "Verdana" !important;
+}
+
+/* International usernames */
+div[class*="chat-line__message"] span[class*="chat-author__intl-login"] {
+    color: yellow !important;
+}
+.chat-author__intl-login {
+    opacity: 1 !important;
+}
+
+/* VOD message */
+span[class^="qa-mod-message"], div[class^="tw-inline video-chat__message"] {
+    font-family: "Verdana" !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: rgb(230, 230, 230) !important;
+}
+
+/* Fix streamer's name in chat */
+.video-chat__message-author--creator {
+    background-color: white !important;
+}
 
 /* @user_name mentions are light green */
 strong[class^="chat-line__message-mention"],
 span[class*="mention-fragment"] {
     color: lightgreen !important;
-    font-weight: normal;
+    font-weight: bold;
 }
+
+/* Highlight a user in chat */
+/* div[data-user*=""] span[class*="message"] {
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    background-color: #b22eff !important;
+} */
+
+/* Remove badges from live chat, ffz supporter badge */
+span[data-badge*="subscriber"],
+span[data-badge*="premium"], 
+span[data-badge*="bits"], 
+span[data-badge*="turbo"], 
+span[data-badge*="glhf-pledge"], 
+span[data-badge*="twitchcon"], 
+span[data-badge*="firewatch"], 
+span[data-badge*="H1Z1"], 
+span[data-badge*="sub-gifter"], 
+span[data-badge*="kingdom-new-lands"], 
+span[data-badge^="overwatch-league-insider_1"], 
+span[data-badge^="titan-souls_1"], 
+span[data-badge^="cuphead_1"], 
+span[data-badge*="clip-champ"], 
+span[data-provider^="ffz"] {
+    display: none !important;
+}
+
+/* Remove badges from chat and emotes in VODs */
+/* Badges */
+img[alt*="Subscriber"],
+img[alt*="Gifter"],
+img[alt*="Prime"],
+img[alt^="Turbo"],
+img[alt*="cheer"],
+img[alt^="H1Z1"],
+img[alt^="GLHF"],
+img[alt*="TwitchCon"],
+/* Channel specific emotes */
+img[alt^="dizzy"], 
+img[alt^="jnb"], 
+img[alt^="kaotyk"], 
+img[alt^="squad"], 
+img[alt^="mjl"] {
+    display: none;
+}
+
+/* Remove cheers */
+/* span[alt^="dizzycheer"] {
+    display: none !important;
+} */
+
+/* Fix emote blocking where it blocks streamer's avatar */
+img[alt="cjayride"] {
+    display: block !important;
+}
+img[alt^="cjay"] {
+    display: none;
+}
+
+/* div[data-user*="nightbot"] {
+    display: none !important;
+    visibility: hidden !important;
+} */
+
+/* Remove "<user> is new here. Say hello!" from chat */
+/* div[class^="user-notice-line"] {
+    display: none !important;
+} */
+
+/* Remove "Click an emote to say hello!" pop-up above chat input */
+/* div[class^="new-chatter-ritual"] {
+    display: none !important;
+    visibility: hidden !important;
+} */
+
+/* Remove non-theater mode padding around video */
+div[class="channel-page tw-full-height"] 
+div[class="channel-page-layout tw-flex tw-flex-column tw-flex-nowrap tw-full-height"] 
+div[class="tw-pd-t-2 tw-pd-x-3"], 
+div[class="channel-page-layout tw-flex tw-flex-column tw-flex-nowrap tw-full-height"] div[class="tw-pd-t-2 tw-pd-x-3"] {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 0px !important;
+}
+
+/* Remove sponsored content bar that sits between the video player and info */
+/* div[data-test-selector^="fuel-commerce-bar"] {
+    display: none !important;
+} */
 
 /* Hide "Offers in-game Drops" corner overlay in game Directory */
 div[class^="drops-badge tw-absolute tw-right-0 tw-top-0"] {
@@ -44,10 +148,9 @@ div[class^="drops-badge tw-absolute tw-right-0 tw-top-0"] {
 }
 
 /* Purify chat message for users typing with "/me" */
-span[class="message has-color"] {
+/* span[class="message has-color"] {
     color: lightgray !important;
-}
-
+} */
 
 /*  Mouseover overlay stream info  */
 /* Title */
@@ -86,65 +189,10 @@ div[class^="player-streaminfo__viewers"] {
      1px 1px 0 #000;
 }
 
-
 /* Remove black gradient overlay on mouseover */
 div[class*="pl-controls-top js-controls-top"],
 div[class*="pl-controls-bottom pl-flex qa-controls-bottom"] {
     background: none !important;
-}
-/* Remove black gradient overlay on pause (VOD confirmed) */
-div[class*="player-overlay player-play-overlay js-paused-overlay"] {
-    display: none !important;
-}
-
-/* Hide Upcoming Events panel (Overwatch game directory page) */
-.col-xs-9 {
-    width: 100%;
-}
-.tower .col-xs-3 {
-    display: none;
-}
-
-/* Remove badges from live chat, ffz supporter badge */
-span[data-badge*="subscriber"],
-span[data-badge*="premium"], 
-span[data-badge*="bits"], 
-span[data-badge*="turbo"], 
-span[data-badge*="glhf-pledge"], 
-span[data-badge*="twitchcon"], 
-span[data-badge*="firewatch"], 
-span[data-badge*="H1Z1"], 
-span[data-provider^="ffz"], 
-span[data-badge*="sub-gifter"], 
-span[data-badge*="kingdom-new-lands"], 
-span[data-badge*="clip-champ"] {
-    display: none !important;
-}
-
-/* Remove badges from chat and emotes in VODs */
-/* Badges */
-img[alt*="Subscriber"],
-img[alt*="Gifter"],
-img[alt*="Prime"],
-img[alt^="Turbo"],
-img[alt*="cheer"],
-img[alt^="H1Z1"],
-img[alt^="GLHF"],
-img[alt*="TwitchCon"],
-/* Channel specific emotes */
-img[alt^="dizzy"], 
-img[alt^="jnb"], 
-img[alt^="kaotyk"], 
-img[alt^="mjl"] {
-    display: none !important;
-}
-
-/* Clip page dark mode (before title name is added */
-body[class^="ce-body"] {
-    background-color: #272822 !important;
-}
-textarea[class^="full-width form__input ct-text-input"] {
-    background-color: #272822 !important;
 }
 
 /* (VOD+Live) Hide "Chat on Videos" fixed chat header */
@@ -153,22 +201,180 @@ div[class*="room-selector__header tw-align-items-center tw-border-b tw-border-l 
     display: none !important;
 }
 
-/* Remove "Show me Games sorted by Popularity" filter bar */
-div[class*="tw-border-b tw-border-l tw-border-r tw-border-t tw-c-background tw-flex tw-flex-row tw-mg-b-2 tw-pd-2"] {
-    display: none !important;
-}
-
-/* Rerun indicator above video */
-.tw-theme--dark .tw-c-background-accent-alt-2 {
-    background-color: red !important;
-    color: black !important;
-    height: 1px !important;
-}
-.tw-c-text-overlay-alt, .tw-theme--dark .tw-c-text-overlay-alt, .tw-theme--light .tw-c-text-overlay-alt {
-    color: #ebebeb !important;
-}
-
 /* Hide "Get Bits" in the site title bar */
-/*div[class*="tw-align-self-center tw-flex-grow-0 tw-flex-nowrap tw-flex-shrink-0 tw-mg-x-1"] {
+div[class="top-nav__menu tw-align-items-stretch tw-flex tw-flex-nowrap tw-full-height"] div[class*="tw-align-self-center tw-flex-grow-0 tw-flex-nowrap tw-flex-shrink-0 tw-mg-x-1"] {
     display: none !important;
+}
+
+/* Remove pinned top cheers at top of chat */
+div[class="tw-z-default"] div[class="pinned-cheer-v2 tw-z-default"],
+div[class="room-selector__header tw-align-items-center tw-border-b tw-border-l tw-border-r tw-c-background-alt-2 tw-flex tw-flex-shrink-0 tw-full-width tw-justify-content-between tw-pd-l-2 tw-pd-r-1"] {
+    display: none !important;
+}
+
+/* Remove "Join the Twitch community! Discover the best live streams anywhere." in the side nav */
+div[class="simplebar-content"] div[class="side-nav-page-info"] {
+    display: none !important;
+}
+/* Remove "Recommended" from the side nav */
+div[class="simplebar-content"] div[class="tw-full-width"] {
+    display: none !important;
+}
+
+/* Remove part of the game directory's banner of unecessary space */
+div[class="tw-overflow-hidden tw-relative"] {
+    display: none !important;
+}
+/* Fix game directory image cutoff */
+div[class="tw-card-img tw-card-img--size-8 tw-flex-shrink-0 tw-overflow-hidden"] {
+    margin-bottom: -8px;
+}
+.tw-card-img--size-8 {
+    width: 35px;
+}
+/* Move links due to directory game image resize */
+div[class="directory-tabs"] {
+    background-color: #fff;
+    border-bottom: 1px solid #dad8de;
+    height: 5rem;
+    padding-left: 7.5rem; /* Custom line*/
+}
+/* Remove odd image border */
+div[class="directory-header__avatar tw-absolute tw-bottom-0 tw-mg-b-1 tw-mg-l-3"] {
+    border: 0;
+}
+
+/* Remove chat input box border on all but top sides */
+.tw-theme--dark .tw-textarea {
+    border: 0px solid #392e5c !important;
+    border-top: 1px solid #392e5c !important;
+    border-bottom: 1px solid #392e5c !important;
+    background: #0e0c13;
+    color: #faf9fa;
+}
+/* Remove chat focus box highlight */
+.tw-textarea:focus, .tw-theme--dark .tw-textarea:focus, .tw-theme--light .tw-textarea:focus {
+    box-shadow: none !important;
+    border: 0px solid red;
+}
+.tw-textarea, .tw-theme--dark .tw-textarea, .tw-theme--light .tw-textarea {
+    border: 0px solid red;
+}
+/* Chat offset */
+textarea[class="tw-block tw-border-radius-medium tw-font-size-6 tw-full-width tw-textarea tw-textarea--no-resize"] {
+    padding-bottom: 0px !important;
+    margin-bottom: 40px !important;
+}
+/* Miniature chat */
+div[class="chat-input tw-block tw-pd-b-2 tw-pd-x-2"] {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+}
+div[class="tw-relative tw-z-default"] {
+    margin-bottom: -39px !important;
+}
+/* Remove "Chat" purple button */
+div[class="chat-input__buttons-container tw-flex tw-justify-content-between tw-mg-t-1"] button[class="tw-interactive tw-button"] {
+    display: none !important;
+}
+/* Shift gear icon and show chat users list button to the right side */
+div[class="tw-flex tw-flex-row"] {
+    z-index: 1 !important;
+}
+svg[class="tw-svg__asset tw-svg__asset--gear tw-svg__asset--inherit"], 
+svg[class="tw-svg__asset tw-svg__asset--viewerlist tw-svg__asset--inherit"] {
+    width: 14px;
+    height: 14px;
+}
+/* Emoticon icon chat menu */
+svg[class="tw-svg__asset tw-svg__asset--emoticons tw-svg__asset--inherit"] {
+    width: 16px;
+    height: 16px;
+}
+button[class="tw-interactive tw-button-icon tw-button-icon--secondary"] {
+    margin-left: -284px !important;
+    margin-bottom: -94px !important;
+}
+/* :hover icon background */
+.tw-button-icon__icon {
+    display: inline-flex;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+/* Shift chat settings icons to right */
+/*div[class="chat-input__buttons-container tw-flex tw-justify-content-between tw-mg-t-1"] {
+    margin-left: 286px;
+}
+div[class="tw-border-b tw-border-l tw-border-r tw-border-radius-medium tw-border-t tw-c-background tw-elevation-1"] {
+    margin-left: -330px !important;
 }*/
+
+/* Remove extensions video overlay*/
+div[class="extension-container"],
+div[class="extension-taskbar"]{
+    display: none !important;
+}
+
+/* Remove Overwatch Events in the game's directory */
+div[class="tw-animation tw-animation--animate tw-animation--duration-medium tw-animation--fill-mode-both tw-animation--slide-in-right tw-animation--timing-ease"] {
+    display: none !important;
+}
+div[class="tw-pd-b-3 tw-pd-t-2 tw-pd-x-3"] {
+    padding-right: 0 !important;
+}
+
+/* Remove "Block" and "Hide Thumbnails" FFZ buttons in a game's directory */
+button[class="tw-mg-l-1 tw-button ffz-directory-toggle-block"], 
+button[class="tw-mg-l-1 tw-button ffz-directory-toggle-thumbnail"] {
+    display: none !important;
+}
+
+/* Remove Overwatch's Hero used by streamer */
+div[class="preview-card-appendage tw-flex"] {
+    display: none !important;
+}
+
+/* Remove "Online Friends" in the side nav */
+div[class="tw-flex-grow-1 tw-full-width"] 
+div[class="tw-mg-b-2"] {
+    display: none !important;
+}
+
+/* Remove "Followed Channels" Title in the side nav (+collapsed) */
+div[class="side-nav-header tw-mg-t-1 tw-mg-x-1 tw-pd-t-1"], 
+div[class="side-nav-header tw-align-items-center tw-c-text-alt-2 tw-flex tw-flex-wrap tw-justify-content-center tw-mg-t-1 tw-pd-b-05 tw-pd-t-1"] {
+    display: none !important;
+}
+
+/* Remove "Search to Add Friends" search bar in the side nav */
+div[class="side-nav__theme-wrapper tw-border-r tw-flex tw-flex-column tw-flex-grow-1 tw-flex-nowrap tw-flex-shrink-0 tw-full-height tw-full-width tw-relative"] 
+div[class="tw-border-t tw-pd-1"] {
+    display: none !important;
+}
+
+/* Remove chat rules pop-up */
+div[class="tw-pd-x-2"] div[class="chat-rules tw-relative"] {
+    display: none !important;
+}
+
+/* Shrink side nav width */
+div[class="tw-flex tw-flex-nowrap tw-full-height tw-overflow-hidden tw-relative"] div[class*="side-nav tw-flex-shrink-0 tw-full-height tw-relative"] {
+    width: 200px !important;
+}
+
+/* Remove Chromecast button on players */
+div[class="player-buttons-right"] button[class="player-button"] {
+    display: none !important;
+}
+
+/* Remove "It's your 2 month anniversary" pop-up at the top of chat */
+div[class*="chat-resub-notification tw-absolute tw-left-0 tw-pd-0 tw-right-0 tw-top-0"] div[class*="chat-share-prompt tw-absolute tw-full-width tw-pd-l-05 tw-pd-y-05"] {
+    display: none !important;
+}
+
+/*
+TODO:
+-After clipping, the page doesn't show the input for the clip title
+*/
