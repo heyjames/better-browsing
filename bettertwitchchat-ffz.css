@@ -1,6 +1,22 @@
+/* Highlight self */
+div[data-user="yourTwitchNameHere"] span[class="chat-line__username notranslate"] {
+    background-color: yellow !important;
+}
+
+/* Remove StreamElements from chat */
+div[data-user-id="100135110"] {
+    display: none !important;
+}
+
+/* Streamer's name in a game's directory */
+p[class="tw-c-text-alt tw-ellipsis"] a[class="tw-interactive tw-link tw-link--inherit"] {
+/*     font-size: 16px !important; */
+    color: #00ea08 !important;
+}
+
 /* Remove Twitch, FFZ emotes */
-/* img[data-provider^="twitch"],
-img[data-tooltip-type*="emote"] {
+img[data-provider^="twitch"],
+/* img[data-tooltip-type*="emote"] {
     display: none !important;
 } */
 
@@ -11,17 +27,18 @@ img[data-tooltip-type*="emote"] {
 
 /* Live+VOD Chat usernames */
 span[class^="chat-author__display-name"] {
-/*     font-size: 16px !important; */
+/*     font-size: 14px !important; */
     font-weight: bold !important;
     color: red !important;
-    font-family: "Verdana" !important;
+    font-family: "Arial" !important;
 }
 
 /* Live message */
 div[class*="chat-line__message"] span[class*="message"] {
-/*     font-size: 16px !important; */
-    font-weight: bold !important;
-    font-family: "Verdana" !important;
+    font-size: 14px !important;
+/*     font-weight: bold !important; */
+    font-family: "Arial" !important;
+    color: #fff !important;
 }
 
 /* International usernames */
@@ -32,10 +49,15 @@ div[class*="chat-line__message"] span[class*="chat-author__intl-login"] {
     opacity: 1 !important;
 }
 
+/* Hide chat header "Chat on Videos" */
+div[class="tw-align-items-center tw-c-background-alt tw-flex tw-flex-shrink-0 tw-justify-content-center video-chat__header"] {
+    display: none !important;
+}
+
 /* VOD message */
 span[class^="qa-mod-message"], div[class^="tw-inline video-chat__message"] {
     font-family: "Verdana" !important;
-    font-size: 16px !important;
+/*     font-size: 16px !important; */
     font-weight: bold !important;
     color: rgb(230, 230, 230) !important;
 }
@@ -48,17 +70,17 @@ span[class^="qa-mod-message"], div[class^="tw-inline video-chat__message"] {
 /* @user_name mentions are light green */
 strong[class^="chat-line__message-mention"],
 span[class*="mention-fragment"] {
-    color: lightgreen !important;
+    color: #00e600 !important;
     font-weight: bold;
 }
 
 /* Highlight a user in chat */
-/* div[data-user*=""] span[class*="message"] {
+ div[data-user*=""] span[class*="message"] {
     color: #fff !important;
     font-weight: bold !important;
     font-size: 16px !important;
     background-color: #b22eff !important;
-} */
+} 
 
 /* Remove badges from live chat, ffz supporter badge */
 span[data-badge*="subscriber"],
@@ -71,11 +93,20 @@ span[data-badge*="firewatch"],
 span[data-badge*="H1Z1"], 
 span[data-badge*="sub-gifter"], 
 span[data-badge*="kingdom-new-lands"], 
-span[data-badge^="overwatch-league-insider_1"], 
+span[data-badge^="overwatch"], 
 span[data-badge^="titan-souls_1"], 
 span[data-badge^="cuphead_1"], 
+span[data-badge^="founder"], 
+span[data-badge^="hello_neighbor_1"], 
 span[data-badge*="clip-champ"], 
+span[data-badge*="vip"], 
+span[data-badge*="eso"], 
 span[data-provider^="ffz"] {
+    display: none !important;
+}
+
+/* Remove bits in chat message */
+span[data-tooltip-type="cheer"] {
     display: none !important;
 }
 
@@ -93,7 +124,24 @@ img[alt*="TwitchCon"],
 img[alt^="dizzy"], 
 img[alt^="jnb"], 
 img[alt^="kaotyk"], 
-img[alt^="squad"], 
+img[alt^="nabi"], 
+img[alt^="trrl"], 
+img[alt^="bcb"], 
+img[alt^="bryand"], 
+img[alt^="bigboz"], 
+img[alt^="blondie"], 
+img[alt^="roo"], 
+img[alt^="fus"], 
+img[alt^="meli"], 
+img[alt^="kimi"], 
+img[alt^="picnic"], 
+img[alt^="uhn"], 
+img[alt^="saab"], 
+img[alt^="choco"], 
+img[alt^="jade"], 
+img[alt^="doctor"], 
+img[alt^="pp"], 
+img[alt^="poki"], 
 img[alt^="mjl"] {
     display: none;
 }
@@ -188,12 +236,32 @@ div[class^="player-streaminfo__viewers"] {
      -1px 1px 0 #000,
      1px 1px 0 #000;
 }
+/* LIVE overlay */
+div[class*="pl-controls-top js-controls-top"] div[class*="player-streamstatus player-streamstatus--theatre"] {
+/*     font-size: 16px; */
+/*     font-weight: bold; */
+    text-shadow:
+     2px 2px 0 #000,
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+/* VOD player seek */
+div[class*="player-seek"] div[class*="player-seek__time-container"] {
+    text-shadow:
+     2px 2px 0 #000,
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
 
 /* Remove black gradient overlay on mouseover */
-div[class*="pl-controls-top js-controls-top"],
+/* div[class*="pl-controls-top js-controls-top"],
 div[class*="pl-controls-bottom pl-flex qa-controls-bottom"] {
     background: none !important;
-}
+} */
 
 /* (VOD+Live) Hide "Chat on Videos" fixed chat header */
 div[class*="tw-align-items-center tw-flex tw-flex-shrink-0 tw-justify-content-center video-chat__header"],
@@ -216,10 +284,10 @@ div[class="room-selector__header tw-align-items-center tw-border-b tw-border-l t
 div[class="simplebar-content"] div[class="side-nav-page-info"] {
     display: none !important;
 }
-/* Remove "Recommended" from the side nav */
-div[class="simplebar-content"] div[class="tw-full-width"] {
+/* Remove "Recommended" from the side nav. I don't see this appear anymore */
+/* div[class="simplebar-content"] div[class="tw-full-width"] {
     display: none !important;
-}
+} */
 
 /* Remove part of the game directory's banner of unecessary space */
 div[class="tw-overflow-hidden tw-relative"] {
@@ -244,64 +312,97 @@ div[class="directory-header__avatar tw-absolute tw-bottom-0 tw-mg-b-1 tw-mg-l-3"
     border: 0;
 }
 
+
+/* Hide right overlay pane when stream is offline's "Watch Now" + Remove "More from ___" replacing overlay if you "x" the first one */
+div[class^="player-root"] div[class^="player-overlay recommendations-overlay pl-single-rec-wrapper"] {
+    display: none !important;
+}
+
+/* Remove "Follow and get notified when ____ is live" popup when stream is offline */
+div[class^="player-root"] div[class^="pl-pinned-panel pl-pinned-panel--animate"] {
+    display: none !important;
+}
+
+/* Chat top header + resub notification */
+div[class^="chat-resub-notification tw-absolute tw-left-0 tw-pd-0 tw-right-0 tw-top-0"], 
+div[class^="rooms-header tw-align-items-center tw-border-b tw-c-background-alt tw-flex tw-flex-shrink-0 tw-full-width tw-justify-content-between tw-pd-l-2 tw-pd-r-1"] 
+{
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Remove chat input box border on all but top sides */
-.tw-theme--dark .tw-textarea {
+/* .tw-theme--dark .tw-textarea {
     border: 0px solid #392e5c !important;
     border-top: 1px solid #392e5c !important;
     border-bottom: 1px solid #392e5c !important;
     background: #0e0c13;
     color: #faf9fa;
-}
+} */
 /* Remove chat focus box highlight */
-.tw-textarea:focus, .tw-theme--dark .tw-textarea:focus, .tw-theme--light .tw-textarea:focus {
+/* .tw-textarea:focus, .tw-theme--dark .tw-textarea:focus, .tw-theme--light .tw-textarea:focus {
     box-shadow: none !important;
     border: 0px solid red;
-}
-.tw-textarea, .tw-theme--dark .tw-textarea, .tw-theme--light .tw-textarea {
+} */
+/* .tw-textarea, .tw-theme--dark .tw-textarea, .tw-theme--light .tw-textarea {
     border: 0px solid red;
-}
+} */
 /* Chat offset */
-textarea[class="tw-block tw-border-radius-medium tw-font-size-6 tw-full-width tw-textarea tw-textarea--no-resize"] {
+/* textarea[class="tw-block tw-border-radius-medium tw-font-size-6 tw-full-width tw-textarea tw-textarea--no-resize"] {
     padding-bottom: 0px !important;
     margin-bottom: 40px !important;
-}
+} */
 /* Miniature chat */
-div[class="chat-input tw-block tw-pd-b-2 tw-pd-x-2"] {
+/* div[class="chat-input tw-block tw-pd-b-2 tw-pd-x-2"] {
     padding-left: 0px !important;
     padding-right: 0px !important;
     padding-bottom: 0px !important;
-}
-div[class="tw-relative tw-z-default"] {
+} */
+/* div[class="tw-relative tw-z-default"] {
     margin-bottom: -39px !important;
-}
+} */
 /* Remove "Chat" purple button */
-div[class="chat-input__buttons-container tw-flex tw-justify-content-between tw-mg-t-1"] button[class="tw-interactive tw-button"] {
+/* div[class="chat-input__buttons-container tw-flex tw-justify-content-between tw-mg-t-1"] button[class="tw-interactive tw-button"] {
     display: none !important;
-}
+} */
 /* Shift gear icon and show chat users list button to the right side */
-div[class="tw-flex tw-flex-row"] {
+/* div[class="tw-flex tw-flex-row"] {
     z-index: 1 !important;
-}
-svg[class="tw-svg__asset tw-svg__asset--gear tw-svg__asset--inherit"], 
+} */
+/* svg[class="tw-svg__asset tw-svg__asset--gear tw-svg__asset--inherit"], 
 svg[class="tw-svg__asset tw-svg__asset--viewerlist tw-svg__asset--inherit"] {
     width: 14px;
     height: 14px;
-}
+} */
 /* Emoticon icon chat menu */
-svg[class="tw-svg__asset tw-svg__asset--emoticons tw-svg__asset--inherit"] {
+/* svg[class="tw-svg__asset tw-svg__asset--emoticons tw-svg__asset--inherit"] {
     width: 16px;
     height: 16px;
-}
-button[class="tw-interactive tw-button-icon tw-button-icon--secondary"] {
+} */
+/* button[class="tw-interactive tw-button-icon tw-button-icon--secondary"] {
     margin-left: -284px !important;
     margin-bottom: -94px !important;
-}
+} */
 /* :hover icon background */
-.tw-button-icon__icon {
+/* .tw-button-icon__icon {
     display: inline-flex;
     padding-left: 6px;
     padding-right: 6px;
-}
+} */
 
 /* Shift chat settings icons to right */
 /*div[class="chat-input__buttons-container tw-flex tw-justify-content-between tw-mg-t-1"] {
@@ -310,6 +411,29 @@ button[class="tw-interactive tw-button-icon tw-button-icon--secondary"] {
 div[class="tw-border-b tw-border-l tw-border-r tw-border-radius-medium tw-border-t tw-c-background tw-elevation-1"] {
     margin-left: -330px !important;
 }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Remove extensions video overlay*/
 div[class="extension-container"],
@@ -321,9 +445,9 @@ div[class="extension-taskbar"]{
 div[class="tw-animation tw-animation--animate tw-animation--duration-medium tw-animation--fill-mode-both tw-animation--slide-in-right tw-animation--timing-ease"] {
     display: none !important;
 }
-div[class="tw-pd-b-3 tw-pd-t-2 tw-pd-x-3"] {
+/* div[class="tw-pd-b-3 tw-pd-t-2 tw-pd-x-3"] {
     padding-right: 0 !important;
-}
+} */
 
 /* Remove "Block" and "Hide Thumbnails" FFZ buttons in a game's directory */
 button[class="tw-mg-l-1 tw-button ffz-directory-toggle-block"], 
@@ -359,10 +483,10 @@ div[class="tw-pd-x-2"] div[class="chat-rules tw-relative"] {
     display: none !important;
 }
 
-/* Shrink side nav width */
-div[class="tw-flex tw-flex-nowrap tw-full-height tw-overflow-hidden tw-relative"] div[class*="side-nav tw-flex-shrink-0 tw-full-height tw-relative"] {
+/* Shrink side nav width. Bug: about section of streamer doesn't adjust columns and is cut-off */
+/* div[class="tw-flex tw-flex-nowrap tw-full-height tw-overflow-hidden tw-relative"] div[class*="side-nav tw-flex-shrink-0 tw-full-height tw-relative"] {
     width: 200px !important;
-}
+} */
 
 /* Remove Chromecast button on players */
 div[class="player-buttons-right"] button[class="player-button"] {
@@ -374,7 +498,316 @@ div[class*="chat-resub-notification tw-absolute tw-left-0 tw-pd-0 tw-right-0 tw-
     display: none !important;
 }
 
+/* Hide "Show me Games/Communities/Creative Communities/Channels" filter bar in game directory */
+div[class="tw-pd-3"] div[class="tw-border-b tw-border-l tw-border-r tw-border-radius-large tw-border-t tw-c-background-base tw-flex tw-flex-row tw-mg-b-2 tw-pd-2"] {
+    display: none !important;
+}
+
+div[class*="pl-overlay pl-overlay--loading"] {
+    display: none !important;
+}
+
+/* Remove "Click and emote to say hello!" pop-up above chat input box */
+div[class*="chat-room__content"] div[class*="new-chatter-ritual"] {
+    display: none !important;
+}
+
+/* Remove Old Videos. BUG: Removed drop-down menu to filter VOD highlights, all, etc. Also removed VOD bottom title, share, views, 3 dots to highlight or delete your own VOD */
+/* div[class*="channel-page-layout tw-flex tw-flex-column tw-flex-nowrap tw-full-height"] div[class*="tw-pd-t-2 tw-pd-x-3"] div[class*="preview-card-carousel tw-mg-y-1 tw-relative"], 
+div[class*="channel-page-layout tw-flex tw-flex-column tw-flex-nowrap tw-full-height"] div[class*="tw-pd-t-2 tw-pd-x-3"] div[class*="tw-flex tw-flex-row"], 
+div[class*="channel-page-layout tw-flex tw-flex-column tw-flex-nowrap tw-full-height"] div[class*="tw-pd-t-2 tw-pd-x-3"] span[class*="tw-c-text-alt-2"] {
+    display: none !important;
+}
+.tw-mg-b-2 {
+    margin-bottom: 0 !important;
+}
+ */
+/* Remove "This Ad supports _____" overlay clickthrough during VODs*/
+div[class*="pl-overlay"] a[class*="pl-overlay__clickthrough"] {
+    display: none !important;
+}
+
+/* Remove pauses overlay */
+div[class*="player-root"] div[class*="player-overlay player-play-overlay js-paused-overlay"] {
+    display: none !important;
+}
+
+/* Remove player overlay */
+div[class*="js-ima-ads-container ima-ads-container"] {
+    display: none !important;
+}
+
+/* Remove "How did you find out about Twitch?" questionnaire popup */
+div[class*="QSIPopOver"] {
+    display: none !important;
+}
+
+/* Remove room select header at top of chat */
+div[class*="tw-flex tw-flex-column tw-flex-grow-1 tw-flex-nowrap tw-full-height tw-full-width tw-relative"] div[class*="room-selector__header"] {
+    display: none !important;
+}
+
+/* Disable the circular profile pictures */
+.tw-border-radius-rounded, .tw-root--theme-dark .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded {
+    border-radius: 0 !important;
+}
+
+/* Restore circular red live indicator left pane */
+div[data-a-target="side-nav-live-status"] 
+div[class="tw-align-items-center tw-flex"] 
+div[class="tw-border-radius-rounded tw-channel-status-indicator tw-channel-status-indicator--live tw-channel-status-indicator--small tw-inline-block tw-relative"] {
+    border-radius: 50% !important;
+}
+
+/* Restore circular red live indicator left of Videos tab */
+.tw-border-radius-rounded, .tw-root--theme-dark .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded {
+    border-radius: 50% !important;
+}
+
+/* Remove "Audio for portions of this video has been muted..." pop-up */
+div[class="player-root"] div[class^="player-alert"] {
+    display: none !important;
+}
+
+/* Remove "It's your 10 month sub anniversary! Share" that appears above chat input */
+div[class="tw-transition tw-transition--duration-long tw-transition--enter-done tw-transition__fade tw-transition__fade--enter-done"] {
+    display: none !important;
+}
+
+/* Remove chat input */
+div[class="chat-input tw-block tw-pd-b-2 tw-pd-x-2"] {
+    display: none !important;
+}
+
+/* Remove Squad Stream top bar */
+div[class="squad-stream-top-bar__container tw-align-items-center tw-c-background-base tw-flex tw-flex-shrink-0 tw-relative"] {
+    display: none !important;
+}
+
+/* Remove stream overlay tags */
+div[class="player-streaminfo__meta-container"] div[class="pl-streamtags"] {
+    display: none !important;
+}
+
+/* Whatever this is, removing it allows double-click to fullscreen to work again */
+div[class="tw-absolute tw-full-height tw-full-width tw-left-0 tw-top-0"] {
+    display: none !important;
+}
+
+/* Remove tags in directory */
+div[class="tw-mg-t-05"] {
+    display: none !important;
+}
+
+/* Remove following and subscribe buttons in theater mouseover */
+div[class^="player-social-panel"] {
+    display: none !important;
+}
+
+/* Remove "Started x hours ago" from directory */
+div[class="tw-mg-b-2 tw-relative"] div[data-test-selector="bottom-right-selector"] {
+    display: none !important;
+}
+
+/* Move stream viewer label to bottom right */
+div[class="tw-mg-b-2 tw-relative"] div[data-test-selector="bottom-left-selector"] {
+    left: auto !important;
+    right: 0 !important;
+    top: 0 !important;
+}
+
+/* Opaque Live indicator on directory */
+div[class="tw-mg-b-2 tw-relative"] div[data-test-selector="top-left-selector"] {
+    opacity: 0 !important;
+}
+
+/* Whatever this is, it prevents double-clicking the stream to fullscreen */
+div[class="tw-c-text-overlay"] {
+    display: none !important;
+}
+
+/* Remove SUBtember notification below the "Subscribe" button */
+div[class^="subtember-callout"] {
+    display: none !important;
+}
+
+/* Remove redeem points chat line */
+div[class^="channel-points-reward-line"] {
+    display: none !important;
+}
+
+/* Remove channel points in chat input area */
+div[data-test-selector^="community-points-summary"] {
+    display: none !important;
+}
+
+/* Adjust FFZ PIP (picture-in-picture) Icon */
+button[class="player-button player-button--pip ffz--player-pip ffz-i-window-restore"] {
+/*     display: none !important; */
+    zoom: 75% !important;
+    padding-top: 5px !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+}
+
+/* Remove new notification in game directory */
+div[class="tw-full-width tw-mg-y-1"] {
+    display: none !important;
+}
+
+/* Remove tags on streamer page */
+div[data-test-selector="realtime_stream_tag_list_container_selector"] {
+    display: none !important;
+}
+
+/* Remove tags on streamer page */
+div[class="channel-root tw-full-height"] {
+    padding: 0 !important;
+}
+
+/* Remove chat room notifications (Community Gift Chest) */
+div[class="chat-room__notifications tw-absolute tw-full-width tw-z-default"] {
+    display: none !important;
+}
+
+div[class="tw-mg-l-3 tw-mg-t-3"] h1 {
+    display: none !important;
+}
+
+div[class="tw-mg-b-2"] h1 {
+    display: none !important;
+}
+
+/* Navbar */
+.tw-root--theme-ffz .tw-c-background-base, .tw-root--theme-ffz .tw-root--theme-dark .tw-c-background-base, .tw-root--theme-ffz.tw-root--theme-dark .tw-c-background-base {
+    background-color: rgb(55,48,89) !important;
+}
+
+/* Navbar shadow */
+.tw-root--theme-ffz .tw-elevation-1, .tw-root--theme-ffz .tw-root--theme-dark .tw-elevation-1, .tw-root--theme-ffz.tw-root--theme-dark .tw-elevation-1 {
+    box-shadow: 0 0 0 0 !important;
+}
+
+/* Player header */
+.tw-root--theme-dark .channel-header, .channel-header {
+    background-color: rgb(31,29,42) !important;
+}
+
+/* Chat border left */
+.tw-root--theme-ffz .tw-border-l, .tw-root--theme-ffz .tw-root--theme-dark .tw-border-l, .tw-root--theme-ffz.tw-root--theme-dark .tw-border-l {
+    border-left-color: rgb(42,42,42) !important;
+}
+
+/* Chat header */
+.tw-root--theme-ffz .tw-border-b, .tw-root--theme-ffz .tw-root--theme-dark .tw-border-b, .tw-root--theme-ffz.tw-root--theme-dark .tw-border-b {
+    background-color: rgb(31,29,42) !important;
+}
+
+/* Chat header bottom border */
+.tw-root--theme-ffz .tw-border-b, .tw-root--theme-ffz .tw-root--theme-dark .tw-border-b, .tw-root--theme-ffz.tw-root--theme-dark .tw-border-b {
+    border-bottom-color: rgb(44,39,65) !important;
+}
+
+/* Chat background */
+.tw-root--theme-dark .chat-room, .chat-room {
+    background-color: rgb(21,21,21) !important;
+}
+
+/* Chat background (VOD) */
+.tw-root--theme-dark .channel-root__right-column, .channel-root__right-column {
+    background-color: rgb(21,21,21) !important;
+}
+
+/* Left nav streamer background */
+.tw-root--theme-dark .side-nav__overlay-wrapper {
+    background-color: rgb(29, 29, 29) !important;
+}
+
+/* Left nav border color */
+div[data-a-target="side-nav-bar"] {
+    border-right: 1px solid rgb(42,42,42) !important;
+}
+
+/* .tw-root--theme-dark .directory-header-new__banner-cover {
+    background: rgb(58, 58, 58) !important;
+} */
+
+.tw-root--theme-dark .directory-header-new__banner-cover {
+    background: linear-gradient(0deg,#151515,rgba(0,0,0,.25)),linear-gradient(90deg,#151515,rgba(0,0,0,.25)) !important;
+}
+
+/* Move the channel header links back to the left */
+div[class="tw-align-items-center tw-flex tw-full-height tw-full-width tw-justify-content-between"] .tw-justify-content-center {
+    justify-content: left !important;
+}
+
+/* Remove the "Home" link from the channel header links */
+ul[data-test-selector="channel-header-tabs"] li[data-index="0"] {
+    display: none !important
+}
+
+/* message deleted */
+span[class="chat-line__message--deleted"] a {
+    color: #00c8ff !important;
+}
+
+/* Disable hover animation */
+a[class*="tw-interactive tw-link"] div {
+    pointer-events: none !important;
+}
+
+/* Directory title and username font color and size adjustments */
+.tw-root--theme-ffz .tw-c-text-alt-2, .tw-root--theme-ffz .tw-root--theme-dark .tw-c-text-alt-2, .tw-root--theme-ffz.tw-root--theme-dark .tw-c-text-alt-2 {
+    color: #e6e6e6 !important;
+    font-size: 14px !important;
+}
+h3[class="tw-ellipsis tw-font-size-5"] {
+    color: #e6e6e6 !important;
+    font-size: 16px !important;
+}
+
+/* Player settings */
+.tw-balloon--md {
+    width: 22rem !important;
+}
+
+/* Player settings background */
+div[class="tw-overflow-auto tw-pd-1"] {
+    background-color: #313131 !important;
+}
+
+/* Remove turn on notifications overlay on an offlilne stream */
+div[class="follow-panel-overlay tw-absolute tw-align-items-start tw-border-radius-small tw-c-background-overlay tw-c-text-overlay tw-elevation-1 tw-flex tw-flex-column tw-pd-1 tw-transition tw-transition--duration-medium tw-transition--enter-done tw-transition__slide-over-top tw-transition__slide-over-top--enter-done"] {
+    display: none !important;
+}
+
+/* Remove view last stream on the right side overlay on an offlilne stream */
+div[class="tw-absolute tw-full-height tw-full-width tw-top-0 tw-transition tw-transition--duration-long tw-transition--enter-done tw-transition__slide-over-right tw-transition__slide-over-right--enter-done"] {
+    display: none !important;
+}
+
+/* Main background */
+.tw-root--theme-dark body {
+    background-color: #212121 !important;
+}
+
+/* Single game directory's header */
+.tw-root--theme-dark .directory-header-new__banner-cover {
+    background: linear-gradient(0deg,#212121,rgba(0,0,0,.25)),linear-gradient(90deg,#151515,rgba(0,0,0,.25)) !important
+}
+
+/* Info below stream player */
+div[class="channel-info-bar tw-flex tw-flex-wrap tw-full-width tw-justify-content-between tw-pd-1"] {
+    background-color: #18181b !important;
+}
+
+/* Navbar */
+.tw-c-background-base {
+    background-color: #373059 !important
+}
+
 /*
 TODO:
 -After clipping, the page doesn't show the input for the clip title
+-Remove "<streamer> isn't streaming right now. Check out their trailer and see what they're all about." pop-up when streamer is offline 
 */
