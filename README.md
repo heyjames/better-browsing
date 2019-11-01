@@ -1,4 +1,7 @@
-Clean up websites using the Stylish Chrome Extension. bettertwitchchat-ffz.css should be used with the FrankerFaceZ Chrome extension. Some ublock origin rules aim to remove many of Twitch's distracting elements.
+Clean up websites using the Stylus Chrome Extension. bettertwitchchat-ffz.css should be used with the FrankerFaceZ Chrome extension. Some ublock origin rules aim to remove many of Twitch's distracting elements.
+
+### Update 10/31/2019
+Code needs to be cleaned up big time because Twitch's code has change a lot since this was created.
 
 ### Twitch
 * MasterOverwatch pop-up/overlay
