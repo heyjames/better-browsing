@@ -1,0 +1,315 @@
+[
+	{
+		"installDate": 1530699155178,
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "Twitch",
+		"sections": [
+			{
+				"code": "/* Highlight self */\ndiv[data-user=\"USERNAME\"] span[class=\"chat-line__username notranslate\"] {\n    background-color: #ffff00 !important;\n}\n\n/* Highlight yourself @ mentions */\nspan[class=\"message\"] strong[data-login=\"USERNAME\"] {\n    background-color: #ffff00 !important;\n}\n\n/* Highlight self */\ndiv[data-user=\"USERNAME\"] span[class=\"chat-line__username notranslate\"] {\n    background-color: #ffff00 !important;\n}\n\n/* Highlight yourself @ mentions */\nspan[class=\"message\"] strong[data-login=\"USERNAME\"] {\n    background-color: #ffff00 !important;\n}\n\n/**********************************************************************************/\n/**********************************************************************************/\n/**********************************************************************************/\n\n/* Remove StreamElements from chat */\ndiv[data-user-id=\"100135110\"] {\n    display: none !important;\n}\n\n/* Streamer's name in a game's directory */\np[class=\"tw-c-text-alt tw-ellipsis\"] a[class=\"tw-interactive tw-link tw-link--inherit\"] {\n/*     font-size: 16px !important; */\n    color: #00ea08 !important;\n}\n\n/* Remove Twitch, FFZ emotes */\nimg[data-provider^=\"twitch\"],\n/* img[data-tooltip-type*=\"emote\"] {\n    display: none !important;\n} */\n\n/* Remove strikethrough on FFZ's deleted messages */\n/* .ffz--deleted-message .message {\n    text-decoration: none !important;\n} */\n\n/* Live+VOD Chat usernames */\nspan[class^=\"chat-author__display-name\"] {\n/*     font-size: 14px !important; */\n    font-weight: bold !important;\n    color: red !important;\n    font-family: \"Arial\" !important;\n}\n\n/* Live message */\ndiv[class*=\"chat-line__message\"] span[class*=\"message\"] {\n    font-size: 18px !important;\n/*     font-weight: bold !important; */\n    font-family: \"Arial\" !important;\n    color: #fff !important;\n}\n\n/* International usernames */\ndiv[class*=\"chat-line__message\"] span[class*=\"chat-author__intl-login\"] {\n    color: yellow !important;\n}\n.chat-author__intl-login {\n    opacity: 1 !important;\n}\n\n/* Hide chat header \"Chat on Videos\" */\ndiv[class=\"tw-align-items-center tw-c-background-alt tw-flex tw-flex-shrink-0 tw-justify-content-center video-chat__header\"] {\n    display: none !important;\n}\n\n/* VOD message */\nspan[class^=\"qa-mod-message\"], div[class^=\"tw-inline video-chat__message\"] {\n    font-family: \"Verdana\" !important;\n/*     font-size: 16px !important; */\n    font-weight: bold !important;\n    color: rgb(230, 230, 230) !important;\n}\n\n/* Fix streamer's name in chat */\n.video-chat__message-author--creator {\n    background-color: white !important;\n}\n\n/* @user_name mentions are light green */\nstrong[class^=\"chat-line__message-mention\"],\nspan[class*=\"mention-fragment\"] {\n    color: #00e600 !important;\n    font-weight: bold;\n}\n\n/* Highlight a user in chat */\n/* div[data-user*=\"\"] span[class*=\"message\"] {\n    color: #fff !important;\n    font-weight: bold !important;\n    font-size: 16px !important;\n    background-color: #b22eff !important;\n} */\n\n/* Remove badges from live chat, ffz supporter badge */\nspan[data-badge*=\"subscriber\"],\nspan[data-badge*=\"premium\"], \nspan[data-badge*=\"bits\"], \nspan[data-badge*=\"turbo\"], \nspan[data-badge*=\"glhf-pledge\"], \nspan[data-badge*=\"twitchcon\"], \nspan[data-badge*=\"firewatch\"], \nspan[data-badge*=\"H1Z1\"], \nspan[data-badge*=\"sub-gifter\"], \nspan[data-badge*=\"kingdom-new-lands\"], \nspan[data-badge^=\"overwatch\"], \nspan[data-badge^=\"titan-souls_1\"], \nspan[data-badge^=\"cuphead_1\"], \nspan[data-badge^=\"founder\"], \nspan[data-badge^=\"hello_neighbor_1\"], \nspan[data-badge^=\"sub-gift-leader\"], \nspan[data-badge*=\"clip-champ\"], \nspan[data-badge*=\"vip\"], \nspan[data-badge*=\"eso\"], \nspan[data-provider^=\"ffz\"] {\n    display: none !important;\n}\n\n/* Remove bits in chat message */\nspan[data-tooltip-type=\"cheer\"] {\n    display: none !important;\n}\n\n/* Remove badges from chat and emotes in VODs */\n/* Badges */\nimg[alt*=\"Subscriber\"],\nimg[alt*=\"Gifter\"],\nimg[alt*=\"Prime\"],\nimg[alt^=\"Turbo\"],\nimg[alt*=\"cheer\"],\nimg[alt^=\"H1Z1\"],\nimg[alt^=\"GLHF\"],\nimg[alt*=\"TwitchCon\"],\n/* Channel specific emotes */\nimg[alt^=\"jnb\"], \nimg[alt^=\"kaotyk\"], \nimg[alt^=\"nabi\"], \nimg[alt^=\"trrl\"], \nimg[alt^=\"bcb\"], \nimg[alt^=\"bryand\"], \nimg[alt^=\"bigboz\"], \nimg[alt^=\"blondie\"], \nimg[alt^=\"roo\"], \nimg[alt^=\"fus\"], \nimg[alt^=\"meli\"], \nimg[alt^=\"kimi\"], \nimg[alt^=\"picnic\"], \nimg[alt^=\"uhn\"], \nimg[alt^=\"saab\"], \nimg[alt^=\"alizBae\"], \nimg[alt^=\"PepePls\"], \nimg[alt^=\"choco\"], \nimg[alt^=\"jade\"], \nimg[alt^=\"doctor\"], \nimg[alt^=\"pp\"], \nimg[alt^=\"poki\"], \nimg[alt^=\"mjl\"] {\n    display: none;\n}\n\n/* Remove cheers */\n/* span[alt^=\"dizzycheer\"] {\n    display: none !important;\n} */\n\n/* Fix emote blocking where it blocks streamer's avatar */\nimg[alt=\"cjayride\"] {\n    display: block !important;\n}\nimg[alt^=\"cjay\"] {\n    display: none;\n}\n\n/* div[data-user*=\"nightbot\"] {\n    display: none !important;\n    visibility: hidden !important;\n} */\n\n/* Remove \"<user> is new here. Say hello!\" from chat */\n/* div[class^=\"user-notice-line\"] {\n    display: none !important;\n} */\n\n/* Remove \"Click an emote to say hello!\" pop-up above chat input */\n/* div[class^=\"new-chatter-ritual\"] {\n    display: none !important;\n    visibility: hidden !important;\n} */\n\n/* Remove non-theater mode padding around video */\ndiv[class=\"channel-page tw-full-height\"] \ndiv[class=\"channel-page-layout tw-flex tw-flex-column tw-flex-nowrap tw-full-height\"] \ndiv[class=\"tw-pd-t-2 tw-pd-x-3\"], \ndiv[class=\"channel-page-layout tw-flex tw-flex-column tw-flex-nowrap tw-full-height\"] div[class=\"tw-pd-t-2 tw-pd-x-3\"] {\n    padding-left: 0px !important;\n    padding-right: 0px !important;\n    padding-top: 0px !important;\n}\n\n/* Remove sponsored content bar that sits between the video player and info */\n/* div[data-test-selector^=\"fuel-commerce-bar\"] {\n    display: none !important;\n} */\n\n/* Hide \"Offers in-game Drops\" corner overlay in game Directory */\ndiv[class^=\"drops-badge tw-absolute tw-right-0 tw-top-0\"] {\n\tdisplay: none !important;\n}\n\n/* Purify chat message for users typing with \"/me\" */\n/* span[class=\"message has-color\"] {\n    color: lightgray !important;\n} */\n\n/*  Mouseover overlay stream info  */\n/* Title */\ndiv[class^=\"player-streaminfo__title qa-stream-title\"] {\n    /*background-color: black;*/\n    font-size: 16px;\n    font-weight: bold;\n    text-shadow:\n     2px 2px 0 #000,\n     -1px -1px 0 #000,\n     1px -1px 0 #000,\n     -1px 1px 0 #000,\n     1px 1px 0 #000;\n}\n/* \"playing <game> for <#> viewers\" */\ndiv[class^=\"player-streaminfo__viewers\"] {\n    /*background-color: black;*/\n    font-size: 16px;\n    font-weight: bold;\n    text-shadow:\n     2px 2px 0 #000,\n     -1px -1px 0 #000,\n     1px -1px 0 #000,\n     -1px 1px 0 #000,\n     1px 1px 0 #000;\n}\n/* Twitch username and game links */\n.player a.player-text-link--no-color {\n    color: #9b66ff;\n    /*background-color: black !important;*/\n    text-shadow:\n     2px 2px 0 #000,\n     -1px -1px 0 #000,\n     1px -1px 0 #000,\n     -1px 1px 0 #000,\n     1px 1px 0 #000;\n}\n/* LIVE overlay */\ndiv[class*=\"pl-controls-top js-controls-top\"] div[class*=\"player-streamstatus player-streamstatus--theatre\"] {\n/*     font-size: 16px; */\n/*     font-weight: bold; */\n    text-shadow:\n     2px 2px 0 #000,\n     -1px -1px 0 #000,\n     1px -1px 0 #000,\n     -1px 1px 0 #000,\n     1px 1px 0 #000;\n}\n/* VOD player seek */\ndiv[class*=\"player-seek\"] div[class*=\"player-seek__time-container\"] {\n    text-shadow:\n     2px 2px 0 #000,\n     -1px -1px 0 #000,\n     1px -1px 0 #000,\n     -1px 1px 0 #000,\n     1px 1px 0 #000;\n}\n\n/* Remove black gradient overlay on mouseover */\n/* div[class*=\"pl-controls-top js-controls-top\"],\ndiv[class*=\"pl-controls-bottom pl-flex qa-controls-bottom\"] {\n    background: none !important;\n} */\n\n/* (VOD+Live) Hide \"Chat on Videos\" fixed chat header */\ndiv[class*=\"tw-align-items-center tw-flex tw-flex-shrink-0 tw-justify-content-center video-chat__header\"],\ndiv[class*=\"room-selector__header tw-align-items-center tw-border-b tw-border-l tw-border-r tw-c-background-alt-2 tw-flex tw-flex-shrink-0 tw-full-width tw-justify-content-between tw-pd-l-2 tw-pd-r-1\"] {\n    display: none !important;\n}\n\n/* Hide \"Get Bits\" in the site title bar */\ndiv[class=\"top-nav__menu tw-align-items-stretch tw-flex tw-flex-nowrap tw-full-height\"] div[class*=\"tw-align-self-center tw-flex-grow-0 tw-flex-nowrap tw-flex-shrink-0 tw-mg-x-1\"] {\n    display: none !important;\n}\n\n/* Remove pinned top cheers at top of chat */\ndiv[class=\"tw-z-default\"] div[class=\"pinned-cheer-v2 tw-z-default\"],\ndiv[class=\"room-selector__header tw-align-items-center tw-border-b tw-border-l tw-border-r tw-c-background-alt-2 tw-flex tw-flex-shrink-0 tw-full-width tw-justify-content-between tw-pd-l-2 tw-pd-r-1\"] {\n    display: none !important;\n}\n\n/* Remove \"Join the Twitch community! Discover the best live streams anywhere.\" in the side nav */\ndiv[class=\"simplebar-content\"] div[class=\"side-nav-page-info\"] {\n    display: none !important;\n}\n/* Remove \"Recommended\" from the side nav. I don't see this appear anymore */\n/* div[class=\"simplebar-content\"] div[class=\"tw-full-width\"] {\n    display: none !important;\n} */\n\n/* Remove part of the game directory's banner of unecessary space */\ndiv[class=\"tw-overflow-hidden tw-relative\"] {\n    display: none !important;\n}\n/* Fix game directory image cutoff */\ndiv[class=\"tw-card-img tw-card-img--size-8 tw-flex-shrink-0 tw-overflow-hidden\"] {\n    margin-bottom: -8px;\n}\n.tw-card-img--size-8 {\n    width: 35px;\n}\n/* Move links due to directory game image resize */\ndiv[class=\"directory-tabs\"] {\n    background-color: #fff;\n    border-bottom: 1px solid #dad8de;\n    height: 5rem;\n    padding-left: 7.5rem; /* Custom line*/\n}\n/* Remove odd image border */\ndiv[class=\"directory-header__avatar tw-absolute tw-bottom-0 tw-mg-b-1 tw-mg-l-3\"] {\n    border: 0;\n}\n\n\n/* Hide right overlay pane when stream is offline's \"Watch Now\" + Remove \"More from ___\" replacing overlay if you \"x\" the first one */\ndiv[class^=\"player-root\"] div[class^=\"player-overlay recommendations-overlay pl-single-rec-wrapper\"] {\n    display: none !important;\n}\n\n/* Remove \"Follow and get notified when ____ is live\" popup when stream is offline */\ndiv[class^=\"player-root\"] div[class^=\"pl-pinned-panel pl-pinned-panel--animate\"] {\n    display: none !important;\n}\n\n/* Chat top header + resub notification */\ndiv[class^=\"chat-resub-notification tw-absolute tw-left-0 tw-pd-0 tw-right-0 tw-top-0\"], \ndiv[class^=\"rooms-header tw-align-items-center tw-border-b tw-c-background-alt tw-flex tw-flex-shrink-0 tw-full-width tw-justify-content-between tw-pd-l-2 tw-pd-r-1\"] \n{\n    display: none !important;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* Remove chat input box border on all but top sides */\n/* .tw-theme--dark .tw-textarea {\n    border: 0px solid #392e5c !important;\n    border-top: 1px solid #392e5c !important;\n    border-bottom: 1px solid #392e5c !important;\n    background: #0e0c13;\n    color: #faf9fa;\n} */\n/* Remove chat focus box highlight */\n/* .tw-textarea:focus, .tw-theme--dark .tw-textarea:focus, .tw-theme--light .tw-textarea:focus {\n    box-shadow: none !important;\n    border: 0px solid red;\n} */\n/* .tw-textarea, .tw-theme--dark .tw-textarea, .tw-theme--light .tw-textarea {\n    border: 0px solid red;\n} */\n/* Chat offset */\n/* textarea[class=\"tw-block tw-border-radius-medium tw-font-size-6 tw-full-width tw-textarea tw-textarea--no-resize\"] {\n    padding-bottom: 0px !important;\n    margin-bottom: 40px !important;\n} */\n/* Miniature chat */\n/* div[class=\"chat-input tw-block tw-pd-b-2 tw-pd-x-2\"] {\n    padding-left: 0px !important;\n    padding-right: 0px !important;\n    padding-bottom: 0px !important;\n} */\n/* div[class=\"tw-relative tw-z-default\"] {\n    margin-bottom: -39px !important;\n} */\n/* Remove \"Chat\" purple button */\n/* div[class=\"chat-input__buttons-container tw-flex tw-justify-content-between tw-mg-t-1\"] button[class=\"tw-interactive tw-button\"] {\n    display: none !important;\n} */\n/* Shift gear icon and show chat users list button to the right side */\n/* div[class=\"tw-flex tw-flex-row\"] {\n    z-index: 1 !important;\n} */\n/* svg[class=\"tw-svg__asset tw-svg__asset--gear tw-svg__asset--inherit\"], \nsvg[class=\"tw-svg__asset tw-svg__asset--viewerlist tw-svg__asset--inherit\"] {\n    width: 14px;\n    height: 14px;\n} */\n/* Emoticon icon chat menu */\n/* svg[class=\"tw-svg__asset tw-svg__asset--emoticons tw-svg__asset--inherit\"] {\n    width: 16px;\n    height: 16px;\n} */\n/* button[class=\"tw-interactive tw-button-icon tw-button-icon--secondary\"] {\n    margin-left: -284px !important;\n    margin-bottom: -94px !important;\n} */\n/* :hover icon background */\n/* .tw-button-icon__icon {\n    display: inline-flex;\n    padding-left: 6px;\n    padding-right: 6px;\n} */\n\n/* Shift chat settings icons to right */\n/*div[class=\"chat-input__buttons-container tw-flex tw-justify-content-between tw-mg-t-1\"] {\n    margin-left: 286px;\n}\ndiv[class=\"tw-border-b tw-border-l tw-border-r tw-border-radius-medium tw-border-t tw-c-background tw-elevation-1\"] {\n    margin-left: -330px !important;\n}*/\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* Remove extensions video overlay*/\ndiv[class=\"extension-container\"],\ndiv[class=\"extension-taskbar\"]{\n    display: none !important;\n}\n\n/* Remove Overwatch Events in the game's directory */\ndiv[class=\"tw-animation tw-animation--animate tw-animation--duration-medium tw-animation--fill-mode-both tw-animation--slide-in-right tw-animation--timing-ease\"] {\n    display: none !important;\n}\n/* div[class=\"tw-pd-b-3 tw-pd-t-2 tw-pd-x-3\"] {\n    padding-right: 0 !important;\n} */\n\n/* Remove \"Block\" and \"Hide Thumbnails\" FFZ buttons in a game's directory */\nbutton[class=\"tw-mg-l-1 tw-button ffz-directory-toggle-block\"], \nbutton[class=\"tw-mg-l-1 tw-button ffz-directory-toggle-thumbnail\"] {\n    display: none !important;\n}\n\n/* Remove Overwatch's Hero used by streamer */\ndiv[class=\"preview-card-appendage tw-flex\"] {\n    display: none !important;\n}\n\n/* Remove \"Online Friends\" in the side nav */\ndiv[class=\"tw-flex-grow-1 tw-full-width\"] \ndiv[class=\"tw-mg-b-2\"] {\n    display: none !important;\n}\n\n/* Remove \"Followed Channels\" Title in the side nav (+collapsed) */\ndiv[class=\"side-nav-header tw-mg-t-1 tw-mg-x-1 tw-pd-t-1\"], \ndiv[class=\"side-nav-header tw-align-items-center tw-c-text-alt-2 tw-flex tw-flex-wrap tw-justify-content-center tw-mg-t-1 tw-pd-b-05 tw-pd-t-1\"] {\n    display: none !important;\n}\n\n/* Remove \"Search to Add Friends\" search bar in the side nav */\ndiv[class=\"side-nav__theme-wrapper tw-border-r tw-flex tw-flex-column tw-flex-grow-1 tw-flex-nowrap tw-flex-shrink-0 tw-full-height tw-full-width tw-relative\"] \ndiv[class=\"tw-border-t tw-pd-1\"] {\n    display: none !important;\n}\n\n/* Remove chat rules pop-up */\ndiv[class=\"tw-pd-x-2\"] div[class=\"chat-rules tw-relative\"] {\n    display: none !important;\n}\n\n/* Shrink side nav width. Bug: about section of streamer doesn't adjust columns and is cut-off */\n/* div[class=\"tw-flex tw-flex-nowrap tw-full-height tw-overflow-hidden tw-relative\"] div[class*=\"side-nav tw-flex-shrink-0 tw-full-height tw-relative\"] {\n    width: 200px !important;\n} */\n\n/* Remove Chromecast button on players */\ndiv[class=\"player-buttons-right\"] button[class=\"player-button\"] {\n    display: none !important;\n}\n\n/* Remove \"It's your 2 month anniversary\" pop-up at the top of chat */\ndiv[class*=\"chat-resub-notification tw-absolute tw-left-0 tw-pd-0 tw-right-0 tw-top-0\"] div[class*=\"chat-share-prompt tw-absolute tw-full-width tw-pd-l-05 tw-pd-y-05\"] {\n    display: none !important;\n}\n\n/* Hide \"Show me Games/Communities/Creative Communities/Channels\" filter bar in game directory */\ndiv[class=\"tw-pd-3\"] div[class=\"tw-border-b tw-border-l tw-border-r tw-border-radius-large tw-border-t tw-c-background-base tw-flex tw-flex-row tw-mg-b-2 tw-pd-2\"] {\n    display: none !important;\n}\n\ndiv[class*=\"pl-overlay pl-overlay--loading\"] {\n    display: none !important;\n}\n\n/* Remove \"Click and emote to say hello!\" pop-up above chat input box */\ndiv[class*=\"chat-room__content\"] div[class*=\"new-chatter-ritual\"] {\n    display: none !important;\n}\n\n/* Remove Old Videos. BUG: Removed drop-down menu to filter VOD highlights, all, etc. Also removed VOD bottom title, share, views, 3 dots to highlight or delete your own VOD */\n/* div[class*=\"channel-page-layout tw-flex tw-flex-column tw-flex-nowrap tw-full-height\"] div[class*=\"tw-pd-t-2 tw-pd-x-3\"] div[class*=\"preview-card-carousel tw-mg-y-1 tw-relative\"], \ndiv[class*=\"channel-page-layout tw-flex tw-flex-column tw-flex-nowrap tw-full-height\"] div[class*=\"tw-pd-t-2 tw-pd-x-3\"] div[class*=\"tw-flex tw-flex-row\"], \ndiv[class*=\"channel-page-layout tw-flex tw-flex-column tw-flex-nowrap tw-full-height\"] div[class*=\"tw-pd-t-2 tw-pd-x-3\"] span[class*=\"tw-c-text-alt-2\"] {\n    display: none !important;\n}\n.tw-mg-b-2 {\n    margin-bottom: 0 !important;\n}\n */\n/* Remove \"This Ad supports _____\" overlay clickthrough during VODs*/\ndiv[class*=\"pl-overlay\"] a[class*=\"pl-overlay__clickthrough\"] {\n    display: none !important;\n}\n\n/* Remove pauses overlay */\ndiv[class*=\"player-root\"] div[class*=\"player-overlay player-play-overlay js-paused-overlay\"] {\n    display: none !important;\n}\n\n/* Remove player overlay */\ndiv[class*=\"js-ima-ads-container ima-ads-container\"] {\n    display: none !important;\n}\n\n/* Remove \"How did you find out about Twitch?\" questionnaire popup */\ndiv[class*=\"QSIPopOver\"] {\n    display: none !important;\n}\n\n/* Remove room select header at top of chat */\ndiv[class*=\"tw-flex tw-flex-column tw-flex-grow-1 tw-flex-nowrap tw-full-height tw-full-width tw-relative\"] div[class*=\"room-selector__header\"] {\n    display: none !important;\n}\n\n/* Disable the circular profile pictures */\n.tw-border-radius-rounded, .tw-root--theme-dark .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded {\n    border-radius: 0 !important;\n}\n\n/* Restore circular red live indicator left pane */\ndiv[data-a-target=\"side-nav-live-status\"] \ndiv[class=\"tw-align-items-center tw-flex\"] \ndiv[class=\"tw-border-radius-rounded tw-channel-status-indicator tw-channel-status-indicator--live tw-channel-status-indicator--small tw-inline-block tw-relative\"] {\n    border-radius: 50% !important;\n}\n\n/* Restore circular red live indicator left of Videos tab */\n.tw-border-radius-rounded, .tw-root--theme-dark .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded {\n    border-radius: 50% !important;\n}\n\n/* Remove \"Audio for portions of this video has been muted...\" pop-up */\ndiv[class=\"player-root\"] div[class^=\"player-alert\"] {\n    display: none !important;\n}\n\n/* Remove \"It's your 10 month sub anniversary! Share\" that appears above chat input */\ndiv[class=\"tw-transition tw-transition--duration-long tw-transition--enter-done tw-transition__fade tw-transition__fade--enter-done\"] {\n    display: none !important;\n}\n\n/* Remove chat input */\ndiv[class=\"chat-input tw-block tw-pd-b-2 tw-pd-x-2\"] {\n    display: none !important;\n}\n\n/* Remove Squad Stream top bar */\ndiv[class=\"squad-stream-top-bar__container tw-align-items-center tw-c-background-base tw-flex tw-flex-shrink-0 tw-relative\"] {\n    display: none !important;\n}\n\n/* Remove stream overlay tags */\ndiv[class=\"player-streaminfo__meta-container\"] div[class=\"pl-streamtags\"] {\n    display: none !important;\n}\n\n/* Whatever this is, removing it allows double-click to fullscreen to work again */\ndiv[class=\"tw-absolute tw-full-height tw-full-width tw-left-0 tw-top-0\"] {\n    display: none !important;\n}\n\n/* Remove tags in directory */\ndiv[class=\"tw-mg-t-05\"] {\n    display: none !important;\n}\n\n/* Remove following and subscribe buttons in theater mouseover */\ndiv[class^=\"player-social-panel\"] {\n    display: none !important;\n}\n\n/* Remove \"Started x hours ago\" from directory */\ndiv[class=\"tw-mg-b-2 tw-relative\"] div[data-test-selector=\"bottom-right-selector\"] {\n    display: none !important;\n}\n\n/* Move stream viewer label to bottom right */\ndiv[class=\"tw-mg-b-2 tw-relative\"] div[data-test-selector=\"bottom-left-selector\"] {\n    left: auto !important;\n    right: 0 !important;\n    top: 0 !important;\n}\n\n/* Opaque Live indicator on directory */\ndiv[class=\"tw-mg-b-2 tw-relative\"] div[data-test-selector=\"top-left-selector\"] {\n    opacity: 0 !important;\n}\n\n/* Whatever this is, it prevents double-clicking the stream to fullscreen */\ndiv[class=\"tw-c-text-overlay\"] {\n    display: none !important;\n}\n\n/* Remove SUBtember notification below the \"Subscribe\" button */\ndiv[class^=\"subtember-callout\"] {\n    display: none !important;\n}\n\n/* Remove redeem points chat line */\ndiv[class^=\"channel-points-reward-line\"] {\n    display: none !important;\n}\n\n/* Remove channel points in chat input area */\ndiv[data-test-selector^=\"community-points-summary\"] {\n    display: none !important;\n}\n\n/* Adjust FFZ PIP (picture-in-picture) Icon */\nbutton[class=\"player-button player-button--pip ffz--player-pip ffz-i-window-restore\"] {\n/*     display: none !important; */\n    zoom: 75% !important;\n    padding-top: 5px !important;\n    margin-left: 4px !important;\n    margin-right: 4px !important;\n}\n\n/* Remove new notification in game directory */\ndiv[class=\"tw-full-width tw-mg-y-1\"] {\n    display: none !important;\n}\n\n/* Remove tags on streamer page */\ndiv[data-test-selector=\"realtime_stream_tag_list_container_selector\"] {\n    display: none !important;\n}\n\n/* Remove tags on streamer page */\ndiv[class=\"channel-root tw-full-height\"] {\n    padding: 0 !important;\n}\n\n/* Remove chat room notifications (Community Gift Chest) */\ndiv[class=\"chat-room__notifications tw-absolute tw-full-width tw-z-default\"] {\n    display: none !important;\n}\n\ndiv[class=\"tw-mg-l-3 tw-mg-t-3\"] h1 {\n    display: none !important;\n}\n\ndiv[class=\"tw-mg-b-2\"] h1 {\n    display: none !important;\n}\n\n/* Navbar */\n.tw-root--theme-ffz .tw-c-background-base, .tw-root--theme-ffz .tw-root--theme-dark .tw-c-background-base, .tw-root--theme-ffz.tw-root--theme-dark .tw-c-background-base {\n    background-color: rgb(55,48,89) !important;\n}\n\n/* Navbar shadow */\n.tw-root--theme-ffz .tw-elevation-1, .tw-root--theme-ffz .tw-root--theme-dark .tw-elevation-1, .tw-root--theme-ffz.tw-root--theme-dark .tw-elevation-1 {\n    box-shadow: 0 0 0 0 !important;\n}\n\n/* Player header */\n.tw-root--theme-dark .channel-header, .channel-header {\n    background-color: rgb(31,29,42) !important;\n}\n\n/* Chat border left */\n.tw-root--theme-ffz .tw-border-l, .tw-root--theme-ffz .tw-root--theme-dark .tw-border-l, .tw-root--theme-ffz.tw-root--theme-dark .tw-border-l {\n    border-left-color: rgb(42,42,42) !important;\n}\n\n/* Chat header */\n.tw-root--theme-ffz .tw-border-b, .tw-root--theme-ffz .tw-root--theme-dark .tw-border-b, .tw-root--theme-ffz.tw-root--theme-dark .tw-border-b {\n    background-color: rgb(31,29,42) !important;\n}\n\n/* Chat header bottom border */\n.tw-root--theme-ffz .tw-border-b, .tw-root--theme-ffz .tw-root--theme-dark .tw-border-b, .tw-root--theme-ffz.tw-root--theme-dark .tw-border-b {\n    border-bottom-color: rgb(44,39,65) !important;\n}\n\n/* Chat background */\n.tw-root--theme-dark .chat-room, .chat-room {\n    background-color: rgb(21,21,21) !important;\n}\n\n/* Chat background (VOD) */\n.tw-root--theme-dark .channel-root__right-column, .channel-root__right-column {\n    background-color: rgb(21,21,21) !important;\n}\n\n/* Left nav streamer background */\n.tw-root--theme-dark .side-nav__overlay-wrapper {\n    background-color: rgb(29, 29, 29) !important;\n}\n\n/* Left nav border color */\ndiv[data-a-target=\"side-nav-bar\"] {\n    border-right: 1px solid rgb(42,42,42) !important;\n}\n\n/* .tw-root--theme-dark .directory-header-new__banner-cover {\n    background: rgb(58, 58, 58) !important;\n} */\n\n.tw-root--theme-dark .directory-header-new__banner-cover {\n    background: linear-gradient(0deg,#151515,rgba(0,0,0,.25)),linear-gradient(90deg,#151515,rgba(0,0,0,.25)) !important;\n}\n\n/* Move the channel header links back to the left */\ndiv[class=\"tw-align-items-center tw-flex tw-full-height tw-full-width tw-justify-content-between\"] .tw-justify-content-center {\n    justify-content: left !important;\n}\n\n/* Remove the \"Home\" link from the channel header links */\nul[data-test-selector=\"channel-header-tabs\"] li[data-index=\"0\"] {\n    display: none !important\n}\n\n/* message deleted */\nspan[class=\"chat-line__message--deleted\"] a {\n    color: #00c8ff !important;\n}\n\n/* Disable hover animation */\na[class*=\"tw-interactive tw-link\"] div {\n    pointer-events: none !important;\n}\n\n/* Directory title and username font color and size adjustments */\n.tw-root--theme-ffz .tw-c-text-alt-2, .tw-root--theme-ffz .tw-root--theme-dark .tw-c-text-alt-2, .tw-root--theme-ffz.tw-root--theme-dark .tw-c-text-alt-2 {\n    color: #e6e6e6 !important;\n    font-size: 14px !important;\n}\nh3[class=\"tw-ellipsis tw-font-size-5\"] {\n    color: #e6e6e6 !important;\n    font-size: 16px !important;\n}\n\n/* Player settings */\n.tw-balloon--md {\n    width: 22rem !important;\n}\n\n/* Player settings background */\ndiv[class=\"tw-overflow-auto tw-pd-1\"] {\n    background-color: #313131 !important;\n}\n\n/* Remove turn on notifications overlay on an offlilne stream */\ndiv[class=\"follow-panel-overlay tw-absolute tw-align-items-start tw-border-radius-small tw-c-background-overlay tw-c-text-overlay tw-elevation-1 tw-flex tw-flex-column tw-pd-1 tw-transition tw-transition--duration-medium tw-transition--enter-done tw-transition__slide-over-top tw-transition__slide-over-top--enter-done\"] {\n    display: none !important;\n}\n\n/* Remove view last stream on the right side overlay on an offlilne stream */\ndiv[class=\"tw-absolute tw-full-height tw-full-width tw-top-0 tw-transition tw-transition--duration-long tw-transition--enter-done tw-transition__slide-over-right tw-transition__slide-over-right--enter-done\"] {\n    display: none !important;\n}\n\n/* Main background */\n.tw-root--theme-dark body {\n    background-color: #212121 !important;\n}\n\n/* Single game directory's header */\n.tw-root--theme-dark .directory-header-new__banner-cover {\n    background: linear-gradient(0deg,#212121,rgba(0,0,0,.25)),linear-gradient(90deg,#151515,rgba(0,0,0,.25)) !important\n}\n\n/* Info below stream player */\ndiv[class=\"channel-info-bar tw-flex tw-flex-wrap tw-full-width tw-justify-content-between tw-pd-1\"] {\n    background-color: #18181b !important;\n}\n\n/* Navbar */\n.tw-c-background-base {\n    background-color: #373059 !important\n}\n\n/* Extend streams on directories */\n.browse-root-page__wrapper, .directory-root-page__content {\n    margin: 0 auto;\n    max-width: 100% !important;\n}\n\n/* Chat room bits header */\ndiv[data-test-selector=\"channel-leaderboard-container\"] {\n    display: none !important;\n}\n\n/* Video stats */\ndiv[class=\"tw-c-background-base tw-c-text-base\"] {\n    opacity: 0.8 !important;\n}\n\n/*\nTODO:\n-After clipping, the page doesn't show the input for the clip title\n-Remove \"<streamer> isn't streaming right now. Check out their trailer and see what they're all about.\" pop-up when streamer is offline \n*/",
+				"domains": [
+					"twitch.tv",
+					"clips.twitch.tv"
+				]
+			}
+		],
+		"id": 1,
+		"updateDate": 1576580151332
+	},
+	{
+		"installDate": 1535172343166,
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "Medium, Hackernoon",
+		"sections": [
+			{
+				"code": "/* Remove static header, footer, social side buttons */\ndiv[class*=\"u-fixed u-bottom\"],\ndiv[class*=\"u-top\"],\ndiv[class*=\"metabar\"],\ndiv[class*=\"highlightMenu highlightMenu--active\"],\ndiv[class*=\"butterBar butterBar--privacy\"] {\n    display: none !important;\n}\n\n/* Remove Sign in with Google */\niframe[src*=\"smartlock.google.com\"] {\n    display: none !important;\n}",
+				"urlPrefixes": [
+					"https://medium"
+				],
+				"domains": [
+					"hackernoon.com",
+					"codeburst.io"
+				]
+			}
+		],
+		"id": 10,
+		"updateDate": 1565898019768
+	},
+	{
+		"installDate": 1535172426761,
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "Indeed",
+		"sections": [
+			{
+				"code": "/* Highlight sponsored posts */\ndiv[class*=\"sjCapt\"] div[class*=\"result-link-bar-container\"] div[class*=\"result-link-bar\"] span[class*=\"sponsoredGray\"] {\n    background-color: red !important;\n    font-weight: bold !important;\n    font-size: 18px;\n    color: white !important;\n}\n\n/* Highlight \"Recommended jobs for you\" section */\n#serpRecommendations {\n    background-color: #e8e8e8 !important;\n}",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [
+					"indeed.com"
+				],
+				"regexps": []
+			}
+		],
+		"id": 11
+	},
+	{
+		"installDate": 1536037115571,
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "Stack Exchange Network",
+		"sections": [
+			{
+				"code": "/* Sign up banner */\naside[class*=\"s-hero s-hero__dark js-dismissable-hero\"] {\n    display: none !important;\n}\n\n/* Privacy Policy sticky footer */\ndiv[id=\"js-gdpr-consent-banner\"] {\n    display: none !important;\n}",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [
+					"stackexchange.com",
+					"askubuntu.com"
+				],
+				"regexps": []
+			}
+		],
+		"id": 12
+	},
+	{
+		"installDate": 1536731965466,
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "Google",
+		"sections": [
+			{
+				"code": "/* Remove \"People also search for\" that appears after returning to search page */\n.s + div, .exp-outline { \n    display: none;\n}\n\n/* Remove \"Gmail will update in 1 week\" popup*/\ndiv[class*=\"bjd by8\"] {\n    display: none !important;\n}",
+				"domains": [
+					"google.com"
+				]
+			}
+		],
+		"id": 14,
+		"updateDate": 1565732676018
+	},
+	{
+		"installDate": 1536791216830,
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "Everywhere",
+		"sections": [
+			{
+				"code": "/* Remove the \"More Videos\" overlay that appears over a paused, embedded YouTube video */\ndiv[class^=\"ytp-pause-overlay ytp-scroll-min ytp-scroll-max\"] {\n    display: none !important;\n}\n\n/* Remove YouTube \"Endcard\" overlay links near end of videos */\ndiv[class^=\"ytp-ce-element\"], div[class^=\"ytp-pause-overlay ytp-scroll-min\"] {\n    display: none !important;\n}\n\n/* Remove Twitter pop-up when hovering over user avatar */\ndiv[id^=\"profile-hover\"], \ndiv[class^=\"ProfileCard-content\"] {\n    display: none !important;\n}\n\n/* Remove Mozilla Developer Network's survey banner */\ndiv[id=\"developer_needs\"] {\n    display: none !important;\n}"
+			}
+		],
+		"id": 15,
+		"updateDate": 1565730060964
+	},
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1565239295872,
+		"name": "Mixer",
+		"sections": [
+			{
+				"code": "/* Remove chat user avatar+padding */\nimg[class^=\"ChatAvatar\"] {\n    display: none !important;\n}\ndiv[class^=\"messageContent__3EH9F\"] {\n    margin-left: 0px !important;\n}\n\n/* Remove floating gifs */\n/* div[id=\"skills-chat-wrapper\"] {\n    display: none !important;\n} */\n\n/* Remove top part showing bits */\ndiv[class=\"transcluded-section\"] {\n    display: none !important;\n}\n\n/* Chat usernames */\nspan[class=\"badge_3LFXw\"] {\n    display: none !important;\n}\n\n/* Chat username mentions */\nspan[class^=\"Username\"] {\n    color: red !important;\n    font-weight: bold;\n}\n\na[class^=\"tagComponent\"] {\n    color: lightgreen !important;\n    font-weight: bold;\n}\n\na[class^=\"linkComponent\"] {\n    color: orange !important;\n    font-weight: bold;\n}\n\n\n",
+				"domains": [
+					"mixer.com"
+				]
+			}
+		],
+		"updateDate": 1565240476906,
+		"id": 17
+	},
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1566763883649,
+		"name": "Chat Input",
+		"sections": [
+			{
+				"code": "/* Remove chat input + vod */\ndiv[class=\"chat-input tw-block tw-pd-b-1 tw-pd-x-1\"], \ndiv[class=\"tw-flex-shrink-0 tw-full-width tw-pd-b-2 tw-pd-t-1 tw-pd-x-2 video-chat__input\"] {\n    display: none !important;\n}",
+				"domains": [
+					"www.twitch.tv"
+				]
+			}
+		],
+		"updateDate": 1574562338310,
+		"id": 18
+	},
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1574562319613,
+		"name": "Chat Header",
+		"sections": [
+			{
+				"code": "/* Remove chat header */\ndiv[class^=\"room-selector\"] div[class^=\"rooms-header\"] {\n    display: none !important;\n}\n",
+				"domains": [
+					"www.twitch.tv"
+				]
+			}
+		],
+		"updateDate": 1574562359221,
+		"id": 19
+	},
+	{
+		"installDate": 1530699260188,
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "Facebook",
+		"sections": [
+			{
+				"code": "/* Hide \"Page Stories You May Like\" */\ndiv[data-story_category^=\"4\"] {\n    display: none !important;\n}\n\n/* Hide Stories */\ndiv[id=\"stories_pagelet_below_composer\"] {\n    display: none !important;\n}\n\n/* Hide Sponsored right pane */\ndiv[id=\"pagelet_ego_pane\"] {\n    display: none !important;\n}",
+				"domains": [
+					"facebook.com"
+				]
+			}
+		],
+		"id": 2,
+		"updateDate": 1565244368708
+	},
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1575187809467,
+		"name": "codewithmosh",
+		"sections": [
+			{
+				"code": ".course-section ul.section-list .section-item .lecture-name {\n    font-weight: bold !important;\n    color: #000;\n}\n\n.course-section ul.section-list .section-item.next-lecture .item {\n    color: #f00 !important;\n    background: #f8dce1 !important\n}",
+				"domains": [
+					"codewithmosh.com"
+				]
+			}
+		],
+		"updateDate": 1575187809467,
+		"id": 20
+	},
+	{
+		"installDate": 1530699282547,
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "Instagram",
+		"sections": [
+			{
+				"code": "/* Hide Log In to Instagram footer */\nsection[class*=\"bR_3v Fzijm\"] {\n    display: none !important;\n}\n\n/* Hide banner */\ndiv[class*=\"tHaIX\"] {\n    display: none !important;\n}\n\n/* Disable login to view */\nbody {\n\toverflow: scroll !important;\n}\ndiv.RnEpo.Yx5HN {\n\tz-index: -1 !important;\n}",
+				"domains": [
+					"instagram.com"
+				]
+			}
+		],
+		"id": 3,
+		"updateDate": 1574494900514
+	},
+	{
+		"installDate": 1530699319135,
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "Reddit",
+		"sections": [
+			{
+				"code": "/* Remove sign up banner */\nsection[class*=\"infobar listingsignupbar\"],\nsection[class*=\"infobar commentsignupbar\"],\nbutton[class*=\"redesign-beta-optin\"]\n{\n    display: none !important;\n}\n\n.quarantine-notice {\n    background-color: #262626;\n}\n\n/* Hide sidebar if width <768px */\n@media (max-width: 1000px) {\n    .side {\n        display: none !important;\n    }\n}\n\nform[class=\"state-button hide-button\"] span a {\n    font-weight: normal !important;\n}\n\n/* Remove post links */\nli[class=\"share\"], \nli[class=\"give-gold-button\"], \nli[class*=\"report-button\"], \nli[class=\"crosspost-button\"], \nspan[class=\"redditSingleClick\"], \na[class=\"premium-banner-outer\"], \nsection[class=\"infobar onboardingbar redesignNightmodeBar redesignbetabar-js\"], \nsection[class=\"infobar onboardingbar redesignInfiniteScroll redesignbetabar-js\"], \ndiv[class=\"happening-now-wrap\"]{\n    display: none !important;\n}\n\n/* Remove the fixed content when scrolling down to comments  */\n.pinnable-content.pinned {\n    display: none;\n}\n\n/* Hide all child comments button */\na[class^=\"noCtrlF res-toggleAllChildren\"] {\n\t-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;\n\t-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;\n\tbox-shadow:inset 0px 1px 0px 0px #f5978e;\n\tbackground:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));\n\tbackground:-moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);\n\tbackground:-webkit-linear-gradient(top, #f24537 5%, #c62d1f 100%);\n\tbackground:-o-linear-gradient(top, #f24537 5%, #c62d1f 100%);\n\tbackground:-ms-linear-gradient(top, #f24537 5%, #c62d1f 100%);\n\tbackground:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);\n\tfilter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);\n\tbackground-color:#f24537;\n\t-moz-border-radius:6px;\n\t-webkit-border-radius:6px;\n\tborder-radius:6px;\n\tborder:1px solid #d02718;\n\tdisplay:inline-block;\n\tcursor:pointer;\n\tcolor:#ffffff !important;\n\tfont-family:Arial;\n\tfont-size:15px;\n\tfont-weight:bold;\n\tpadding:6px 24px !important;\n\ttext-decoration:none;\n\ttext-shadow:0px 1px 0px #810e05;\n}\na[class^=\"noCtrlF res-toggleAllChildren\"]n:hover {\n\tbackground:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));\n\tbackground:-moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);\n\tbackground:-webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);\n\tbackground:-o-linear-gradient(top, #c62d1f 5%, #f24537 100%);\n\tbackground:-ms-linear-gradient(top, #c62d1f 5%, #f24537 100%);\n\tbackground:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);\n\tfilter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);\n\tbackground-color:#c62d1f;\n}\na[class^=\"noCtrlF res-toggleAllChildren\"]:active {\n\tposition:relative;\n\ttop:1px;\n}\n\n/* Hide Reddit user shittymorph's Reddit comments and replies to his comment */\ndiv[data-author-fullname^=\"t2_tfpcq\"] div[class^=\"entry unvoted\"] form[class^=\"usertext warn-on-unload\"] div[class^=\"usertext-body may-blank-within md-container\"] div[class^=\"md\"] p {\n    display: none !important;\n}\n/* Highlights a red bar on the username line to further distinguish Shittymorph comments */\ndiv[data-author-fullname^=\"t2_tfpcq\"] div[class^=\"entry unvoted\"] p[class^=\"tagline\"] {\n    background-color: red;\n    color: white;\n}\n\n/* Hide \"discussions in r/_____ pop-up in the bottom-right corner after scrolling down in the comments section\" */\ndiv[class^=\"read-next-container\"] aside[class^=\"read-next active fixed\"] {\n    display: none !important;\n}\n\ndiv[id^=\"SHORTCUT_FOCUSABLE_DIV\"] div[class^=\"pnjkbx-0 ktBrhe\"] {\n    display: none !important;\n}\n\n/* Hide Subcribe button in comments page */\nspan[id=\"REScommentSubToggle\"] {\n    display: none !important;\n}\n\nspan[title=\"Warning: Loud\"] {\n    background-color: red !important;\n    border-color: red !important;\n}\n\ntime {\n    color: yellow !important;\n}\n\ndiv[class=\"author-tooltip hover-bubble author-tooltip_common anchor-bottom-left\"] {\n    display: none !important;\n}",
+				"domains": [
+					"reddit.com"
+				]
+			}
+		],
+		"id": 4,
+		"updateDate": 1574758409434
+	},
+	{
+		"installDate": 1530699339151,
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "The Verge",
+		"sections": [
+			{
+				"code": "/* Night mode */\n.c-seven-up {\n    background: white;\n    margin: 0 auto;\n}\n\ndiv[class=\"l-root l-reskin\"] {\n    background: white;\n}\n\n.c-compact-river__entry {\n    background-color: white;\n    border-top: 1px solid black;\n    margin-bottom: 8px;\n}\n\n/* Night mode on main stories */\n.c-seven-up .c-entry-box--compact {\n    background-color: white;\n    color: black;\n\tmargin-bottom: 1px;\n\tpadding: 8px;\n}\n\n/* Remove static banner when page is scrolled down */\ndiv[class=\"c-tab-bar tab-bar-fixed\"] {\n    display: none !important;\n}\n\n/* Remove navbar that auto expands when mouse hovers */\nnav[class=\"c-global-header__links\"] {\n    display: none !important;\n}\n\n/* Remove \"disable adblock\" banner */\ndiv[class=\"adblock-whitelist-messaging__wrapper\"] {\n    display: none !important;\n}\n",
+				"domains": [
+					"theverge.com"
+				]
+			}
+		],
+		"id": 5,
+		"updateDate": 1576579613667
+	},
+	{
+		"installDate": 1530699356355,
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "YouTube",
+		"sections": [
+			{
+				"code": "/* Remove live chat user photo */\n#author-photo, \nyt-live-chat-viewer-engagement-message-renderer[class=\"style-scope yt-live-chat-item-list-renderer\"]{\n    display: none !important;\n}\n\n/* Restore color to YouTube's new layout's dark mode's autoplay button */\n/* paper-toggle-button[checked]:not([disabled]) .toggle-bar.paper-toggle-button {\n    opacity: 1;\n    background-color: red;\n} */\n\n/* Remove the Chromecast button */\nbutton[title=\"Play on TV\"] {\n    display: none !important;\n}\n\n/* Like bar */\nytd-sentiment-bar-renderer[id*=\"sentiment\"] div[id*=\"container\"] {\n    background-color: red !important\n}\n\ndiv[id*=\"container\"] div[id*=\"like-bar\"] {\n    background-color: #3EA6FF !important;\n}\n\n/* Static chat usernames */\n#author-name {\n    color: rgb(255, 0, 0) !important;\n    font-weight: bold !important;\n    font-family: Verdana !important;\n}\n\n/* Enable dark mode on search bar suggestions */\n.sbsb_a {\n    background-color: #272822 !important;\n}\n/* Keyboard scrolling has different highlight color */\n.sbsb_d {\n    background-color: #49483E !important;\n}\n\n/* Autocomplete search results text */\n.sbsb_a ul li {\n    color: #F8F8F2 !important;\n}\n.sbsb_a ul li:hover {\n    background-color: #49483E !important;\n}\n\n/* Background border fix for \"Report search predictions\" on autocomplete search results */\n.sbfl_a, .sbfl_b {\n    background-color: #272822 !important;\n}\n.sbfl_a, .sbfl_b:hover {\n    background-color: #49483E !important;\n}\nli[class*=\"sbsb_c gsfs\"]:last-child {\n    background-color: #272822 !important;\n}\nli[class*=\"sbsb_c gsfs\"]:last-child:hover {\n    background-color: #49483E !important;\n}\n/* \"Report search predictions\" text */\n.sbfl_b:hover {\n    color: #F8F8F2 !important;\n}\n\n/*#message {\n    color: lightgreen !important;\n}*/\n\n/* Remove \"Say something...\" to participate in chat */\n#panel-pages {\n    display: none !important;\n}\n\n/* Remove \"Buy <YouTube Username> merchandise\" */\n#merch-shelf {\n    display: none !important;\n}\n\n/* Chat text padding */\nyt-live-chat-text-message-renderer[class*=\"style-scope yt-live-chat-item-list-renderer\"] {\n    padding-top: 1px !important;\n    padding-bottom: 2px !important;\n}\n\n/* Remove chat's padding on the left */\n#items yt-live-chat-text-message-renderer {\n    padding-left: 8px;\n}\n\n/* Fix black font on black background when searching YouTube from Chrome's autocomplete bar */\n#search {\n    color: white !important;\n}\n\n/* Remove lower-left \"YouTube TV is now available\" pop-up */\n/* Removed as it hides Unsubscribe from ___ popup */\n/* paper-dialog[class*=\"style-scope ytd-popup-container\"] {\n    display: none !important;\n} */\n\n/* Hide \"Scroll for details\" when fullscreen */\ndiv[class*=\"ytp-right-controls\"] button[class*=\"ytp-fullerscreen-edu-button ytp-button\"],\nbutton[class^=\"ytp-fullerscreen-edu-button ytp-button ytp-fullerscreen-edu-button-subtle\"]{\n    display: none !important;\n}\n\n/* Remove next button */\na[class*=\"ytp-next-button\"], a[class*=\"ytp-prev-button\"] {\n    display: none !important;\n}\n\n/* Remove miniplayer button */\nbutton[class*=\"ytp-miniplayer-button ytp-button\"] {\n    display: none !important;\n}\n\nytd-thumbnail-overlay-toggle-button-renderer[overlay-button-refresh] #label.ytd-thumbnail-overlay-toggle-button-renderer {\n    display: none !important;\n}\n\n/* Block the brand in the corner of video that leads to their channel */\ndiv[class=\"ytp-player-content ytp-iv-player-content\"] {\n    display: none !important;\n}",
+				"domains": [
+					"youtube.com"
+				]
+			}
+		],
+		"id": 6,
+		"updateDate": 1575187687221
+	},
+	{
+		"installDate": 1535172223688,
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "Quora",
+		"sections": [
+			{
+				"code": "/* Remove Related questions */\ndiv[class=\"paged_list_wrapper\"] div[class=\"logged_out_related_questions_container\"] {\n    display: none !important;\n}\n\n/* Remove Ask your own question static pop-up */\ndiv[class=\"fixable_clone\"] div[class=\"BelowQuestionAddPrompt fixable_fixed\"] {\n    display: none !important;\n}",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [
+					"quora.com"
+				],
+				"regexps": []
+			}
+		],
+		"id": 9
+	}
+]
