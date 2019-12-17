@@ -20,72 +20,6 @@
 		"updateDate": 1576580151332
 	},
 	{
-		"installDate": 1535172343166,
-		"enabled": true,
-		"updateUrl": null,
-		"md5Url": null,
-		"url": null,
-		"originalMd5": null,
-		"name": "Medium, Hackernoon",
-		"sections": [
-			{
-				"code": "/* Remove static header, footer, social side buttons */\ndiv[class*=\"u-fixed u-bottom\"],\ndiv[class*=\"u-top\"],\ndiv[class*=\"metabar\"],\ndiv[class*=\"highlightMenu highlightMenu--active\"],\ndiv[class*=\"butterBar butterBar--privacy\"] {\n    display: none !important;\n}\n\n/* Remove Sign in with Google */\niframe[src*=\"smartlock.google.com\"] {\n    display: none !important;\n}",
-				"urlPrefixes": [
-					"https://medium"
-				],
-				"domains": [
-					"hackernoon.com",
-					"codeburst.io"
-				]
-			}
-		],
-		"id": 10,
-		"updateDate": 1565898019768
-	},
-	{
-		"installDate": 1535172426761,
-		"enabled": true,
-		"updateUrl": null,
-		"md5Url": null,
-		"url": null,
-		"originalMd5": null,
-		"name": "Indeed",
-		"sections": [
-			{
-				"code": "/* Highlight sponsored posts */\ndiv[class*=\"sjCapt\"] div[class*=\"result-link-bar-container\"] div[class*=\"result-link-bar\"] span[class*=\"sponsoredGray\"] {\n    background-color: red !important;\n    font-weight: bold !important;\n    font-size: 18px;\n    color: white !important;\n}\n\n/* Highlight \"Recommended jobs for you\" section */\n#serpRecommendations {\n    background-color: #e8e8e8 !important;\n}",
-				"urls": [],
-				"urlPrefixes": [],
-				"domains": [
-					"indeed.com"
-				],
-				"regexps": []
-			}
-		],
-		"id": 11
-	},
-	{
-		"installDate": 1536037115571,
-		"enabled": true,
-		"updateUrl": null,
-		"md5Url": null,
-		"url": null,
-		"originalMd5": null,
-		"name": "Stack Exchange Network",
-		"sections": [
-			{
-				"code": "/* Sign up banner */\naside[class*=\"s-hero s-hero__dark js-dismissable-hero\"] {\n    display: none !important;\n}\n\n/* Privacy Policy sticky footer */\ndiv[id=\"js-gdpr-consent-banner\"] {\n    display: none !important;\n}",
-				"urls": [],
-				"urlPrefixes": [],
-				"domains": [
-					"stackexchange.com",
-					"askubuntu.com"
-				],
-				"regexps": []
-			}
-		],
-		"id": 12
-	},
-	{
 		"installDate": 1536731965466,
 		"enabled": true,
 		"updateUrl": null,
@@ -114,30 +48,11 @@
 		"name": "Everywhere",
 		"sections": [
 			{
-				"code": "/* Remove the \"More Videos\" overlay that appears over a paused, embedded YouTube video */\ndiv[class^=\"ytp-pause-overlay ytp-scroll-min ytp-scroll-max\"] {\n    display: none !important;\n}\n\n/* Remove YouTube \"Endcard\" overlay links near end of videos */\ndiv[class^=\"ytp-ce-element\"], div[class^=\"ytp-pause-overlay ytp-scroll-min\"] {\n    display: none !important;\n}\n\n/* Remove Twitter pop-up when hovering over user avatar */\ndiv[id^=\"profile-hover\"], \ndiv[class^=\"ProfileCard-content\"] {\n    display: none !important;\n}\n\n/* Remove Mozilla Developer Network's survey banner */\ndiv[id=\"developer_needs\"] {\n    display: none !important;\n}"
+				"code": "/* Remove the \"More Videos\" overlay that appears over a paused, embedded YouTube video */\ndiv[class^=\"ytp-pause-overlay ytp-scroll-min ytp-scroll-max\"] {\n    display: none !important;\n}\n\n/* Remove YouTube \"Endcard\" overlay links near end of videos */\ndiv[class^=\"ytp-ce-element\"], div[class^=\"ytp-pause-overlay ytp-scroll-min\"] {\n    display: none !important;\n}"
 			}
 		],
 		"id": 15,
-		"updateDate": 1565730060964
-	},
-	{
-		"enabled": true,
-		"updateUrl": null,
-		"md5Url": null,
-		"url": null,
-		"originalMd5": null,
-		"installDate": 1565239295872,
-		"name": "Mixer",
-		"sections": [
-			{
-				"code": "/* Remove chat user avatar+padding */\nimg[class^=\"ChatAvatar\"] {\n    display: none !important;\n}\ndiv[class^=\"messageContent__3EH9F\"] {\n    margin-left: 0px !important;\n}\n\n/* Remove floating gifs */\n/* div[id=\"skills-chat-wrapper\"] {\n    display: none !important;\n} */\n\n/* Remove top part showing bits */\ndiv[class=\"transcluded-section\"] {\n    display: none !important;\n}\n\n/* Chat usernames */\nspan[class=\"badge_3LFXw\"] {\n    display: none !important;\n}\n\n/* Chat username mentions */\nspan[class^=\"Username\"] {\n    color: red !important;\n    font-weight: bold;\n}\n\na[class^=\"tagComponent\"] {\n    color: lightgreen !important;\n    font-weight: bold;\n}\n\na[class^=\"linkComponent\"] {\n    color: orange !important;\n    font-weight: bold;\n}\n\n\n",
-				"domains": [
-					"mixer.com"
-				]
-			}
-		],
-		"updateDate": 1565240476906,
-		"id": 17
+		"updateDate": 1576581385158
 	},
 	{
 		"enabled": true,
@@ -146,7 +61,7 @@
 		"url": null,
 		"originalMd5": null,
 		"installDate": 1566763883649,
-		"name": "Chat Input",
+		"name": "Chat Bottom",
 		"sections": [
 			{
 				"code": "/* Remove chat input + vod */\ndiv[class=\"chat-input tw-block tw-pd-b-1 tw-pd-x-1\"], \ndiv[class=\"tw-flex-shrink-0 tw-full-width tw-pd-b-2 tw-pd-t-1 tw-pd-x-2 video-chat__input\"] {\n    display: none !important;\n}",
@@ -155,7 +70,7 @@
 				]
 			}
 		],
-		"updateDate": 1574562338310,
+		"updateDate": 1576582079714,
 		"id": 18
 	},
 	{
@@ -165,7 +80,7 @@
 		"url": null,
 		"originalMd5": null,
 		"installDate": 1574562319613,
-		"name": "Chat Header",
+		"name": "Chat Top",
 		"sections": [
 			{
 				"code": "/* Remove chat header */\ndiv[class^=\"room-selector\"] div[class^=\"rooms-header\"] {\n    display: none !important;\n}\n",
@@ -174,27 +89,8 @@
 				]
 			}
 		],
-		"updateDate": 1574562359221,
+		"updateDate": 1576582073462,
 		"id": 19
-	},
-	{
-		"installDate": 1530699260188,
-		"enabled": true,
-		"updateUrl": null,
-		"md5Url": null,
-		"url": null,
-		"originalMd5": null,
-		"name": "Facebook",
-		"sections": [
-			{
-				"code": "/* Hide \"Page Stories You May Like\" */\ndiv[data-story_category^=\"4\"] {\n    display: none !important;\n}\n\n/* Hide Stories */\ndiv[id=\"stories_pagelet_below_composer\"] {\n    display: none !important;\n}\n\n/* Hide Sponsored right pane */\ndiv[id=\"pagelet_ego_pane\"] {\n    display: none !important;\n}",
-				"domains": [
-					"facebook.com"
-				]
-			}
-		],
-		"id": 2,
-		"updateDate": 1565244368708
 	},
 	{
 		"enabled": true,
@@ -254,25 +150,6 @@
 		"updateDate": 1574758409434
 	},
 	{
-		"installDate": 1530699339151,
-		"enabled": true,
-		"updateUrl": null,
-		"md5Url": null,
-		"url": null,
-		"originalMd5": null,
-		"name": "The Verge",
-		"sections": [
-			{
-				"code": "/* Night mode */\n.c-seven-up {\n    background: white;\n    margin: 0 auto;\n}\n\ndiv[class=\"l-root l-reskin\"] {\n    background: white;\n}\n\n.c-compact-river__entry {\n    background-color: white;\n    border-top: 1px solid black;\n    margin-bottom: 8px;\n}\n\n/* Night mode on main stories */\n.c-seven-up .c-entry-box--compact {\n    background-color: white;\n    color: black;\n\tmargin-bottom: 1px;\n\tpadding: 8px;\n}\n\n/* Remove static banner when page is scrolled down */\ndiv[class=\"c-tab-bar tab-bar-fixed\"] {\n    display: none !important;\n}\n\n/* Remove navbar that auto expands when mouse hovers */\nnav[class=\"c-global-header__links\"] {\n    display: none !important;\n}\n\n/* Remove \"disable adblock\" banner */\ndiv[class=\"adblock-whitelist-messaging__wrapper\"] {\n    display: none !important;\n}\n",
-				"domains": [
-					"theverge.com"
-				]
-			}
-		],
-		"id": 5,
-		"updateDate": 1576579613667
-	},
-	{
 		"installDate": 1530699356355,
 		"enabled": true,
 		"updateUrl": null,
@@ -290,26 +167,5 @@
 		],
 		"id": 6,
 		"updateDate": 1575187687221
-	},
-	{
-		"installDate": 1535172223688,
-		"enabled": true,
-		"updateUrl": null,
-		"md5Url": null,
-		"url": null,
-		"originalMd5": null,
-		"name": "Quora",
-		"sections": [
-			{
-				"code": "/* Remove Related questions */\ndiv[class=\"paged_list_wrapper\"] div[class=\"logged_out_related_questions_container\"] {\n    display: none !important;\n}\n\n/* Remove Ask your own question static pop-up */\ndiv[class=\"fixable_clone\"] div[class=\"BelowQuestionAddPrompt fixable_fixed\"] {\n    display: none !important;\n}",
-				"urls": [],
-				"urlPrefixes": [],
-				"domains": [
-					"quora.com"
-				],
-				"regexps": []
-			}
-		],
-		"id": 9
 	}
 ]
