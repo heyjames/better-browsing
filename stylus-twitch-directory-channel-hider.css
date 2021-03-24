@@ -1,0 +1,13 @@
+/* Hide from Directory */
+article[data-a-id="card-"] {
+    visibility: hidden !important;
+    /*filter: blur(0.5em) invert(50%);
+    opacity: 0.5;*/
+}
+
+/* Hide from "Recommended Channels" */
+a[href="/"] {
+    display: none !important;
+    /*filter: blur(0.5em) invert(50%);
+    opacity: 0.5;*/
+}
