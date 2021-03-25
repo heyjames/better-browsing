@@ -1,0 +1,7 @@
+body {
+    overflow: unset !important;
+}
+
+div[role="presentation"] {
+    display: none !important;
+}
