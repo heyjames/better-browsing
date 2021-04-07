@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitch Channel Hider
 // @namespace    http://tampermonkey.net/
-// @version      3.0
+// @version      3.1
 // @description  Hides channels on Twitch including from "Recommended Channels"
 // @author       You
 // @match        https://www.twitch.tv/*
@@ -10,9 +10,12 @@
 // ==/UserScript==
 
 // Blocked channels (case-insensitive)
-const CHANNELS = [
+let CHANNELS = [
   "$$$$$$$$$$$$"
 ];
+
+// Remove possible duplicates due to user error
+CHANNELS = Array.from(new Set(CHANNELS));
 
 const Stylesheet = function() {
     // Create query selectors for each channel
@@ -20,7 +23,6 @@ const Stylesheet = function() {
     function _createSelectors(CHANNELS) {
         let overlay = "";
         let thumbnail = "";
-        //let info = "";
         let recommended = "";
 
         for (let i=0; i<CHANNELS.length; i++) {
@@ -29,32 +31,35 @@ const Stylesheet = function() {
 
             // Create channel-specific selectors
             overlay += `article[data-a-id="card-${CHANNELS[i].toLowerCase()}"]::before,`;
-            thumbnail += `article[data-a-id="card-${CHANNELS[i].toLowerCase()}"] > *,`;
-            //thumbnail += `article[data-a-id="card-${CHANNELS[i].toLowerCase()}"]>:nth-child(2),`;
-            //info += `article[data-a-id="card-${CHANNELS[i].toLowerCase()}"]>:nth-child(1),`;
-            recommended += `a[href="/${CHANNELS[i]}"],`;
+            thumbnail += `article[data-a-id="card-${CHANNELS[i].toLowerCase()}"]>*,`;
+            recommended += `div[class="tw-relative tw-transition-group"] a[href="/${CHANNELS[i]}"],`;
 
             // Remove last comma
             if (i === (CHANNELS.length-1)) {
                 overlay = overlay.slice(0, -1);
                 thumbnail = thumbnail.slice(0, -1);
-                //info = info.slice(0, -1);
                 recommended = recommended.slice(0, -1);
             }
         }
+
+        let strSelectorObj = { overlay, thumbnail, recommended };
+        strSelectorObj = _addSpecificChannel("elon", "^", strSelectorObj);
+
+        return strSelectorObj;
+    }
+
+    function _addSpecificChannel(channel, selectorModifier="", { overlay, thumbnail, recommended }) {
+        overlay += `,article[data-a-id${selectorModifier}="card-${channel.toLowerCase()}"]::before`;
+        thumbnail += `,article[data-a-id${selectorModifier}="card-${channel.toLowerCase()}"]>*`;
+        recommended += `,div[class="tw-relative tw-transition-group"] a[href${selectorModifier}="/${channel.toLowerCase()}"]`;
 
         return { overlay, thumbnail, recommended };
     }
 
     // Get complete CSS from applying query selectors
     // Takes an object containing CSS query selector strings and returns complete CSS
-    function _createCSS({ overlay, thumbnail, info="", recommended }) {
+    function _createCSS({ overlay, thumbnail, recommended }) {
         return `
-:root {
-    --time-transition-in: 10s;
-    --time-transition-out: 0.1s;
-}
-
 ${overlay} {
     content: "X";
     color: #d97d50;
@@ -62,40 +67,20 @@ ${overlay} {
     font-size: 3em;
     position: relative;
     top: 70px;
-    left: 140px;
+    left: 146px;
     height: 0px;
 }
 
 ${thumbnail} {
     visibility: hidden;
-    /*opacity: 0;*/
+    height: 110px !important;
 }
-
-/*${info} {
-    visibility: hidden;
-    /*opacity: 0 !important;*/
-
-    -o-transition: var(--time-transition-out);
-    -ms-transition: var(--time-transition-out);
-    -moz-transition: var(--time-transition-out);
-    -webkit-transition:var(--time-transition-out);
-}*/
 
 ${recommended} {
     display: none !important;
-    /*filter: blur(0.5em) invert(50%);
-    opacity: 0.5;*/
 }
 
-/*
-// Allow selectable, but blurred channel info
-article[data-a-id^="card-"]>:nth-child(1):hover {
-    opacity: 1 !important;
-    -o-transition: var(--time-transition-in);
-    -ms-transition: var(--time-transition-in);
-    -moz-transition: var(--time-transition-in);
-    -webkit-transition: var(--time-transition-in);
-}*/
+
 `;
     }
 
