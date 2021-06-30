@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitch Channel Hider
 // @namespace    http://tampermonkey.net/
-// @version      3.1
+// @version      3.2
 // @description  Hides channels on Twitch including from "Recommended Channels"
 // @author       You
 // @match        https://www.twitch.tv/*
@@ -11,7 +11,7 @@
 
 // Blocked channels (case-insensitive)
 let CHANNELS = [
-  "$$$$$$$$$$$$"
+    "$$$$$$$$$$$$"
 ];
 
 // Remove possible duplicates due to user error
@@ -21,66 +21,56 @@ const Stylesheet = function() {
     // Create query selectors for each channel
     // Takes and array argument and returns an object with properties containing CSS selectors
     function _createSelectors(CHANNELS) {
-        let overlay = "";
         let thumbnail = "";
         let recommended = "";
+        let liveAndViewcount = "";
+        let checkMark = "";
 
         for (let i=0; i<CHANNELS.length; i++) {
             // Ignore template entries to add users to array easier
             if (CHANNELS[i] === "$$$$$$$$$$$$") continue;
 
             // Create channel-specific selectors
-            overlay += `article[data-a-id="card-${CHANNELS[i].toLowerCase()}"]::before,`;
-            thumbnail += `article[data-a-id="card-${CHANNELS[i].toLowerCase()}"]>*,`;
-            recommended += `div[class="tw-relative tw-transition-group"] a[href="/${CHANNELS[i]}"],`;
+            thumbnail += `article[class="InjectLayout-sc-588ddc-0 prioritized-signals-media-card sNBDP"] a[href^="/${CHANNELS[i]}"],`;
+            recommended += `a[data-test-selector="recommended-channel"][href="/${CHANNELS[i]}"],`;
+            liveAndViewcount += `a[data-a-target="preview-card-image-link"][href^="/${CHANNELS[i]}"]+div,`
+            checkMark += `article[class="InjectLayout-sc-588ddc-0 prioritized-signals-media-card sNBDP"] a[href^="/${CHANNELS[i]}"]~div,`;
 
             // Remove last comma
             if (i === (CHANNELS.length-1)) {
-                overlay = overlay.slice(0, -1);
                 thumbnail = thumbnail.slice(0, -1);
                 recommended = recommended.slice(0, -1);
+                liveAndViewcount = liveAndViewcount.slice(0, -1);
+                checkMark = checkMark.slice(0, -1);
             }
         }
 
-        let strSelectorObj = { overlay, thumbnail, recommended };
-        strSelectorObj = _addSpecificChannel("elon", "^", strSelectorObj);
+        let strSelectorObj = { thumbnail, recommended, liveAndViewcount, checkMark };
+        strSelectorObj = _addSpecificChannel("hasan", "^", strSelectorObj);
 
         return strSelectorObj;
     }
 
-    function _addSpecificChannel(channel, selectorModifier="", { overlay, thumbnail, recommended }) {
-        overlay += `,article[data-a-id${selectorModifier}="card-${channel.toLowerCase()}"]::before`;
-        thumbnail += `,article[data-a-id${selectorModifier}="card-${channel.toLowerCase()}"]>*`;
-        recommended += `,div[class="tw-relative tw-transition-group"] a[href${selectorModifier}="/${channel.toLowerCase()}"]`;
+    function _addSpecificChannel(channel, selectorModifier="", { thumbnail, recommended, liveAndViewcount, checkMark }) {
+        thumbnail += `,article[class="InjectLayout-sc-588ddc-0 prioritized-signals-media-card sNBDP"] a[href^="/${channel.toLowerCase()}"]`;
+        recommended += `,a[data-test-selector="recommended-channel"][href${selectorModifier}="/${channel.toLowerCase()}"]`;
+        liveAndViewcount += `,a[data-a-target="preview-card-image-link"][href${selectorModifier}="/${channel.toLowerCase()}"]+div`;
+        checkMark += `,article[class="InjectLayout-sc-588ddc-0 prioritized-signals-media-card sNBDP"] a[href^="/${channel.toLowerCase()}"]~div`;
 
-        return { overlay, thumbnail, recommended };
+        return { thumbnail, recommended, liveAndViewcount, checkMark };
     }
 
     // Get complete CSS from applying query selectors
     // Takes an object containing CSS query selector strings and returns complete CSS
-    function _createCSS({ overlay, thumbnail, recommended }) {
+    function _createCSS({ thumbnail, recommended, liveAndViewcount, checkMark }) {
         return `
-${overlay} {
-    content: "X";
-    color: #d97d50;
-    font-weight: bold;
-    font-size: 3em;
-    position: relative;
-    top: 70px;
-    left: 146px;
-    height: 0px;
-}
-
 ${thumbnail} {
     visibility: hidden;
-    height: 110px !important;
 }
 
-${recommended} {
+${recommended}, ${liveAndViewcount}, ${checkMark} {
     display: none !important;
 }
-
-
 `;
     }
 
