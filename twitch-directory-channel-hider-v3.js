@@ -1,7 +1,8 @@
+extension
 // ==UserScript==
 // @name         Twitch Channel Hider
 // @namespace    http://tampermonkey.net/
-// @version      3.2
+// @version      3.3
 // @description  Hides channels on Twitch including from "Recommended Channels"
 // @author       You
 // @match        https://www.twitch.tv/*
@@ -14,6 +15,11 @@ let CHANNELS = [
     "$$$$$$$$$$$$"
 ];
 
+let CHANNELS_MATCHING = [
+    { "elon": "^" },
+    { "msgive": "^" },
+];
+
 // Remove possible duplicates due to user error
 CHANNELS = Array.from(new Set(CHANNELS));
 
@@ -21,54 +27,62 @@ const Stylesheet = function() {
     // Create query selectors for each channel
     // Takes and array argument and returns an object with properties containing CSS selectors
     function _createSelectors(CHANNELS) {
+        //let overlay = "";
         let thumbnail = "";
         let recommended = "";
-        let liveAndViewcount = "";
-        let checkMark = "";
+        let host = "";
 
         for (let i=0; i<CHANNELS.length; i++) {
             // Ignore template entries to add users to array easier
             if (CHANNELS[i] === "$$$$$$$$$$$$") continue;
 
             // Create channel-specific selectors
-            thumbnail += `article[class="InjectLayout-sc-588ddc-0 prioritized-signals-media-card sNBDP"] a[href^="/${CHANNELS[i]}"],`;
+            //overlay += `article[data-a-id="card-${CHANNELS[i].toLowerCase()}"]::before,`;
+            thumbnail += `article[data-a-id="card-${CHANNELS[i].toLowerCase()}"]>*,`;
             recommended += `a[data-test-selector="recommended-channel"][href="/${CHANNELS[i]}"],`;
-            liveAndViewcount += `a[data-a-target="preview-card-image-link"][href^="/${CHANNELS[i]}"]+div,`
-            checkMark += `article[class="InjectLayout-sc-588ddc-0 prioritized-signals-media-card sNBDP"] a[href^="/${CHANNELS[i]}"]~div,`;
+            host += `a[data-a-target="preview-card-image-link"][href="/${CHANNELS[i]}"],`;
 
             // Remove last comma
             if (i === (CHANNELS.length-1)) {
+                //overlay = overlay.slice(0, -1);
                 thumbnail = thumbnail.slice(0, -1);
                 recommended = recommended.slice(0, -1);
-                liveAndViewcount = liveAndViewcount.slice(0, -1);
-                checkMark = checkMark.slice(0, -1);
+                host = host.slice(0, -1);
             }
         }
 
-        let strSelectorObj = { thumbnail, recommended, liveAndViewcount, checkMark };
-        strSelectorObj = _addSpecificChannel("hasan", "^", strSelectorObj);
+        let strSelectorObj = { thumbnail, recommended, host };
+        CHANNELS_MATCHING.forEach(c => {
+            let channelString = Object.keys(c)[0];
+            let channelModifier = Object.values(c)[0];
+
+            strSelectorObj = _addSpecificChannel(channelString, channelModifier, strSelectorObj);
+
+            return strSelectorObj;
+        });
 
         return strSelectorObj;
     }
 
-    function _addSpecificChannel(channel, selectorModifier="", { thumbnail, recommended, liveAndViewcount, checkMark }) {
-        thumbnail += `,article[class="InjectLayout-sc-588ddc-0 prioritized-signals-media-card sNBDP"] a[href^="/${channel.toLowerCase()}"]`;
+    function _addSpecificChannel(channel, selectorModifier="", { thumbnail, recommended, host }) {
+        //overlay += `,article[data-a-id${selectorModifier}="card-${channel.toLowerCase()}"]::before`;
+        thumbnail += `,article[data-a-id${selectorModifier}="card-${channel.toLowerCase()}"]>*`;
         recommended += `,a[data-test-selector="recommended-channel"][href${selectorModifier}="/${channel.toLowerCase()}"]`;
-        liveAndViewcount += `,a[data-a-target="preview-card-image-link"][href${selectorModifier}="/${channel.toLowerCase()}"]+div`;
-        checkMark += `,article[class="InjectLayout-sc-588ddc-0 prioritized-signals-media-card sNBDP"] a[href^="/${channel.toLowerCase()}"]~div`;
+        host += `,a[data-a-target="preview-card-image-link"][href${selectorModifier}="/${channel.toLowerCase()}"]`;
 
-        return { thumbnail, recommended, liveAndViewcount, checkMark };
+        return { thumbnail, recommended, host };
     }
 
     // Get complete CSS from applying query selectors
     // Takes an object containing CSS query selector strings and returns complete CSS
-    function _createCSS({ thumbnail, recommended, liveAndViewcount, checkMark }) {
+    function _createCSS({ thumbnail, recommended, host }) {
         return `
 ${thumbnail} {
     visibility: hidden;
+    height: 110px !important;
 }
 
-${recommended}, ${liveAndViewcount}, ${checkMark} {
+${recommended}, ${host} {
     display: none !important;
 }
 `;
