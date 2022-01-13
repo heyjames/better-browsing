@@ -36,9 +36,12 @@
     const qaBtn = createAppendScrollBoxBtn("Q&A", "yellow");
     qaBtn.onclick = () => document.getElementById('cf-ask-cel').scrollIntoView();
 
-    const galleryBtn = createAppendScrollBoxBtn("Gallery", "yellow");
-    galleryBtn.onclick = () => document.getElementById('reviews-image-gallery-container').scrollIntoView();
+    const reviewsBtn = createAppendScrollBoxBtn("Reviews", "yellow");
+    reviewsBtn.onclick = () => document.getElementById('reviewsMedley').scrollIntoView();
 
-    const picsBtn = createAppendScrollBoxBtn("View Pics", "lightcoral");
-    picsBtn.onclick = () => document.querySelector("a[href='#CustomerImages']").click();
+    const galleryLink = document.querySelector("a[href='#CustomerImages']");
+    if (galleryLink) {
+        const customerImgBtn = createAppendScrollBoxBtn("Cust. Imgs", "lightcoral");
+        customerImgBtn.onclick = () => galleryLink.click();
+    }
 })();
