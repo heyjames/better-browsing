@@ -1,0 +1,44 @@
+// ==UserScript==
+// @name         Amazon Navigation Box
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://www.amazon.com/*
+// @icon         https://www.google.com/s2/favicons?domain=amazon.com
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    let div = document.createElement("div");
+    div.setAttribute("id", "nav-box");
+    div.style.display = "block";
+    div.style.position = "fixed";
+    div.style.top = "158px";
+    div.style.right = "20px";
+    div.style.zIndex = "9999";
+    document.querySelector("div[id='a-page']").prepend(div);
+
+    function createAppendScrollBoxBtn(innerText, bgColor) {
+        let btn = document.createElement("button");
+        btn.innerText = innerText;
+        btn.style.backgroundColor = bgColor;
+        document.getElementById("nav-box").appendChild(btn);
+
+        return btn;
+    }
+
+    const topBtn = createAppendScrollBoxBtn("Top", "yellow");
+    topBtn.onclick = () => window.scrollTo(0, 0);
+
+    const qaBtn = createAppendScrollBoxBtn("Q&A", "yellow");
+    qaBtn.onclick = () => document.getElementById('cf-ask-cel').scrollIntoView();
+
+    const galleryBtn = createAppendScrollBoxBtn("Gallery", "yellow");
+    galleryBtn.onclick = () => document.getElementById('reviews-image-gallery-container').scrollIntoView();
+
+    const picsBtn = createAppendScrollBoxBtn("View Pics", "lightcoral");
+    picsBtn.onclick = () => document.querySelector("a[href='#CustomerImages']").click();
+})();
