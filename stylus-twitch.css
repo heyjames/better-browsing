@@ -1,0 +1,232 @@
+/* Live+VOD Chat usernames */
+span[class^="chat-author__display-name"] {
+/*    font-size: 18px !important; */
+/*     font-weight: normal !important; */
+    color: #ff5c5c !important;
+/*     font-family: "Arial" !important; */
+}
+
+/* Show full stream title in directory */
+a [class='CoreText-sc-cpl358-0 ilJsSZ'] {
+    white-space: unset !important;
+}
+/*
+div[class="chat-line__message"] {
+    padding: 0 !important;
+}*/
+/*
+span[class^="chat-line__username notranslate "] {
+	color: rgb(154, 205, 50);
+	white-space: nowrap;
+	overflow: hidden;
+	width: 70px !important;
+	display: inline-block;
+}*/
+/* Live+VOD Chat message */
+span[class*="text-fragment"] {
+    /*font-size: 16px !important; */
+/*     font-weight: 600 !important; */
+    color: #fff !important;
+/*     font-family: "Times New Roman" !important; */
+}
+/* StreamElements chat comment links and @user_name mentions */
+div[class="chat-line__message"] span[class*="message"] {
+/*    font-size: 18px !important;*/
+/*     font-weight: 600 !important; */
+    color: #fff !important;
+/*     font-family: "Times New Roman" !important; */    
+}
+
+/* Highlight a user in chat */
+div[data-user*=""] span[class*="message"] {
+    color: black !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    background-color: yellow !important;
+}
+
+/* Pinned Channels */
+div[class="Layout-sc-nxg1ff-0 cIfBon side-nav-section"] div[class="Layout-sc-nxg1ff-0 hTlfRs"] {
+    background-color: rgb(62, 27, 55) !important;
+}
+
+/* @user_name mentions */
+strong[class^="chat-line__message-mention"],
+span[class*="mention-fragment"] {
+    color: #00e600 !important;
+}
+
+/* Expand Replying to messages in chat */
+div[class="chat-line__message-container tw-relative"] p {
+	text-overflow: unset !important;
+	white-space: unset !important;
+	overflow: unset !important;
+}
+
+/* International usernames */
+div[class*="chat-line__message"] span[class*="chat-author__intl-login"] {
+    color: yellow !important;
+}
+.chat-author__intl-login {
+    opacity: 1 !important;
+}
+
+/* Clip button */
+button[data-a-target="player-clip-button"] {
+    display: none !important;
+}
+
+/* Hype train */
+div[class="channel-root__right-column channel-root__right-column--expanded"] div[class="Layout-sc-nxg1ff-0 dCOFmD"], div[class="community-highlight-stack__scroll-area--disable scrollable-area scrollable-area--suppress-scroll-x"] {
+    opacity: 0.1 !important;
+}
+
+div[class="channel-root__right-column channel-root__right-column--expanded"] div[class="Layout-sc-nxg1ff-0 dCOFmD"]:hover, div[class="community-highlight-stack__scroll-area--disable scrollable-area scrollable-area--suppress-scroll-x"]:hover {
+    opacity: 1 !important;
+}
+
+/* Reduce padding around chat */
+.chat-line__message, .chat-line__moderation, .chat-line__status {
+    padding: 4px 2rem !important;
+}
+/* Add padding around chat */
+/* div[data-test-selector="video-chat-message-list-wrapper"] {
+    padding-left: 4px;
+} */
+
+/* Main background */
+/* Game background */
+.tw-root--theme-dark body,
+div[class="Layout-sc-nxg1ff-0 hOrycg directory-header-new__banner-cover"] {
+    background-color: rgb(15, 15, 17) !important;
+}
+.side-bar-contents,
+div[class="simplebar-content side-nav__scrollable_content"] {
+    background-color: rgb(25, 23, 28) !important;
+}
+/* Top nav bar, user avatar's squared area */
+div[class="Layout-sc-nxg1ff-0 gJbMyx top-nav__menu"],
+nav[data-a-target="top-nav-container"] .dZzQyr {
+    background-color: rgb(75, 52, 124) !important;
+}
+/* Top nav bar drop shadow */
+/*.gJbMyx {
+    box-shadow: unset !important;
+}*/
+
+/* Directory channel names */
+a[class*="ScCoreLink-udwpw5-0 cxXSPs tw-link"][data-test-selector="ChannelLink"],
+a[data-a-target="preview-card-channel-link"] {
+    font-size: 2em !important;
+    color: red !important;
+    font-weight: bold !important;
+}
+
+/* The darkened horizontal gradient that appears when hovering player */
+/*
+.top-bar {
+    background: unset !important;
+}
+div[data-a-target="player-controls"] {
+    background: unset !important;
+}
+*/
+/* The dark overlay that appears when the stream is paused */
+.player-overlay-background--darkness-5 {
+    background: unset !important;
+}
+/* The play icon that appears when the stream is paused */
+button[aria-label="Play"] {
+    display: none !important;
+}
+
+/* Hide follow and subscribe button when hovering over player */
+div[class="Layout-sc-nxg1ff-0 eMBoAp theatre-social-panel"] {
+    display: none !important;
+}
+
+/* Hide timestamp in VOD */
+[data-test-selector="message-timestamp"] {
+    display: none !important;
+}
+
+/* Hide Pin Channel in pop-up */
+div[class="Layout-sc-nxg1ff-0 dSjsxG"] {
+    display: none !important;
+}
+
+/* Remove badges from live chat, ffz supporter badge */
+/*span[data-badge*="subscriber"],
+span[data-badge*="premium"], 
+span[data-badge*="bits"], 
+span[data-badge*="turbo"], 
+span[data-badge*="glhf-pledge"], 
+span[data-badge*="twitchcon"],
+span[data-badge*="firewatch"],
+span[data-badge*="enter"],
+span[data-badge*="H1Z1"], 
+span[data-badge*="sub-gift"], 
+span[data-badge*="kingdom-new-lands"], 
+span[data-badge^="overwatch"], 
+span[data-badge^="titan-souls_1"], 
+span[data-badge^="cuphead_1"], 
+span[data-badge^="founder"], 
+span[data-badge^="hello_neighbor_1"], 
+span[data-badge*="clip-champ"], 
+span[data-badge*="vip"], 
+span[data-badge*="deceit_1"],
+span[data-badge*="eso"],
+span[data-badge^="hype"],
+span[data-badge^="brawl"],
+span[data-badge^="battlerite"],
+span[data-provider^="ffz"],
+span[data-badge^="glitchcon2020"],
+span[data-badge^="60"],
+span[data-badge^="predictions"],
+span[data-badge^="no_video"],
+span[data-badge^="no_audio"],
+span[data-badge^="moments"] {
+    display: none !important;
+}*/
+.chat-line__message--badges span {
+    display: none;
+}
+span[data-badge="broadcaster"],
+span[data-badge="moderator"],
+span[data-badge*="partner"],
+span[data-badge*="staff"] {
+    display: inline-block !important;
+}
+
+/* Remove bits in chat message */
+/*span[data-tooltip-type="cheer"] {
+    display: none !important;
+}*/
+
+/* Remove badges from chat and emotes in VODs */
+/* Badges */
+img[alt*="Subscriber"],
+img[alt*="Founder"],
+img[alt*="Gift"],
+img[alt*="Gifter"],
+img[alt*="Bits"],
+img[alt*="Prime"],
+img[alt^="OWL"],
+img[alt^="Turbo"],
+img[alt*="cheer"],
+img[alt*="rubius"],
+img[alt^="H1Z1"],
+img[alt^="GLHF"],
+img[alt*="TwitchCon"],
+img[alt*="Charity"],
+img[alt^="Current"],
+img[alt^="Former"],
+img[alt^="Watching"],
+img[alt^="VIP"],
+img[alt^="Glitch"],
+img[alt^="Moments"],
+img[alt^="Artist"]
+/* Channel specific emotes */
+/*img[alt^="anne"]*/ {
+    display: none;
+}
