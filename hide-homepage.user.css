@@ -10,7 +10,7 @@ ytd-browse[page-subtype="home"] {
 }
     
 ytd-app {
-    background: red;
+    background: yellow !important;
 }
     
 }
