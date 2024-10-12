@@ -8,5 +8,9 @@
 ytd-browse[page-subtype="home"] {
     display: none !important;
 }
-
+    
+ytd-app {
+    background: green;
+}
+    
 }
