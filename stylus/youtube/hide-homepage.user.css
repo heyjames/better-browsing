@@ -1,13 +1,17 @@
 /* ==UserStyle==
 @name         Hide YouTube Homepage
 @namespace    https://github.com/heyjames
-@updateURL    https://github.com/heyjames/better-browsing/raw/refs/heads/master/stylus/youtube/hide-homepage.user.css
+@updateURL    https://github.com/heyjames/better-browsing/raw/master/stylus/youtube/hide-homepage.user.css
 @version      1.0.0
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
 
 ytd-browse[page-subtype="home"] {
     display: none !important;
+}
+    
+ytd-app {
+    background: green;
 }
     
 }
