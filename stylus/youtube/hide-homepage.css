@@ -1,3 +1,12 @@
+/* ==UserStyle==
+@name         Hide YouTube Homepage
+@namespace    https://github.com/heyjames
+@version      1.0.0
+==/UserStyle== */
+@-moz-document domain("youtube.com") {
+
 ytd-browse[page-subtype="home"] {
     display: none !important;
+}
+
 }
