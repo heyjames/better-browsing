@@ -1,6 +1,7 @@
 /* ==UserStyle==
 @name         Hide YouTube Homepage
 @namespace    https://github.com/heyjames
+@updateURL    https://github.com/heyjames/better-browsing/raw/master/hide-homepage.user.css
 @version      1.0.0
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
